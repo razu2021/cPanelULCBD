@@ -1,0 +1,117 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.testimonial {
+    padding: clamp(6rem, 8vw, 10rem) 0;
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
+
+    &__header {
+        margin-bottom: clamp(3rem, 5vw, 5rem);
+        .testimonial__title {
+            font-size: clamp(2.6rem, 3vw, 3.6rem);
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .testimonial__subtitle {
+            font-size: clamp(1.6rem, 2vw, 2rem);
+            color: #64748b;
+        }
+    }
+
+    &__slider {
+        padding: 3rem 0;
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(12px);
+        border-radius: 2rem;
+        padding: 3rem 2.5rem;
+        max-width: 36rem;
+        position: relative;
+        transition: 0.5s ease;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 0 1rem 3rem rgba(0,0,0,0.08);
+
+        &:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 2rem 5rem rgba(0,0,0,0.15);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #22d3ee);
+            opacity: 0.08;
+            filter: blur(50px);
+            z-index: 0;
+            transition: 0.5s;
+        }
+
+        &:hover::before {
+            opacity: 0.15;
+        }
+
+        .testimonial__quote {
+            position: absolute;
+            font-size: 6rem;
+            font-weight: 700;
+            color: rgba(99,102,241,0.15);
+            top: -1rem;
+            left: 1rem;
+            z-index: 1;
+        }
+
+        .testimonial__content {
+            position: relative;
+            z-index: 2;
+
+            .testimonial__text {
+                font-size: 1.6rem;
+                line-height: 1.7;
+                color: #0f172a;
+                margin-bottom: 2rem;
+            }
+
+            .testimonial__user {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .testimonial__img {
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.3s;
+                    }
+                }
+
+                .testimonial__name {
+                    font-size: clamp(1.8rem, 2vw, 2.2rem);
+                    font-weight: 600;
+                    color: #0f172a;
+                }
+
+                .testimonial__role {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: #6366f1;
+                }
+            }
+        }
+    }
+}

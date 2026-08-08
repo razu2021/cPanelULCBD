@@ -1,0 +1,96 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.portfolio {
+  &__title {
+    font-size: clamp(2.4rem, 3vw, 3rem);
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  &__subtitle {
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    color: #64748b;
+  }
+
+  .portfolio-card {
+    position: relative;
+    border-radius: 1.8rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff, #f3f4f6);
+    box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 1.8rem 3.5rem rgba(0,0,0,0.18);
+    }
+
+    &__thumb {
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 1.8rem 1.8rem 0 0;
+        transition: transform 0.4s;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+
+      &__overlay, .portfolio-card__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(99,102,241,0.15); /* subtle gradient overlay */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &:hover .portfolio-card__overlay {
+        opacity: 1;
+      }
+
+      .portfolio-card__btn {
+        padding: 0.8rem 1.6rem;
+        background: #6366f1;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.3s;
+
+        &:hover {
+          background: #4f46e5;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__content {
+      padding: 1rem 1.2rem;
+      text-align: center;
+
+      &__title {
+        font-size: 1.85rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 0.5rem;
+      }
+
+      &__desc {
+        font-size: 1.45rem;
+        color: #475569;
+        line-height: 1.5;
+      }
+    }
+  }
+}

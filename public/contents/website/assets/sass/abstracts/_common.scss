@@ -1,0 +1,124 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+.parallax {
+  will-change: transform; /* ব্রাউজারকে আগেই জানিয়ে রাখে যে এটি মুভ করবে, এতে ল্যাগ কমে */
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+    
+    // আপনার সেই Clamp ফন্ট সাইজ
+    font-size: $font-size-base; 
+    
+    // টেক্সট সিলেকশন কালার (অপশনাল কিন্তু সুন্দর লাগে)
+    &::selection {
+        background-color: $bg_primay;
+        color: $white;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif; // যদি আলাদা হেডিং ফন্ট থাকে
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0px;
+}
+
+p {
+    margin-bottom: $space-md;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// টেক্সট হাইলাইট বা বোল্ড করার জন্য
+strong, b {
+    font-weight: 700;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all .3s ease;
+
+    &:hover {
+        color: $color-blue;
+    }
+}
+
+// বাটন ফোকাস আউটলাইন রিমুভ (এক্সেসিবিলিটি ঠিক রেখে)
+button:focus,
+a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+img {
+    max-width: 100%; // কন্টেইনারের বাইরে যাবে না
+    height: auto;
+    display: block; // নিচের এক্সট্রা গ্যাপ দূর করার জন্য
+}
+
+figure {
+    margin: 0;
+}
+
+// ভিডিওর জন্য
+video, iframe {
+    width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+}
+
+
+
+// ইনপুট ফিল্ডের ডিফল্ট স্টাইল রিসেট
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+textarea {
+    resize: vertical; // ইউজার শুধু লম্বালম্বি বড় করতে পারবে
+}

@@ -1,0 +1,511 @@
+.btn-wrap {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+/* Base Button Style */
+.btn1, .btn2, .btn3, .btn4, .btn5 {
+    font-size: clamp(1.2rem, 1.3vw, 1.4rem);
+    padding: clamp(0.8rem, 1vw, 1rem) clamp(1.6rem, 1.8vw, 2rem);
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.25s ease;
+}
+
+/* ================= btn1 (Primary Soft) ================= */
+.btn1 {
+    background: #6366f1;
+    color: #fff;
+
+    &:hover {
+        background: #4f46e5;
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.8rem 1.6rem rgba(99,102,241,0.25);
+    }
+}
+
+/* ================= btn2 (Minimal Ghost) ================= */
+.btn2 {
+    background: transparent;
+    color: #0f172a;
+
+    &:hover {
+        background: #f1f5f9;
+    }
+}
+
+/* ================= btn3 (Soft Gradient Outline) ================= */
+.btn3 {
+    border: 1px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(120deg, #6366f1, #ec4899) border-box;
+    color: #6366f1;
+
+    &:hover {
+        background: linear-gradient(120deg, #6366f1, #ec4899);
+        color: #fff;
+    }
+}
+
+/* ================= btn4 (Subtle Fill Slide) ================= */
+.btn4 {
+    position: relative;
+    color: #6366f1;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #6366f1;
+        transform: translateY(100%);
+        transition: 0.3s;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        transform: translateY(0);
+    }
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+/* ================= btn5 (Soft Shadow Button) ================= */
+.btn5 {
+    background: #ffffff;
+    color: #0f172a;
+    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.06);
+
+    &:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.8rem 1.6rem rgba(0,0,0,0.08);
+    }
+}
+
+
+/* base */
+.btn6, .btn7, .btn8, .btn9, .btn10 {
+    font-size: clamp(1.2rem, 1.3vw, 1.4rem);
+    padding: clamp(0.7rem, 1vw, 0.9rem) clamp(1.5rem, 1.8vw, 1.8rem);
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+/* ================= btn6 (Soft Pill Glow) ================= */
+.btn6 {
+    border-radius: 5rem;
+    background: #6366f1;
+    color: #fff;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: #6366f1;
+        filter: blur(10px);
+        opacity: 0;
+        transition: 0.3s;
+        z-index: -1;
+    }
+
+    &:hover::after {
+        opacity: 0.6;
+    }
+}
+
+/* ================= btn7 (Underline Slide) ================= */
+.btn7 {
+    color: #0f172a;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0%;
+        height: 2px;
+        background: #6366f1;
+        transition: 0.3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+/* ================= btn8 (Arrow Slide →) ================= */
+.btn8 {
+    background: #0f172a;
+    color: #fff;
+    border-radius: 5rem;
+
+    span {
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+    &:hover span {
+        transform: translateX(4px);
+    }
+}
+
+/* ================= btn9 (Soft Gradient Fill) ================= */
+.btn9 {
+    background: linear-gradient(120deg, #6366f1, #ec4899);
+    color: #fff;
+    background-size: 200% 200%;
+
+    &:hover {
+        background-position: right center;
+    }
+}
+
+/* ================= btn10 (Inset Press Clean) ================= */
+.btn10 {
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+
+    &:hover {
+        background: #f1f5f9;
+    }
+
+    &:active {
+        box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+    }
+}
+
+/* Base style for all buttons */
+.btn11, .btn12, .btn13, .btn14, .btn15, 
+.btn16, .btn17, .btn18, .btn19, .btn20 {
+    font-size: clamp(1.2rem,1.3vw,1.4rem);
+    padding: clamp(0.7rem,0.9vw,0.9rem) clamp(1.5rem,1.8vw,2rem);
+    border-radius: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+/* ================= btn11 (Soft Gradient Pill) ================= */
+.btn11 {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+
+    &:hover {
+        background-position: right center;
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.6rem 1.2rem rgba(99,102,241,0.25);
+    }
+}
+
+/* ================= btn12 (Glass Frosted) ================= */
+.btn12 {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+
+    &:hover {
+        background: rgba(255,255,255,0.2);
+    }
+}
+
+/* ================= btn13 (Neon Outline) ================= */
+.btn13 {
+    border: 2px solid #22d3ee;
+    color: #22d3ee;
+    background: transparent;
+
+    &:hover {
+        background: #22d3ee;
+        color: #000;
+        box-shadow: 0 0 1.5rem #22d3ee, 0 0 3rem #22d3ee;
+    }
+}
+
+/* ================= btn14 (Outline Fill Slide) ================= */
+.btn14 {
+    position: relative;
+    border: 2px solid #6366f1;
+    color: #6366f1;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #6366f1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.3s;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+/* ================= btn15 (Soft Shadow Clean) ================= */
+.btn15 {
+    background: #fff;
+    color: #0f172a;
+    box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.06);
+
+    &:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.8rem 1.6rem rgba(0,0,0,0.08);
+    }
+}
+
+/* ================= btn16 (Micro Pulse Hover) ================= */
+.btn16 {
+    background: #ec4899;
+    color: #fff;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0.6rem 1.2rem rgba(236,72,153,0.25);
+    }
+}
+
+/* ================= btn17 (Arrow Slide) ================= */
+.btn17 {
+    background: #0f172a;
+    color: #fff;
+    border-radius: 5rem;
+    position: relative;
+
+    span {
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+    &:hover span {
+        transform: translateX(4px);
+    }
+}
+
+/* ================= btn18 (Soft Gradient Glow) ================= */
+.btn18 {
+    background: linear-gradient(120deg, #6366f1, #ec4899);
+    color: #fff;
+    box-shadow: 0 0.6rem 1rem rgba(236,72,153,0.2);
+
+    &:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.8rem 1.6rem rgba(236,72,153,0.4);
+    }
+}
+
+/* ================= btn19 (Clean Inset Press) ================= */
+.btn19 {
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+
+    &:hover {
+        background: #f1f5f9;
+    }
+
+    &:active {
+        box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+    }
+}
+
+/* ================= btn20 (Gradient Outline Pill) ================= */
+.btn20 {
+    border: 2px solid transparent;
+    background: linear-gradient(#fff,#fff) padding-box,
+                linear-gradient(135deg,#6366f1,#8b5cf6) border-box;
+    color: #6366f1;
+
+    &:hover {
+        background: linear-gradient(135deg,#6366f1,#8b5cf6);
+        color: #fff;
+    }
+}
+
+
+/* Base for all 5 buttons */
+.btn21, .btn22, .btn23, .btn24, .btn25 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    font-size: clamp(1.2rem, 1.3vw, 1.4rem);
+    padding: clamp(0.8rem,1vw,0.9rem) clamp(1.8rem,2vw,2rem);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* ================= btn21 (Slide Fill Left → Right) ================= */
+.btn21 {
+    border: 2px solid #6366f1;
+    color: #6366f1;
+    background: transparent;
+
+    &::before {
+        content:"";
+        position: absolute;
+        inset:0;
+        background:#6366f1;
+        transform: scaleX(0);
+        transform-origin:left;
+        transition: 0.3s ease;
+        z-index:-1;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+
+    &:hover {
+        color:#fff;
+    }
+}
+
+/* ================= btn22 (Slide Fill Top → Bottom) ================= */
+.btn22 {
+    border: 2px solid #ec4899;
+    color: #ec4899;
+    background: transparent;
+
+    &::before {
+        content:"";
+        position:absolute;
+        inset:0;
+        background:#ec4899;
+        transform: scaleY(0);
+        transform-origin:top;
+        transition:0.3s ease;
+        z-index:-1;
+    }
+
+    &:hover::before {
+        transform: scaleY(1);
+    }
+
+    &:hover {
+        color:#fff;
+    }
+}
+
+/* ================= btn23 (Diagonal Slide Fill) ================= */
+.btn23 {
+    border: 2px solid #22d3ee;
+    color: #22d3ee;
+    background: transparent;
+
+    &::before {
+        content:"";
+        position:absolute;
+        inset:0;
+        background: linear-gradient(135deg,#22d3ee,#3b82f6);
+        transform: scale(0);
+        transform-origin: top left;
+        transition:0.3s ease;
+        z-index:-1;
+    }
+
+    &:hover::before {
+        transform: scale(1);
+    }
+
+    &:hover {
+        color:#fff;
+    }
+}
+
+/* ================= btn24 (Circular Fill from Center) ================= */
+.btn24 {
+    border:2px solid #f59e0b;
+    color:#f59e0b;
+    background:transparent;
+    overflow:hidden;
+
+    &::before {
+        content:"";
+        position:absolute;
+        width:0;
+        height:0;
+        background:#f59e0b;
+        border-radius:50%;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        transition:all 0.4s ease;
+        z-index:-1;
+    }
+
+    &:hover::before {
+        width:300%;
+        height:300%;
+    }
+
+    &:hover {
+        color:#fff;
+    }
+}
+
+/* ================= btn25 (Double Layer Slide) ================= */
+.btn25 {
+    border:2px solid #10b981;
+    color:#10b981;
+    background:transparent;
+    
+    &::before {
+        content:"";
+        position:absolute;
+        inset:0;
+        background:#10b981;
+        transform:translateX(-100%);
+        transition:0.35s ease;
+        z-index:-1;
+    }
+
+    &::after {
+        content:"";
+        position:absolute;
+        inset:0;
+        border:2px solid #10b981;
+        z-index:-2;
+    }
+
+    &:hover::before {
+        transform:translateX(0);
+    }
+
+    &:hover {
+        color:#fff;
+    }
+}

@@ -1,0 +1,320 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.team__partner {
+    padding: clamp(6rem, 8vw, 10rem) 0;
+    background: radial-gradient(circle at center, #eef2ff, #f8fafc);
+
+    &-slider {
+        padding: 5rem 0;
+    }
+
+    &-item {
+        height: 13rem;
+        border-radius: 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(10px);
+
+        transition: 0.5s ease;
+
+        filter: grayscale(100%) blur(1px);
+        opacity: 0.4;
+        transform: scale(0.75);
+
+        position: relative;
+
+        img {
+            max-width: 7rem;
+            transition: 0.5s;
+        }
+
+        /* glow layer */
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            opacity: 0;
+            transition: 0.5s;
+            z-index: -1;
+        }
+    }
+
+    /* CENTER ACTIVE */
+    .swiper-slide-active .team__partner-item {
+        transform: scale(1.1);
+        opacity: 1;
+        filter: grayscale(0%) blur(0);
+
+        background: #fff;
+        box-shadow: 0 2rem 5rem rgba(0,0,0,0.15);
+
+        &::before {
+            opacity: 0.15;
+            filter: blur(20px);
+        }
+
+        img {
+            transform: scale(1.2);
+        }
+    }
+
+    /* SIDE SLIDES */
+    .swiper-slide-prev .team__partner-item,
+    .swiper-slide-next .team__partner-item {
+        opacity: 0.7;
+        transform: scale(0.9);
+    }
+}
+
+
+// partner section responsive slider2  class name partner2 
+/* 1rem = 10px dhore sizing kora */
+
+.partner2 {
+    padding: clamp(8rem, 15vw, 18rem) 0;
+    background: #ffffff; // Clean white base
+    position: relative;
+    overflow: hidden;
+
+    // --- Complex Background Graphical Canvas ---
+    &__canvas {
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 0; left: 0;
+        z-index: 1;
+        pointer-events: none;
+
+        .graphic {
+            position: absolute;
+            filter: blur(50px);
+            opacity: 0.1;
+        }
+        // Floating gradient orbs
+        .shape-a { width: 50rem; height: 50rem; background: #007bff; top: -15%; left: -10%; border-radius: 50% 20% 50% 20%; }
+        .shape-b { width: 40rem; height: 40rem; background: #6f42c1; bottom: -10%; right: -5%; border-radius: 20% 50% 20% 50%; }
+        
+        // Dotted circle element
+        .shape-c {
+            width: 25rem; height: 25rem;
+            top: 40%; left: 45%;
+            filter: blur(2px); // Subtle blur
+            opacity: 0.05;
+
+            .dotted-path {
+                width: 100%; height: 100%;
+                stroke: #007bff;
+                animation: rotatePath 30s linear infinite;
+            }
+        }
+    }
+
+    .container { position: relative; z-index: 2; }
+
+    // --- Section Header ---
+    .section-head {
+        margin-bottom: clamp(6rem, 10vw, 10rem);
+        max-width: 80rem; margin-left: auto; margin-right: auto;
+
+        .sub-title {
+            font-size: 1.6rem; color: #007bff; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.4rem;
+            display: inline-flex; align-items: center; gap: 1rem;
+            background: rgba(0, 123, 255, 0.08); padding: 0.8rem 2.5rem;
+            border-radius: 5rem; margin-bottom: 2rem;
+        }
+        .main-title {
+            font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 900;
+            color: #111; line-height: 1.1; margin-bottom: 2.5rem;
+        }
+        .description { font-size: 1.7rem; color: #555; line-height: 1.8; margin: 0; }
+    }
+
+    // --- Swiper Continuous Marquee Style ---
+    .partnerSlider {
+        width: 100%;
+        padding: 5rem 0;
+        cursor: grab;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: 3rem;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+
+        // Required for smooth continuous loop
+        .swiper-wrapper {
+            transition-timing-function: linear !important; // Infinite flow
+        }
+    }
+
+    // --- Premium Partner Card Design ---
+    .partner-card {
+        background: #ffffff;
+        width: 100%;
+        height: 12rem;
+        border-radius: 2.5rem;
+        padding: 2.5rem;
+        border: 0.1rem solid #f0f0f0;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.04);
+        display: flex; align-items: center; justify-content: center;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        position: relative;
+        overflow: hidden;
+        perspective: 1000px; // For 3D Tilt
+
+        // Glass overlay effect
+        .card-glass {
+            position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, transparent 60%);
+            opacity: 0; transition: opacity 0.5s ease; z-index: 1;
+        }
+
+        img {
+            max-width: 100%; max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(100%); // B&W by default
+            opacity: 0.6;
+            transition: shob kichu 0.5s ease;
+            z-index: 2;
+        }
+
+        // --- Interaction ---
+        &:hover {
+            transform: translateY(-1rem) scale(1.03);
+            border-color: #007bff;
+            box-shadow: 0 3rem 6rem rgba(0, 123, 255, 0.1);
+
+            img { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+            .card-glass { opacity: 1; }
+        }
+
+        // Specific style for Accreditations
+        &.accreditation-card {
+            border: 0.2rem dashed #f0f0f0; // Unique look for bodies
+            
+            .badge-text {
+                position: absolute; bottom: 1rem; right: 1.5rem;
+                font-size: 1rem; font-weight: 800; color: #6f42c1;
+                display: flex; align-items: center; gap: 0.5rem;
+                background: rgba(111, 66, 193, 0.05); padding: 0.4rem 1.2rem;
+                border-radius: 2rem;
+                z-index: 3;
+            }
+
+            &:hover {
+                border-color: #6f42c1;
+                box-shadow: 0 3rem 6rem rgba(111, 66, 193, 0.1);
+                .badge-text { background: #6f42c1; color: #fff; }
+            }
+        }
+    }
+}
+
+// --- Graphical Animations Keyframes ---
+
+@keyframes rotatePath { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3rem); } }
+
+// Tablets and Mobile Adjustments
+@media (max-width: 991px) {
+    .partner2 {
+        .section-head { text-align: center; }
+        .partner-card { height: 10rem; padding: 1.5rem; }
+    }
+}
+
+// partner section responsive slider2  class name partner3   start here 
+/* 1rem = 10px dhore sizing kora */
+
+/* 1rem = 10px dhore kora hoyeche */
+
+.partner3_slider {
+    padding: clamp(8rem, 12vw, 15rem) 0;
+    background: #fcfdfe;
+    position: relative;
+    overflow: hidden;
+
+    &__shapes {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 1; pointer-events: none;
+        .shape {
+            position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.15;
+        }
+        .s-1 { width: 40rem; height: 40rem; background: #007bff; top: -10%; left: -5%; animation: move 10s infinite alternate; }
+        .s-2 { width: 35rem; height: 35rem; background: #6f42c1; bottom: -5%; right: -5%; animation: move 8s infinite alternate-reverse; }
+    }
+
+    .container { position: relative; z-index: 2; }
+
+    .section-head {
+        margin-bottom: 5rem;
+        .sub-title { font-size: 1.5rem; color: #007bff; font-weight: 700; letter-spacing: 0.3rem; text-transform: uppercase; }
+        .main-title { font-size: clamp(2.8rem, 4vw, 4.2rem); font-weight: 800; color: #111; margin-top: 1rem; }
+    }
+
+    .partnerSwiper {
+        padding: 6rem 0;
+        overflow: visible; // 3D effect-er jonno proyojon
+    }
+
+    .p-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(15px);
+        padding: 4rem 3rem;
+        border-radius: 3rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+
+        &__overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(0,123,255,0.05), transparent);
+            z-index: 1;
+        }
+
+        img {
+            max-width: 15rem; height: 8rem; object-fit: contain;
+            margin-bottom: 2.5rem; filter: grayscale(100%);
+            opacity: 0.7; transition: 0.4s ease; z-index: 2; position: relative;
+        }
+
+        .p-info {
+            position: relative; z-index: 2;
+            h4 { font-size: 2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 0.5rem; }
+            p { font-size: 1.4rem; color: #666; margin: 0; }
+        }
+
+        &:hover {
+            transform: translateY(-1rem);
+            border-color: #007bff;
+            img { filter: grayscale(0%); opacity: 1; }
+        }
+    }
+
+    // Swiper Active Slide Decoration
+    .swiper-slide-active .p-card {
+        background: #ffffff;
+        border-color: #007bff;
+        box-shadow: 0 3rem 6rem rgba(0, 123, 255, 0.15);
+        img { filter: grayscale(0%); opacity: 1; }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #007bff; width: 2.5rem; border-radius: 1rem;
+    }
+}
+
+@keyframes move {
+    from { transform: translate(0, 0); }
+    to { transform: translate(3rem, 3rem); }
+}

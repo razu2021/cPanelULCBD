@@ -1,0 +1,439 @@
+/* 1rem = 10px */
+
+.roadmap1 {
+    padding: clamp(8rem, 12vw, 12rem) 0;
+    background: #fcfdfe;
+    position: relative;
+    overflow: hidden;
+
+    .section-head {
+        margin-bottom: 8rem;
+        .sub-title { font-size: 1.6rem; color: #007bff; font-weight: 700; letter-spacing: 0.2rem; display: block; margin-bottom: 1.5rem; }
+        .main-title { font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; color: #1a1a1a; }
+    }
+
+    .roadmap-wrapper {
+        position: relative;
+        max-width: 90rem;
+        margin: 0 auto;
+
+        // Vertical Center Line
+        .progress-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 0.4rem;
+            height: 100%;
+            background: rgba(0, 123, 255, 0.1);
+            transform: translateX(-50%);
+            z-index: 1;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; width: 100%; height: 0;
+                background: linear-gradient(to bottom, #007bff, #6f42c1);
+                transition: height 2s ease; // It can be triggered on scroll
+            }
+        }
+
+        .step-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 6rem;
+            position: relative;
+            z-index: 2;
+
+            &.item-reverse {
+                flex-direction: row-reverse;
+                .step-content { text-align: right; margin-left: 0; margin-right: 5rem; }
+            }
+
+            .step-icon {
+                width: 8rem;
+                height: 8rem;
+                background: #fff;
+                border: 0.5rem solid #f0f7ff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                color: #007bff;
+                box-shadow: 0 1rem 3rem rgba(0, 123, 255, 0.1);
+                position: relative;
+                transition: all 0.4s ease;
+
+                .step-count {
+                    position: absolute;
+                    top: -1rem;
+                    right: -1rem;
+                    background: #007bff;
+                    color: #fff;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 50%;
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .step-content {
+                width: 40%;
+                margin-left: 5rem;
+                background: #fff;
+                padding: 3rem;
+                border-radius: 2.5rem;
+                box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.04);
+                border: 0.1rem solid #f0f0f0;
+                transition: all 0.4s ease;
+
+                h4 { font-size: 2.2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 1.2rem; }
+                p { font-size: 1.5rem; color: #666; line-height: 1.6; margin: 0; }
+            }
+
+            // Hover Effect
+            &:hover {
+                .step-icon {
+                    background: #007bff;
+                    color: #fff;
+                    transform: scale(1.1);
+                }
+                .step-content {
+                    transform: translateY(-0.5rem);
+                    border-color: #007bff;
+                    box-shadow: 0 2rem 5rem rgba(0, 123, 255, 0.1);
+                }
+            }
+
+            &.last-step {
+                margin-bottom: 0;
+                .step-icon {
+                    background: linear-gradient(135deg, #007bff, #6f42c1);
+                    color: #fff;
+                    animation: pulse-blue 2s infinite;
+                }
+            }
+        }
+    }
+}
+
+// Mobile Responsive
+@media (max-width: 768px) {
+    .roadmap1 {
+        .roadmap-wrapper {
+            .progress-line { left: 4rem; }
+            .step-item {
+                flex-direction: row !important;
+                justify-content: flex-start;
+                .step-icon { min-width: 8rem; }
+                .step-content { 
+                    width: 100%; 
+                    margin-left: 3rem !important; 
+                    margin-right: 0 !important;
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+}
+
+@keyframes pulse-blue {
+    0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4); }
+    70% { box-shadow: 0 0 0 2rem rgba(0, 123, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+// Additional styles for roadmap2 can be added here following a similar structure, with different colors and layout adjustments as needed.
+/* 1rem = 10px */
+
+/* 1rem = 10px */
+
+.roadmap2 {
+    padding: clamp(3rem, 15vw, 5rem) 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+
+    &__canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        z-index: 1;
+        pointer-events: none;
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            animation: moveOrb 15s infinite alternate ease-in-out;
+        }
+        .orb-1 { width: 40rem; height: 40rem; background: #007bff; top: -10%; left: -10%; }
+        .orb-2 { width: 35rem; height: 35rem; background: #6f42c1; bottom: -5%; right: -5%; }
+
+        .wave-line {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            opacity: 0.5;
+            animation: waveFlow 10s infinite linear;
+        }
+    }
+
+    .container { position: relative; z-index: 2; }
+
+    &__flow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        padding-top: 5rem;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            gap: 6rem;
+        }
+    }
+
+    .flow-item {
+        flex: 1;
+        text-align: center;
+        position: relative;
+
+        .icon-sphere {
+            width: 10rem;
+            height: 10rem;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 auto 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: #007bff;
+            box-shadow: 0 2rem 4rem rgba(0, 123, 255, 0.1);
+            position: relative;
+            z-index: 2;
+            transition: all 0.5s ease;
+
+            .pulse-ring {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 0.2rem solid rgba(0, 123, 255, 0.3);
+                border-radius: 50%;
+                animation: pulseOrbit 3s infinite;
+            }
+        }
+
+        .content {
+            .no {
+                font-size: 1.4rem;
+                font-weight: 900;
+                color: #007bff;
+                background: rgba(0, 123, 255, 0.1);
+                padding: 0.5rem 1.5rem;
+                border-radius: 2rem;
+                display: inline-block;
+                margin-bottom: 1.5rem;
+            }
+            h4 { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 1rem; }
+            p { font-size: 1.5rem; color: #666; line-height: 1.5; }
+        }
+
+        &:hover {
+            .icon-sphere {
+                background: #007bff;
+                color: #fff;
+                transform: translateY(-1rem) scale(1.1);
+            }
+        }
+
+        &.special {
+            .icon-sphere {
+                background: linear-gradient(135deg, #007bff, #6f42c1);
+                color: #fff;
+                box-shadow: 0 2rem 4rem rgba(111, 66, 193, 0.3);
+            }
+        }
+    }
+}
+
+/* Animations */
+@keyframes moveOrb {
+    from { transform: translate(0, 0); }
+    to { transform: translate(10rem, 5rem); }
+}
+
+@keyframes waveFlow {
+    from { stroke-dashoffset: 100; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes pulseOrbit {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.8); opacity: 0; }
+}
+
+
+// Additional styles for roadmap3 can be added here following a similar structure, with different colors and layout adjustments as needed.
+/* 1rem = 10px dhore sizing kora */
+/* 1rem = 10px */
+
+.roadmap3 {
+    padding: clamp(8rem, 12vw, 15rem) 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+
+    // --- Dynamic Shapes ---
+    &__shapes {
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 0; left: 0; z-index: 1;
+        pointer-events: none;
+
+        .shape {
+            position: absolute;
+            filter: blur(80px);
+            opacity: 0.12;
+            border-radius: 50%;
+        }
+        .shape-1 { width: 40rem; height: 40rem; background: #007bff; top: -10%; left: -5%; animation: float 15s infinite alternate; }
+        .shape-2 { width: 30rem; height: 30rem; background: #6f42c1; bottom: 5%; right: 5%; animation: float 12s infinite alternate-reverse; }
+        .shape-3 { width: 25rem; height: 25rem; background: #00d4ff; top: 40%; left: 40%; animation: pulse 8s infinite ease-in-out; }
+    }
+
+    .container { position: relative; z-index: 2; }
+
+    .section-head {
+        margin-bottom: clamp(6rem, 8vw, 10rem);
+        .sub-title { font-size: 1.6rem; color: #007bff; font-weight: 700; letter-spacing: 0.3rem; text-transform: uppercase; }
+        .main-title { font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 900; color: #1a1a1a; margin-top: 1rem; }
+    }
+
+    &__wrapper {
+        position: relative;
+        padding: 5rem 0;
+    }
+
+    // --- Animated SVG Path ---
+    &__svg-path {
+        position: absolute;
+        top: 50%; left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        .anim-line {
+            stroke-dasharray: 20;
+            animation: dashMove 30s linear infinite;
+        }
+
+        @media (max-width: 991px) { display: none; }
+    }
+
+    &__track {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5rem;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 991px) {
+            overflow-x: auto;
+            padding: 2rem 0 5rem;
+            justify-content: flex-start;
+            &::-webkit-scrollbar { height: 0.5rem; }
+            &::-webkit-scrollbar-thumb { background: #007bff; border-radius: 1rem; }
+        }
+    }
+
+    .roadmap-item {
+        flex: 1;
+        min-width: 24rem;
+        transition: all 0.5s ease;
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: 0.1rem solid rgba(0, 0, 0, 0.05);
+            padding: 4rem 3rem;
+            border-radius: 3rem;
+            text-align: center;
+            box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.03);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+
+            .step-no {
+                position: absolute;
+                top: -2rem; left: 50%;
+                transform: translateX(-50%);
+                background: #ffffff;
+                width: 4.5rem; height: 4.5rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+                font-weight: 900;
+                color: #007bff;
+                box-shadow: 0 1rem 2rem rgba(0, 123, 255, 0.15);
+                border: 0.2rem solid #f0f7ff;
+            }
+
+            .icon-box {
+                font-size: 4rem;
+                color: #007bff;
+                margin-bottom: 2.5rem;
+                transition: transform 0.4s ease;
+            }
+
+            h4 { font-size: 2.2rem; font-weight: 800; color: #1a1a1a; margin-bottom: 1.5rem; }
+            p { font-size: 1.5rem; color: #666; line-height: 1.6; }
+
+            &.final {
+                background: linear-gradient(135deg, #007bff 0%, #6f42c1 100%);
+                border: none;
+                h4, p, .icon-box { color: #fff; }
+                .step-no { color: #6f42c1; }
+            }
+        }
+
+        // --- Interaction ---
+        &:hover, &.active {
+            transform: translateY(-2rem);
+            .glass-card {
+                background: #ffffff;
+                border-color: #007bff;
+                box-shadow: 0 3.5rem 7rem rgba(0, 123, 255, 0.1);
+                .icon-box { transform: scale(1.2) rotate(-10deg); }
+            }
+        }
+    }
+}
+
+// --- Keyframes ---
+@keyframes dashMove {
+    from { stroke-dashoffset: 1000; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(5rem, 5rem) scale(1.1); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.2; transform: scale(1.2); }
+}

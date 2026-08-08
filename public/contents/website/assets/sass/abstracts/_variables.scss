@@ -1,0 +1,116 @@
+// -----------------------------------------------------------------------------
+// 1. Brand Color
+// -----------------------------------------------------------------------------
+$color-pink:       #ff69b4; // মেইন ব্র্যান্ড কালার
+$color-purpel:     #9333ea; // সাকসেস বা সেকেন্ডারি কালার
+$color-blue:        #2563eb; // হাইলাইট বা এরর কালার
+
+
+// -----------------------------------------------------------------------------
+// 2. Backgroun color 
+// -----------------------------------------------------------------------------
+$bg_primay : #09072c;
+$bg_secondary : #0749b3;
+$bg_3 : #8e44ad;
+
+
+$bg_mainmenu : #ffff;
+
+
+$bd_gredient_primary : linear-gradient(90deg, #0f172a, #1e3a8a);
+$section1_bg : linear-gradient(90deg, #0f172a, #1e3a8a);
+$section2_bg : linear-gradient(90deg, #1e3a8a, #0f172a);
+$section3_bg : linear-gradient(90deg, #0f172a, #1e3a8a);
+$section4_bg : linear-gradient(90deg, #1e3a8a, #0f172a);
+
+
+
+// -----------------------------------------------------------------------------
+// 3. Text color
+// -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// 4. Netural Color
+// -----------------------------------------------------------------------------
+
+
+$white:               #ffffff;
+$black:               #000000;
+$gray-100:            #f8f9fa;
+$gray-200:            #e9ecef;
+$gray-500:            #adb5bd;
+$gray-800:            #343a40;
+
+
+// -----------------------------------------------------------------------------
+// 5. font fmiliy 
+// -----------------------------------------------------------------------------
+$google : "Google Sans", sans-serif;
+$roboto : "Roboto", sans-serif;
+$open : "Open Sans", sans-serif;
+
+
+// -----------------------------------------------------------------------------
+// 6. Font Size
+// -----------------------------------------------------------------------------
+$font-size-base:      1.7rem; // 16px
+$font-size-sm:        1.4rem; // 14px
+$font-size-md:        1.8rem; // 18px
+$font-size-lg:        2.4rem; // 24px
+$font-size-xl:        3.2rem; // 32px
+$font-size-xxl:       4.8rem; // 48px
+
+// -----------------------------------------------------------------------------
+// 7. font weight
+// -----------------------------------------------------------------------------
+$font-weight-regular: 400;
+$font-weight-bold:    700;
+
+
+// -----------------------------------------------------------------------------
+// 8. RESPONSIVE BREAKPOINTS 
+// -----------------------------------------------------------------------------
+$bp-sm:   576px;   // Small devices (landscape phones)
+$bp-md:   768px;   // Medium devices (tablets)
+$bp-lg:   992px;   // Large devices (desktops)
+$bp-xl:   1200px;  // Extra large devices (large desktops)
+$bp-xxl:  1400px;  // Extra extra large (optional,)
+
+
+// -----------------------------------------------------------------------------
+// 9. LAYOUT & SPACING 
+// -----------------------------------------------------------------------------
+$gutter-horizontal:   3rem;  
+
+$space-sm:            1.5rem;
+$space-md:            3rem;
+$space-lg:            5rem;
+$space-xl:            8rem;
+
+
+// -----------------------------------------------------------------------------
+// 5. MISCELLANEOUS 
+// -----------------------------------------------------------------------------
+$border-radius-sm:    0.4rem;
+$border-radius-md:    0.8rem;
+$border-radius-lg:    1.5rem;
+$border-radius-xl:    2rem;
+$border-radius-xxl:    2.2rem;
+
+$box-shadow-light:    0 0.5rem 1.5rem rgba($black, 0.1);
+$box-shadow-dark:     0 1rem 3rem rgba($black, 0.2);
+
+
+$transition-fast:     0.3s all ease;
+$transition-slow:     0.5s all ease;
+
+
+// ------------------ border color 
+$border_primary: #dddddd;

@@ -1,0 +1,5 @@
+.main_nav {
+  padding: clamp(1.5rem, 2vh, 3rem) 0;
+  background-color: #eb3a3a;
+  border-bottom: 1px solid red;
+}/*# sourceMappingURL=main_menu.css.map */

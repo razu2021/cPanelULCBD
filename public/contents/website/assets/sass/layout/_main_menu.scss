@@ -1,0 +1,561 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// ---------------------------------------------------------------------
+//1. main menu 1 end here 
+//----------------------------------------------------------------------
+.main_nav{
+    background-color: $bg_mainmenu;
+    border-bottom: 1px solid $border_primary;
+    .main_navbar {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: clamp(1rem,2vh, 1.5rem) 0;
+    }
+
+    // Logo Styling
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        @include respond-to(lg){
+            width: auto;
+            justify-content: flex-start;
+            gap: 2rem;
+        }
+        .brand-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 1.2rem; // 12px gap (1rem = 10px logic)
+
+            img {
+            height: clamp(4.5rem, 6vw, 6.5rem); // 45px to 65px responsive
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            }
+
+            .brand-text {
+                @include logo-gradient-text;
+                font-size: clamp(2rem, 3vw, 2.2rem); // 22px to 32px
+                font-weight: 800;
+                letter-spacing: -0.05rem;
+                line-height: 1.2;
+                display: inline-block;
+
+                span {
+                    font-weight: 900; // 'Global' word weight
+                }
+            }
+
+            // Hover Effect: Logo ektu boro hobe ar text ektu move korbe
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+                .brand-text {
+                    filter: brightness(1.1); // Gradient color-ta ektu bright hobe
+                }
+            }
+        }
+
+
+       .menu_toggle_btn {
+        // Shudhu Mobile/Tablet e dekhabe
+        display: flex; 
+        
+        @media (min-width: 992px) {
+            display: none; // Desktop-e Hamburger button vanish hoye jabe
+        }
+
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 2.8rem;
+            color: #0f172a;
+        }
+    }
+    }
+
+    // Menu Styling--------------------------------
+      .main_menu {
+            display: none;
+            @include respond-to(lg){display: block;}
+        ul {
+        display: flex;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            position: relative;
+            > a {
+                display: inline-flex;   // 🔥 better than flex here
+                align-items: center;
+                gap: 0.6rem;            // text & icon spacing
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #0f172a;
+                text-decoration: none;
+                padding: 0.5rem 0;
+                transition: 0.3s;
+                line-height: 1; 
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #0f172a;
+                    i {
+                    display: block;          // 🔥 removes inline gap
+                    font-size: 1.2rem;
+                    }
+                }
+                &:hover {
+                    color: #ec4899;
+                }
+                // underline animation
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -0.5rem;
+                    width: 0%;
+                    height: 0.2rem;
+                    background: linear-gradient(90deg, #3b82f6, #ec4899);
+                    transition: 0.3s;
+                }
+                &:hover::after {
+                    width: 100%;
+                } 
+            }
+
+          
+            //----------------- SUBCATEGORY BOX--------------------
+            .has_subcategory {
+                position: absolute;
+                top: 120%;
+                left: 0;
+                min-width: 22rem;
+                background: #ffffff;
+                border-radius: 1.2rem;
+                padding: 1rem 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(1rem);
+                transition: all 0.3s ease;
+                box-shadow: 0 2rem 4rem rgba(0,0,0,0.08);
+                border: 1px solid rgba(0,0,0,0.05);
+                z-index: 99;
+
+            ul {
+                display: block;
+
+                li {
+                    position: relative;
+
+    
+                //-------------------- CHILD CATEGORY  BOX------------------
+                .has_childcategory {
+                    position: absolute;
+                    top: 0;
+                    left:100%;
+                    min-width: 20rem;
+                    background: #ffffff;
+                    border-radius: 1.2rem;
+                    padding: 1rem 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateX(1rem);
+                    transition: all 0.3s ease;
+                    box-shadow: 0 2rem 4rem rgba(0,0,0,0.08);
+                    border: 1px solid rgba(0,0,0,0.05);
+                    z-index: 999;
+
+                    ul {
+                    display: block;
+
+                    li {
+                        a {
+                        display: block;
+                        padding: 1.1rem 1.6rem;
+                        font-size: 1.3rem;
+                        color: #334155;
+                        transition: 0.3s;
+                        position: relative;
+
+                        &:hover {
+                            background: rgba(59, 130, 246, 0.08);
+                            color: #3b82f6;
+                            padding-left: 2rem;
+                        }
+
+                        // small arrow indicator
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 1rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 0.4rem;
+                            height: 0.4rem;
+                            background: #9333ea;
+                            border-radius: 50%;
+                            opacity: 0;
+                            transition: 0.3s;
+                        }
+
+                        &:hover::before {
+                            opacity: 1;
+                            left: 0.6rem;
+                        }
+
+
+                        }
+                    }
+                    }
+                }
+
+                //--------------- HOVER SHOW CHILD-------------------
+                &:hover {
+                    > .has_childcategory {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(0);
+                    }
+                }
+                // --------------------------------------------- child category end here ------------------
+        
+                // ---------- subcategory design -------
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1.2rem 1.8rem;
+                    font-size: 1.4rem;
+                    color: #334155;
+                    transition: 0.3s;
+                    position: relative;
+                    line-height: 1; // 🔥 important fix
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        }
+
+                        span i {
+                        display: block; // 🔥 removes inline gap issue
+                        font-size: 1.4rem;
+                            transform: translateY(1px);
+                        }
+
+                    &:hover {
+                    background: rgba(236, 72, 153, 0.08);
+                    color: #ec4899;
+                    padding-left: 2.2rem;
+                    }
+
+                    // left indicator
+                    &::before {
+                    content: "";
+                    position: absolute;
+                    left: 1.2rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    background: #3b82f6;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: 0.3s;
+                    }
+
+                    &:hover::before {
+                    opacity: 1;
+                    left: 0.8rem;
+                    }
+                }
+                }
+            }
+            }
+
+            // ======================
+            // HOVER SHOW
+            // ======================
+            &:hover {
+            .has_subcategory {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            }
+        }
+        }
+  }
+// -------------------------------- main menu code css end here --------------------------------
+    .auth_actions {
+        ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+        .btn_appointment {
+            display: none;
+            font-size: 1.4rem;
+            background: $color-purpel;
+            color: #fff;
+            padding: clamp(1rem, 1.2vw, 1.4rem) clamp(2rem, 2vw, 3rem);
+            border-radius: 10rem;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+            transition: $transition-fast;
+            @include respond-to(lg){display: block}
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.3);
+            }
+        }
+    }
+    // -------------- right secation css end here ----------
+    
+}
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------
+// 2. header top start here  main social 
+//----------------------------------------------------------------------
+.mainsocialmenu1 {
+  background: $bd_gredient_primary;
+  padding: clamp(0.8rem, 1vw, 1.2rem) 0;
+
+  .main_socialmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .main_scial {
+      ul {
+        display: flex;
+        gap: clamp(0.8rem, 1vw, 1.5rem);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(3.2rem, 3vw, 4rem);
+            height: clamp(3.2rem, 3vw, 4rem);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: linear-gradient(45deg, #00c6ff, #ff00cc);
+              transform: translateY(-0.3rem) scale(1.05);
+              box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
+            }
+          }
+        }
+      }
+    }
+
+    .main_contact {
+      ul {
+        display: flex;
+        gap: clamp(1rem, 2vw, 2rem);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        flex-wrap: wrap;
+
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            gap: clamp(0.6rem, 1vw, 1rem);
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+            transition: 0.3s;
+
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: clamp(2.8rem, 3vw, 3.2rem);
+              height: clamp(2.8rem, 3vw, 3.2rem);
+              border-radius: 50%;
+              background: rgba(255,255,255,0.08);
+              font-size: clamp(1.2rem, 1.3vw, 1.5rem);
+              transition: 0.3s;
+            }
+
+            &:hover {
+              color: #fff;
+
+              span {
+                background: linear-gradient(45deg, #3b82f6, #9333ea);
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------------------------
+// TOP HEADER CSS START HERE 
+//-----------------------------------------------------------------------------------------
+.topheader {
+    background: #060115;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    backdrop-filter: blur(10px);
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(1rem, 2vw, 2rem);
+    }
+    
+
+    // Office Info Cards
+    .office-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(0.8rem, 1.5vw, 1.5rem);
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: clamp(0.5rem, 1vw, 1rem);
+            padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            i {
+                font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+                color: #fff;
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            }
+
+            span {
+                font-size: clamp(1.2rem, 1.2vw, 1.6rem);
+            }
+        }
+    }
+
+    // Site Navigation
+    .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: clamp(1rem, 1.5vw, 2rem);
+
+        a {
+            text-decoration: none;
+            font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+            transition: all 0.3s ease;
+        }
+
+        .btn-login {
+            border: 2px solid #fff;
+            color: #fff;
+            padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+            border-radius: 50px;
+            background: transparent;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+            &:hover {
+                background: rgba(255,255,255,0.25);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            }
+        }
+
+        .btn-register {
+            background: linear-gradient(135deg, #facc15 0%, #f97316 100%);
+            color: #fff;
+            padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .topheader {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .site-nav {
+            gap: clamp(0.8rem, 1.5vw, 1.5rem);
+            margin-top: clamp(0.5rem, 1vw, 1rem);
+        }
+
+        .office-info {
+            gap: clamp(0.8rem, 1vw, 1.2rem);
+        }
+    }
+}

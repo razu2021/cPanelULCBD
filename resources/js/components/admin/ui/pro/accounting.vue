@@ -1,0 +1,62 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import { Head, Link } from '@inertiajs/vue3'
+import { route } from 'ziggy-js'
+import {Gitlab, LayoutDashboard ,ChevronDown,Component,LayoutTemplate, Columns2, SlidersVertical, MailPlus, ContactIcon, SignatureIcon, PickaxeIcon, LockIcon, WebhookIcon, LucidePieChart } from 'lucide-vue-next';
+
+
+
+// --- dropdown toggle option 
+
+const openMenus = ref<{[key:string]: boolean}>({})
+const toggleMenu = (key:string)=>{
+  openMenus.value[key] =!openMenus.value[key]
+}
+
+
+</script>
+<!-- marketing.vue ফাইলের ভেতরে এই স্ট্রাকচারটি ব্যবহার করুন -->
+<template>
+      <div class="flex flex-col space-y-1">
+        <!-- Parent Button -->
+        <button
+          @click="toggleMenu('accounting_manage')" class="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-indigo-50 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-4 h-4 flex items-center justify-center text-indigo-600"><LucidePieChart /> </span>
+            <span class="text-sm text-gray-700 font-medium">
+             Marketing Suite
+            </span>
+          </div>
+          <!-- Arrow -->
+          <span class="text-xs text-gray-400 transition-transform duration-200"
+            :class="openMenus['accounting_manage'] ? 'rotate-180 text-indigo-600' : 'rotate-0'"><ChevronDown /></span>
+        </button>
+
+        <!-- Dropdown Items -->
+        <div class="ml-6 flex flex-col space-y-1 mt-1 overflow-hidden transition-all duration-300 ease-in-out"
+          :style="openMenus['accounting_manage'] ? 'max-height: 500px;' : 'max-height: 0;'">
+          <Link href="#" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+              Email Campain 
+          </Link>
+          <Link href="#" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+             SMS Marketing
+          </Link>
+          <Link href="#" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+             Whatsapp
+          </Link>
+          <Link href="#" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+             Push Notification
+          </Link>
+          <Link href="#" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+                Audience/Subscribers
+          </Link>
+          <Link href="#" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+                Campaign Reports
+          </Link>
+          <Link href="#" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+                Social Media Planner
+          </Link>
+        </div>
+    </div>
+      <!-- ====== dropdown Site Seo end here ====== -->
+</template>

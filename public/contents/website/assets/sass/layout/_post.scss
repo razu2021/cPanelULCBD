@@ -1,0 +1,235 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// -------------- post page css start here ----------
+.all_postFilter {
+    margin-bottom: 2.5rem;
+
+    .filter_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #e2e8f0;
+
+        .filter_left {
+            h3 {
+                font-size: clamp(2.2rem, 2.5vw, 2.6rem); // 22–26px
+                font-weight: 700;
+                margin-bottom: 0.3rem;
+                color: #0f172a;
+            }
+
+            p {
+                font-size: 1.4rem;
+                color: #64748b;
+            }
+        }
+
+        .filter_right {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
+
+            /* search style (underline style) */
+            .search_box {
+                input {
+                    border: none;
+                    border-bottom: 2px solid #e2e8f0;
+                    outline: none;
+                    padding: 0.5rem 0;
+                    font-size: 1.4rem;
+                    min-width: 22rem;
+                    transition: 0.3s;
+
+                    &:focus {
+                        border-color: #3b82f6;
+                    }
+                }
+            }
+
+            /* chips */
+            .filter_chips {
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+
+                .chip {
+                    font-size: 1.3rem;
+                    padding: 0.5rem 1.2rem;
+                    border-radius: 2rem;
+                    border: 1px solid #e2e8f0;
+                    background: transparent;
+                    cursor: pointer;
+                    transition: 0.25s;
+
+                    &:hover {
+                        background: #f1f5f9;
+                    }
+
+                    &.active {
+                        background: #0f172a;
+                        color: #fff;
+                        border-color: #0f172a;
+                    }
+                }
+            }
+        }
+    }
+}
+// ----------- filter section code end her 
+
+
+.all-posts-section {
+
+    // ===== Post Card =====
+    .post_card1 {
+        background: #fff;
+        border-radius: 2rem;
+        overflow: hidden;
+        transition: 0.4s;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.08);
+
+        &:hover {
+            transform: translateY(-0.8rem);
+            box-shadow: 0 2rem 4rem rgba(0,0,0,0.15);
+
+            img {
+                transform: scale(1.1);
+            }
+
+            .overlay {
+                opacity: 1;
+            }
+        }
+
+        .card_image {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 22rem;
+                object-fit: cover;
+                transition: 0.5s;
+            }
+
+            .overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+                opacity: 0;
+                transition: 0.4s;
+            }
+
+            .category {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                background: #3b82f6;
+                color: #fff;
+                padding: 0.4rem 1rem;
+                font-size: 1.2rem;
+                border-radius: 2rem;
+            }
+        }
+
+        .card_content {
+            padding: 1.8rem;
+
+            .card_title {
+                font-size: clamp(1.8rem, 2vw, 2.2rem);
+                font-weight: 700;
+                margin-bottom: 1rem;
+                color: #0f172a;
+            }
+
+            .card_excerpt {
+                font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+                color: #64748b;
+                margin-bottom: 1.5rem;
+            }
+
+            .card_footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .date {
+                    font-size: 1.3rem;
+                    color: #94a3b8;
+                }
+
+                .read_more {
+                    font-size: 1.4rem;
+                    color: #3b82f6;
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    &:hover {
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    // ===== Sidebar =====
+    .recent_allpost {
+        padding: 2rem;
+        border-radius: 2rem;
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+
+        .sidebar-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .recent_item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+
+            img {
+                width: 6rem;
+                height: 6rem;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+
+            h6 {
+                font-size: 1.4rem;
+                margin-bottom: 0.3rem;
+            }
+
+            span {
+                font-size: 1.2rem;
+                color: #64748b;
+            }
+        }
+    }
+
+    // ===== Pagination =====
+    .modern-pagination {
+        .page-link {
+            border-radius: 1rem;
+            margin: 0 0.3rem;
+            font-size: 1.4rem;
+            padding: 0.6rem 1.2rem;
+        }
+
+        .active .page-link {
+            background: #3b82f6;
+            border: none;
+        }
+    }
+}
+
