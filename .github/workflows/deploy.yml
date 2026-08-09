@@ -45,6 +45,8 @@ jobs:
           source: "."
           target: "domains/ulcbd.org/public_html/"
           rm: false
+          timeout: 100s
+          command_timeout: 10m
 
       # ৪. হোস্টিং সার্ভারে গিয়ে লারাভেল কমান্ড রান করা
       - name: Post-deployment Commands
