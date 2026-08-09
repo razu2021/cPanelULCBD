@@ -15,6 +15,14 @@
     {{-- ============= include header section ================== --}}
 </head>
 <body>
+
+<div class="text-center p-2 ">
+    <h1>Website Under Maintenance</h1>
+    <p>We are currently upgrading our systems to serve you better. The website will be back online shortly. Thank you for your patience!
+</p>
+
+</div>
+
 @includeif('frontend/components/ui/announcement')
 
 
