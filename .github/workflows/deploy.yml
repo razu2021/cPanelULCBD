@@ -21,7 +21,7 @@ jobs:
           extensions: mbstring, bcmath, curl, openssl, xml, zip
 
       - name: Install Composer Dependencies
-        run: composer install --no-progress --no-interaction --prefer-dist
+        run: composer install --no-progress --no-interaction --prefer-dist --no-scripts
 
       # ২. Node.js সেটআপ এবং Vite Build
       - name: Setup Node.js

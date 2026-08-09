@@ -18,7 +18,7 @@
 @includeif('frontend/components/ui/announcement')
 
 
-<!-- <div class="snake-scroll-wrapper">
+<div class="snake-scroll-wrapper">
     <div class="snake-icon-root">
         <div class="ball-3d-box">
             <div class="globe-content">
@@ -27,7 +27,7 @@
             <div class="ball-reflection"></div>
         </div>
     </div>
-</div> -->
+</div>
 <div id="cursor-ripple-container"></div>
 
     {{-- ============= include header section ================== --}}
