@@ -44,7 +44,7 @@
                     <div class="video-wrapper mt-5">
                         <h4 class="mb-4">Overview</h4>
                         <div class="ratio ratio-16x9 shadow-lg rounded-custom overflow-hidden">
-                            <iframe src="{{ $data->video_url ?? 'https://www.youtube.com/embed/dQw4w9WgXcQ' }}" title="YouTube video" allowfullscreen></iframe>
+                            <iframe src="{{ $data->video_url ?? '' }}" title="YouTube video" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
 
-                    <div class="sidebar-box">
+                    <!-- <div class="sidebar-box">
                         <h4 class="sidebar-title">Related Tags</h4>
                         <div class="tag-container">
                             <span class="tag-pill">#Laravel</span>
@@ -76,7 +76,7 @@
                             <span class="tag-pill">#Animation</span>
                             <span class="tag-pill">#E-commerce</span>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="info-footer mt-4 text-center">
                         <p>Last Updated: 2 Hours Ago</p>
