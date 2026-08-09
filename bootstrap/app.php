@@ -30,7 +30,7 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
 
         // -------- global middleware register -----------
-        $middleware->prepend(\App\Http\Middleware\VerifyLicense::class);
+       // $middleware->prepend(\App\Http\Middleware\VerifyLicense::class);
 
 
 
