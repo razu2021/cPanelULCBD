@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           source: "."
-          target: "domains/globalguideguru.com/public_html/reversit"
+          target: "domains/ulcbd.org/public_html/"
           rm: false
 
       # ৪. হোস্টিং সার্ভারে গিয়ে লারাভেল কমান্ড রান করা
@@ -55,7 +55,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd domains/globalguideguru.com/public_html/reversit
+            cd domains/ulcbd.org/public_html/
             # প্রোডাকশন মোডে ভেন্ডর ফাইল আপডেট
             composer install --no-dev --optimize-autoloader
             # ডাটাবেস মাইগ্রেশন (ফোর্স মোড প্রোডাকশনের জন্য নিরাপদ)
