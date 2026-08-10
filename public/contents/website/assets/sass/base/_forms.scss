@@ -1,0 +1,511 @@
+//-----------------------------------------------------------------------------------------
+// LAW FIRM APPOINTMENT SECTION SCSS (1rem = 10px Base)
+//-----------------------------------------------------------------------------------------
+
+.appointment-section {
+    background: radial-gradient(circle at 10% 20%, #0c1322 0%, #060911 100%);
+    padding-top: clamp(4rem, 8vw, 8rem);
+    padding-bottom: clamp(4rem, 8vw, 8rem);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+
+    // Background Glow Effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: -10rem;
+        right: -10rem;
+        width: clamp(25rem, 40vw, 50rem);
+        height: clamp(25rem, 40vw, 50rem);
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+        pointer-events: none;
+    }
+
+    // Subtitle Badge
+    .badge-subtitle {
+        background: rgba(212, 175, 55, 0.12);
+        color: #d4af37;
+        border: 0.1rem solid rgba(212, 175, 55, 0.3);
+        padding: 0.6rem 1.4rem;
+        border-radius: 5rem;
+        font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+    }
+
+    // Section Title
+    .section-title {
+        font-size: clamp(2.4rem, 3.5vw, 3.8rem);
+        font-weight: 700;
+        line-height: 1.2;
+        color: #ffffff;
+
+        span {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .section-desc {
+        font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+        color: #a0aec0;
+        line-height: 1.6;
+    }
+
+    // Feature Cards
+    .features-list {
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 0.1rem solid rgba(255, 255, 255, 0.06);
+            padding: 1.4rem 1.8rem;
+            border-radius: 1.2rem;
+            backdrop-filter: blur(1rem);
+
+            .icon-box {
+                width: clamp(3.8rem, 4.5vw, 4.5rem);
+                height: clamp(3.8rem, 4.5vw, 4.5rem);
+                background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #d4af37;
+                font-size: clamp(1.8rem, 2vw, 2.2rem);
+                flex-shrink: 0;
+            }
+
+            h4 {
+                font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 0.2rem;
+            }
+
+            p {
+                font-size: clamp(1.1rem, 1.3vw, 1.2rem);
+                color: #8a99ad;
+                margin: 0;
+            }
+        }
+    }
+
+    // Emergency Call Card
+    .call-card {
+        background: linear-gradient(90deg, rgba(212, 175, 55, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+        border-left: 0.3rem solid #d4af37;
+        padding: 1.4rem 1.8rem;
+        border-radius: 0.8rem;
+
+        .call-icon {
+            font-size: clamp(2rem, 2.5vw, 2.5rem);
+            color: #d4af37;
+        }
+
+        span {
+            font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+        }
+
+        a {
+            font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+
+            &:hover {
+                color: #d4af37;
+            }
+        }
+    }
+
+    // Form Container (Glassmorphism Card)
+    .appointment-card {
+        background: rgba(18, 26, 43, 0.75);
+        border: 0.1rem solid rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        padding: clamp(2rem, 4vw, 4rem);
+        backdrop-filter: blur(2rem);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+
+        .card-header-text {
+            h3 {
+                font-size: clamp(2rem, 2.5vw, 2.6rem);
+                font-weight: 700;
+                color: #ffffff;
+            }
+
+            p {
+                font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+                color: #8a99ad;
+            }
+        }
+    }
+
+    // Form Field Styling
+    .input-group-custom {
+        .form-label {
+            font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+            font-weight: 500;
+            color: #d1d5db;
+            margin-bottom: 0.6rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .input-icon {
+                position: absolute;
+                left: 1.4rem;
+                color: #d4af37;
+                font-size: clamp(1.5rem, 1.6vw, 1.6rem);
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            .form-control,
+            .form-select {
+                background: rgba(255, 255, 255, 0.04);
+                border: 0.1rem solid rgba(255, 255, 255, 0.12);
+                border-radius: 1rem;
+                padding: clamp(1rem, 1.2vw, 1.2rem) 1.4rem 1rem 4.2rem;
+                font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+                color: #ffffff;
+                transition: all 0.3s ease;
+
+                &::placeholder {
+                    color: #4b5563;
+                }
+
+                &:focus {
+                    background: rgba(255, 255, 255, 0.08);
+                    border-color: #d4af37;
+                    box-shadow: 0 0 1.5rem rgba(212, 175, 55, 0.2);
+                    outline: none;
+                }
+
+                option {
+                    background: #0c1322;
+                    color: #ffffff;
+                }
+            }
+
+            textarea.form-control {
+                padding-top: 1.2rem;
+            }
+        }
+    }
+
+    // Submit Button
+    .btn-submit {
+        background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+        color: #060911;
+        font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+        font-weight: 600;
+        padding: clamp(1.2rem, 1.5vw, 1.5rem) 2.4rem;
+        border-radius: 1rem;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 0.8rem 2rem rgba(212, 175, 55, 0.25);
+
+        i {
+            font-size: clamp(2rem, 2.2vw, 2.2rem);
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            background: linear-gradient(135deg, #e5be48 0%, #be9312 100%);
+            transform: translateY(-0.2rem);
+            box-shadow: 0 1.2rem 2.5rem rgba(212, 175, 55, 0.35);
+
+            i {
+                transform: translateX(0.4rem);
+            }
+        }
+    }
+}
+
+// Tablet and Desktop Adjustments (Desktop First overrides if needed)
+@media (min-width: 992px) {
+    .appointment-section {
+        .appointment-card {
+            margin-left: 1rem;
+        }
+    }
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// CONTACT FORM SECTION SCSS (1rem = 10px Base)
+// -----------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------
+// LAW FIRM GET IN TOUCH SCSS (1rem = 10px Base)
+//-----------------------------------------------------------------------------------------
+
+.get-in-touch-section {
+    background: #060911;
+    padding-top: clamp(4rem, 8vw, 8rem);
+    padding-bottom: clamp(4rem, 8vw, 8rem);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+
+    // Subtle background accent light
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -15rem;
+        left: -15rem;
+        width: clamp(25rem, 40vw, 50rem);
+        height: clamp(25rem, 40vw, 50rem);
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+        pointer-events: none;
+    }
+
+    // Badge Subtitle
+    .badge-subtitle {
+        background: rgba(212, 175, 55, 0.1);
+        color: #d4af37;
+        border: 0.1rem solid rgba(212, 175, 55, 0.25);
+        padding: 0.6rem 1.6rem;
+        border-radius: 5rem;
+        font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+    }
+
+    // Section Title & Desc
+    .section-title {
+        font-size: clamp(2.4rem, 3.5vw, 3.8rem);
+        font-weight: 700;
+        line-height: 1.25;
+        color: #ffffff;
+
+        span {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .section-desc {
+        font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+        color: #94a3b8;
+        line-height: 1.6;
+    }
+
+    // Left Cards Area
+    .contact-info-wrapper {
+        .info-card {
+            background: rgba(18, 26, 43, 0.6);
+            border: 0.1rem solid rgba(255, 255, 255, 0.08);
+            padding: clamp(1.4rem, 1.8vw, 2rem);
+            border-radius: 1.4rem;
+            backdrop-filter: blur(1rem);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+
+            &:hover {
+                transform: translateY(-0.2rem);
+                border-color: rgba(212, 175, 55, 0.4);
+            }
+
+            .icon-box {
+                width: clamp(3.8rem, 4.2vw, 4.5rem);
+                height: clamp(3.8rem, 4.2vw, 4.5rem);
+                background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.03) 100%);
+                border-radius: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #d4af37;
+                font-size: clamp(1.8rem, 2vw, 2.2rem);
+                flex-shrink: 0;
+            }
+
+            h4 {
+                font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 0.4rem;
+            }
+
+            p {
+                font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+                color: #94a3b8;
+                margin: 0;
+                line-height: 1.5;
+
+                a {
+                    color: #cbd5e1;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #d4af37;
+                    }
+                }
+            }
+
+            .text-closed {
+                font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+                color: #ef4444;
+                font-weight: 500;
+            }
+        }
+
+        // Social Card
+        .social-links-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 0.1rem solid rgba(255, 255, 255, 0.06);
+            border-radius: 1.4rem;
+
+            span {
+                font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+                color: #e2e8f0;
+                font-weight: 500;
+            }
+
+            .social-btn {
+                width: clamp(3.6rem, 4vw, 4rem);
+                height: clamp(3.6rem, 4vw, 4rem);
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.05);
+                border: 0.1rem solid rgba(255, 255, 255, 0.1);
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+                text-decoration: none;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover {
+                    background: #d4af37;
+                    color: #060911;
+                    border-color: #d4af37;
+                    transform: translateY(-0.3rem);
+                    box-shadow: 0 0.8rem 1.6rem rgba(212, 175, 55, 0.3);
+                }
+            }
+        }
+    }
+
+    // Contact Form Glass Box
+    .contact-form-card {
+        background: rgba(18, 26, 43, 0.75);
+        border: 0.1rem solid rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        padding: clamp(2rem, 4vw, 4rem);
+        backdrop-filter: blur(2rem);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+
+        .form-header {
+            h3 {
+                font-size: clamp(2rem, 2.4vw, 2.6rem);
+                font-weight: 700;
+                color: #ffffff;
+            }
+
+            p {
+                font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+                color: #8a99ad;
+            }
+        }
+    }
+
+    // Input Group Custom
+    .input-group-custom {
+        .form-label {
+            font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+            font-weight: 500;
+            color: #d1d5db;
+            margin-bottom: 0.6rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .input-icon {
+                position: absolute;
+                left: 1.4rem;
+                color: #d4af37;
+                font-size: clamp(1.5rem, 1.6vw, 1.6rem);
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            .form-control {
+                background: rgba(255, 255, 255, 0.04);
+                border: 0.1rem solid rgba(255, 255, 255, 0.12);
+                border-radius: 1rem;
+                padding: clamp(1rem, 1.2vw, 1.2rem) 1.4rem 1rem 4.2rem;
+                font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+                color: #ffffff;
+                transition: all 0.3s ease;
+
+                &::placeholder {
+                    color: #4b5563;
+                }
+
+                &:focus {
+                    background: rgba(255, 255, 255, 0.08);
+                    border-color: #d4af37;
+                    box-shadow: 0 0 1.5rem rgba(212, 175, 55, 0.2);
+                    outline: none;
+                }
+            }
+
+            textarea.form-control {
+                padding-top: 1.2rem;
+            }
+        }
+    }
+
+    // Submit Button
+    .btn-send {
+        background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+        color: #060911;
+        font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+        font-weight: 600;
+        padding: clamp(1.2rem, 1.5vw, 1.5rem) 2.4rem;
+        border-radius: 1rem;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 0.8rem 2rem rgba(212, 175, 55, 0.2);
+
+        i {
+            font-size: clamp(1.6rem, 1.8vw, 1.8rem);
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            background: linear-gradient(135deg, #e5be48 0%, #be9312 100%);
+            transform: translateY(-0.2rem);
+            box-shadow: 0 1.2rem 2.5rem rgba(212, 175, 55, 0.35);
+
+            i {
+                transform: translate(0.3rem, -0.3rem);
+            }
+        }
+    }
+}

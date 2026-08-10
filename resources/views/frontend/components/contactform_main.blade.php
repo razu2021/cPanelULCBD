@@ -1,3 +1,4 @@
+
 <section class="contact py-5">
   <div class="container">
     <!-- Header -->
@@ -12,21 +13,29 @@
       <div class="col-12 col-md-5">
         <div class="contact__info">
           <h4>Contact Information</h4>
-
+          @if($siteemails)
+          @foreach($siteemails->take(3) as $email)
           <div class="contact__item">
             <span>📧</span>
-            <p>info@example.com</p>
+            <p><a href="mailto:{{$email->email ?? '#'}}">{{$email->email ?? ''}}</a></p>
           </div>
+          @endforeach
+          @endif
 
+          @if($sitephones)
+          @foreach($sitephones->take(3) as $phone)
           <div class="contact__item">
             <span>📞</span>
-            <p>+880 1234 567 890</p>
+            <p><a href="tel:{{$phone->phone ?? ''}}">{{$phone->phone ?? ''}}</a></p>
           </div>
+          @endforeach
+          @endif
 
-          <div class="contact__item">
+          <!-- <div class="contact__item">
             <span>📍</span>
             <p>Dhaka, Bangladesh</p>
-          </div>
+          </div> -->
+
         </div>
       </div>
 

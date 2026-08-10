@@ -53,6 +53,10 @@ export const allsections: sections[] = [
         name : 'Embed Google map Section defualt'
     },
     {
+        key: 'getAppointment_main',
+        name : 'Get Appointment Section defualt'
+    },
+    {
         key: 'hero_main',
         name : 'Hero Section defualt'
     },

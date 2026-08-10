@@ -16,14 +16,8 @@
 </head>
 <body>
 
-<div class="text-center p-2 bg-warning">
-    <h1>Website Under Maintenance</h1>
-    <p>We are currently upgrading our systems to serve you better. The website will be back online shortly. Thank you for your patience!
-</p>
-
-</div>
-
 @includeif('frontend/components/ui/announcement')
+@includeif('frontend/components/ui/maintainance_header')
 
 
 <!-- <div class="snake-scroll-wrapper">

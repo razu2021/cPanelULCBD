@@ -145,6 +145,420 @@ html {
     background: #fff;
   }
 }
+.appointment-section {
+  background: radial-gradient(circle at 10% 20%, #0c1322 0%, #060911 100%);
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.appointment-section::before {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+  width: clamp(25rem, 40vw, 50rem);
+  height: clamp(25rem, 40vw, 50rem);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+.appointment-section .badge-subtitle {
+  background: rgba(212, 175, 55, 0.12);
+  color: #d4af37;
+  border: 0.1rem solid rgba(212, 175, 55, 0.3);
+  padding: 0.6rem 1.4rem;
+  border-radius: 5rem;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+.appointment-section .section-title {
+  font-size: clamp(2.4rem, 3.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+.appointment-section .section-title span {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.appointment-section .section-desc {
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+  color: #a0aec0;
+  line-height: 1.6;
+}
+.appointment-section .features-list .feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.1rem solid rgba(255, 255, 255, 0.06);
+  padding: 1.4rem 1.8rem;
+  border-radius: 1.2rem;
+  backdrop-filter: blur(1rem);
+}
+.appointment-section .features-list .feature-card .icon-box {
+  width: clamp(3.8rem, 4.5vw, 4.5rem);
+  height: clamp(3.8rem, 4.5vw, 4.5rem);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  flex-shrink: 0;
+}
+.appointment-section .features-list .feature-card h4 {
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+.appointment-section .features-list .feature-card p {
+  font-size: clamp(1.1rem, 1.3vw, 1.2rem);
+  color: #8a99ad;
+  margin: 0;
+}
+.appointment-section .call-card {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-left: 0.3rem solid #d4af37;
+  padding: 1.4rem 1.8rem;
+  border-radius: 0.8rem;
+}
+.appointment-section .call-card .call-icon {
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  color: #d4af37;
+}
+.appointment-section .call-card span {
+  font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+.appointment-section .call-card a {
+  font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+.appointment-section .call-card a:hover {
+  color: #d4af37;
+}
+.appointment-section .appointment-card {
+  background: rgba(18, 26, 43, 0.75);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: clamp(2rem, 4vw, 4rem);
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+}
+.appointment-section .appointment-card .card-header-text h3 {
+  font-size: clamp(2rem, 2.5vw, 2.6rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+.appointment-section .appointment-card .card-header-text p {
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  color: #8a99ad;
+}
+.appointment-section .input-group-custom .form-label {
+  font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 0.6rem;
+}
+.appointment-section .input-group-custom .input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.appointment-section .input-group-custom .input-wrapper .input-icon {
+  position: absolute;
+  left: 1.4rem;
+  color: #d4af37;
+  font-size: clamp(1.5rem, 1.6vw, 1.6rem);
+  pointer-events: none;
+  z-index: 2;
+}
+.appointment-section .input-group-custom .input-wrapper .form-control,
+.appointment-section .input-group-custom .input-wrapper .form-select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.1rem solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: clamp(1rem, 1.2vw, 1.2rem) 1.4rem 1rem 4.2rem;
+  font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.appointment-section .input-group-custom .input-wrapper .form-control::-moz-placeholder, .appointment-section .input-group-custom .input-wrapper .form-select::-moz-placeholder {
+  color: #4b5563;
+}
+.appointment-section .input-group-custom .input-wrapper .form-control::placeholder,
+.appointment-section .input-group-custom .input-wrapper .form-select::placeholder {
+  color: #4b5563;
+}
+.appointment-section .input-group-custom .input-wrapper .form-control:focus,
+.appointment-section .input-group-custom .input-wrapper .form-select:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #d4af37;
+  box-shadow: 0 0 1.5rem rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+.appointment-section .input-group-custom .input-wrapper .form-control option,
+.appointment-section .input-group-custom .input-wrapper .form-select option {
+  background: #0c1322;
+  color: #ffffff;
+}
+.appointment-section .input-group-custom .input-wrapper textarea.form-control {
+  padding-top: 1.2rem;
+}
+.appointment-section .btn-submit {
+  background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+  color: #060911;
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  font-weight: 600;
+  padding: clamp(1.2rem, 1.5vw, 1.5rem) 2.4rem;
+  border-radius: 1rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0.8rem 2rem rgba(212, 175, 55, 0.25);
+}
+.appointment-section .btn-submit i {
+  font-size: clamp(2rem, 2.2vw, 2.2rem);
+  transition: transform 0.3s ease;
+}
+.appointment-section .btn-submit:hover {
+  background: linear-gradient(135deg, #e5be48 0%, #be9312 100%);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.2rem 2.5rem rgba(212, 175, 55, 0.35);
+}
+.appointment-section .btn-submit:hover i {
+  transform: translateX(0.4rem);
+}
+
+@media (min-width: 992px) {
+  .appointment-section .appointment-card {
+    margin-left: 1rem;
+  }
+}
+.get-in-touch-section {
+  background: #060911;
+  padding-top: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.get-in-touch-section::after {
+  content: "";
+  position: absolute;
+  bottom: -15rem;
+  left: -15rem;
+  width: clamp(25rem, 40vw, 50rem);
+  height: clamp(25rem, 40vw, 50rem);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+.get-in-touch-section .badge-subtitle {
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+  border: 0.1rem solid rgba(212, 175, 55, 0.25);
+  padding: 0.6rem 1.6rem;
+  border-radius: 5rem;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+.get-in-touch-section .section-title {
+  font-size: clamp(2.4rem, 3.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+}
+.get-in-touch-section .section-title span {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.get-in-touch-section .section-desc {
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+  color: #94a3b8;
+  line-height: 1.6;
+}
+.get-in-touch-section .contact-info-wrapper .info-card {
+  background: rgba(18, 26, 43, 0.6);
+  border: 0.1rem solid rgba(255, 255, 255, 0.08);
+  padding: clamp(1.4rem, 1.8vw, 2rem);
+  border-radius: 1.4rem;
+  backdrop-filter: blur(1rem);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.get-in-touch-section .contact-info-wrapper .info-card:hover {
+  transform: translateY(-0.2rem);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+.get-in-touch-section .contact-info-wrapper .info-card .icon-box {
+  width: clamp(3.8rem, 4.2vw, 4.5rem);
+  height: clamp(3.8rem, 4.2vw, 4.5rem);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.03) 100%);
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  flex-shrink: 0;
+}
+.get-in-touch-section .contact-info-wrapper .info-card h4 {
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+.get-in-touch-section .contact-info-wrapper .info-card p {
+  font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+.get-in-touch-section .contact-info-wrapper .info-card p a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.get-in-touch-section .contact-info-wrapper .info-card p a:hover {
+  color: #d4af37;
+}
+.get-in-touch-section .contact-info-wrapper .info-card .text-closed {
+  font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+  color: #ef4444;
+  font-weight: 500;
+}
+.get-in-touch-section .contact-info-wrapper .social-links-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 0.1rem solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.4rem;
+}
+.get-in-touch-section .contact-info-wrapper .social-links-card span {
+  font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+  color: #e2e8f0;
+  font-weight: 500;
+}
+.get-in-touch-section .contact-info-wrapper .social-links-card .social-btn {
+  width: clamp(3.6rem, 4vw, 4rem);
+  height: clamp(3.6rem, 4vw, 4rem);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.get-in-touch-section .contact-info-wrapper .social-links-card .social-btn:hover {
+  background: #d4af37;
+  color: #060911;
+  border-color: #d4af37;
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.8rem 1.6rem rgba(212, 175, 55, 0.3);
+}
+.get-in-touch-section .contact-form-card {
+  background: rgba(18, 26, 43, 0.75);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: clamp(2rem, 4vw, 4rem);
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+}
+.get-in-touch-section .contact-form-card .form-header h3 {
+  font-size: clamp(2rem, 2.4vw, 2.6rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+.get-in-touch-section .contact-form-card .form-header p {
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  color: #8a99ad;
+}
+.get-in-touch-section .input-group-custom .form-label {
+  font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 0.6rem;
+}
+.get-in-touch-section .input-group-custom .input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.get-in-touch-section .input-group-custom .input-wrapper .input-icon {
+  position: absolute;
+  left: 1.4rem;
+  color: #d4af37;
+  font-size: clamp(1.5rem, 1.6vw, 1.6rem);
+  pointer-events: none;
+  z-index: 2;
+}
+.get-in-touch-section .input-group-custom .input-wrapper .form-control {
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.1rem solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: clamp(1rem, 1.2vw, 1.2rem) 1.4rem 1rem 4.2rem;
+  font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.get-in-touch-section .input-group-custom .input-wrapper .form-control::-moz-placeholder {
+  color: #4b5563;
+}
+.get-in-touch-section .input-group-custom .input-wrapper .form-control::placeholder {
+  color: #4b5563;
+}
+.get-in-touch-section .input-group-custom .input-wrapper .form-control:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #d4af37;
+  box-shadow: 0 0 1.5rem rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+.get-in-touch-section .input-group-custom .input-wrapper textarea.form-control {
+  padding-top: 1.2rem;
+}
+.get-in-touch-section .btn-send {
+  background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+  color: #060911;
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  font-weight: 600;
+  padding: clamp(1.2rem, 1.5vw, 1.5rem) 2.4rem;
+  border-radius: 1rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0.8rem 2rem rgba(212, 175, 55, 0.2);
+}
+.get-in-touch-section .btn-send i {
+  font-size: clamp(1.6rem, 1.8vw, 1.8rem);
+  transition: transform 0.3s ease;
+}
+.get-in-touch-section .btn-send:hover {
+  background: linear-gradient(135deg, #e5be48 0%, #be9312 100%);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.2rem 2.5rem rgba(212, 175, 55, 0.35);
+}
+.get-in-touch-section .btn-send:hover i {
+  transform: translate(0.3rem, -0.3rem);
+}
+
 .about9 {
   position: relative;
   padding: clamp(7rem, 10vw, 12rem) 0;
@@ -3276,94 +3690,84 @@ html {
 }
 
 .topheader {
-  background: #060115;
-  padding: clamp(1rem, 2vw, 1.5rem);
-  color: #fff;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
   backdrop-filter: blur(10px);
-}
-.topheader .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(1rem, 2vw, 2rem);
-}
-.topheader .office-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(0.8rem, 1.5vw, 1.5rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: clamp(0.5rem, 1vw, 1rem) 0;
 }
 .topheader .office-info .info-item {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.5rem, 1vw, 1rem);
-  padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #e2e8f0;
 }
 .topheader .office-info .info-item i {
-  font-size: clamp(1.4rem, 1.5vw, 1.8rem);
-  color: #fff;
-}
-.topheader .office-info .info-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  font-size: clamp(1.6rem, 1.1vw, 1.7rem);
+  color: #facc15;
 }
 .topheader .office-info .info-item span {
-  font-size: clamp(1.2rem, 1.2vw, 1.6rem);
+  font-size: clamp(1.75rem, 0.85vw, 1.875rem);
+  font-weight: 400;
 }
-.topheader .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: clamp(1rem, 1.5vw, 2rem);
+.topheader .marquee-wrapper {
+  white-space: nowrap;
+}
+.topheader .marquee-wrapper marquee {
+  display: block;
+  vertical-align: middle;
+}
+.topheader .marquee-wrapper .info-item {
+  color: #000;
+}
+.topheader .marquee-wrapper .info-item i {
+  font-size: clamp(1.85rem, 1vw, 1.1rem);
+  color: #010000;
+}
+.topheader .marquee-wrapper .info-item span {
+  font-size: clamp(1.75rem, 0.85vw, 1.875rem);
 }
 .topheader .site-nav a {
   text-decoration: none;
-  font-size: clamp(1.2rem, 1.2vw, 1.5rem);
-  transition: all 0.3s ease;
+  font-size: clamp(1.75rem, 0.85vw, 1.875rem);
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .topheader .site-nav .btn-login {
-  border: 2px solid #fff;
-  color: #fff;
-  padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: clamp(0.25rem, 0.5vw, 0.4rem) clamp(0.75rem, 1vw, 1.2rem);
   border-radius: 50px;
-  background: transparent;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
 }
 .topheader .site-nav .btn-login:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  transform: translateY(-1px);
 }
 .topheader .site-nav .btn-register {
   background: linear-gradient(135deg, #facc15 0%, #f97316 100%);
-  color: #fff;
-  padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+  color: #0f172a;
+  font-weight: 600;
+  padding: clamp(0.25rem, 0.5vw, 0.4rem) clamp(0.75rem, 1vw, 1.2rem);
   border-radius: 50px;
   border: none;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
 }
 .topheader .site-nav .btn-register:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+  color: #000000;
 }
 
-@media (max-width: 768px) {
-  .topheader .container {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 767.98px) {
+  .topheader .marquee-wrapper {
+    padding-top: 0.35rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
   }
-  .topheader .site-nav {
-    gap: clamp(0.8rem, 1.5vw, 1.5rem);
-    margin-top: clamp(0.5rem, 1vw, 1rem);
-  }
-  .topheader .office-info {
-    gap: clamp(0.8rem, 1vw, 1.2rem);
+  .topheader .site-nav a {
+    padding: 0.2rem 0.6rem;
   }
 }
 /**=============  mobile menu design and responsive slider ===========*/

@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Maintenancemode;
-
+use Illuminate\Support\Facades\Cache;
 class MaintenancemodeObserver
 {
     /**
@@ -11,7 +11,8 @@ class MaintenancemodeObserver
      */
     public function created(Maintenancemode $maintenancemode): void
     {
-        //
+        //======= forget cache ----
+        Cache::forget('maintainance');
     }
 
     /**
@@ -19,7 +20,8 @@ class MaintenancemodeObserver
      */
     public function updated(Maintenancemode $maintenancemode): void
     {
-        //
+        //======= forget cache ----
+        Cache::forget('maintainance');
     }
 
     /**
@@ -27,7 +29,8 @@ class MaintenancemodeObserver
      */
     public function deleted(Maintenancemode $maintenancemode): void
     {
-        //
+        //======= forget cache ----
+        Cache::forget('maintainance');
     }
 
     /**
@@ -35,7 +38,8 @@ class MaintenancemodeObserver
      */
     public function restored(Maintenancemode $maintenancemode): void
     {
-        //
+        //======= forget cache ----
+        Cache::forget('maintainance');
     }
 
     /**
@@ -43,6 +47,7 @@ class MaintenancemodeObserver
      */
     public function forceDeleted(Maintenancemode $maintenancemode): void
     {
-        //
+        //======= forget cache ----
+        Cache::forget('maintainance');
     }
 }

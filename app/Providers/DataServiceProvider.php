@@ -8,6 +8,7 @@ use App\Models\CategoryPage;
 use App\Models\Copyright;
 use App\Models\Customcss;
 use App\Models\Customescript;
+use App\Models\Maintenancemode;
 use App\Models\Managefooter;
 use App\Models\Manageheader;
 use App\Models\Preloader;
@@ -60,6 +61,7 @@ class DataServiceProvider extends ServiceProvider
             'siteemails' => SiteEmail::where('public_status',1)->get(['type','email','title','description']),
             'siteinfo' => SiteInfo::where('public_status',1)->first(),
             'copyright' => Copyright::where('public_status',1)->first(['receved_by','design_by','receiver_url','designer_url','receiver_icon','designer_icon']),
+            'maintainance' => Maintenancemode::where('public_status',1)->where('type','header')->first(['title','description']),
             'categorys' => CategoryPage::with([
                     'subCategory' => function ($q) {
                         $q->active()
@@ -114,7 +116,7 @@ view()->share($frontendData);
         //     /**======== Analitics & Tracking  cache  =========== */
         //     $analitics = cache()->rememberForever('AnaliticsTracking',function(){
         //         return AnaliticsTracking::where('public_status',1)->get(['key','value']);
-        //     });
+        //     //});
             
 
         //     /**======== Site Social cache  =========== */

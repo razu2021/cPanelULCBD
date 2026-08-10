@@ -436,126 +436,112 @@
 
 
 
-
-
-
-
-
-
-
-
-
 //-----------------------------------------------------------------------------------------
-// TOP HEADER CSS START HERE 
+// TOP HEADER SCSS
 //-----------------------------------------------------------------------------------------
 .topheader {
-    background: #060115;
-    padding: clamp(1rem, 2vw, 1.5rem);
-    color: #fff;
+   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     backdrop-filter: blur(10px);
-
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: clamp(1rem, 2vw, 2rem);
-    }
-    
-
-    // Office Info Cards
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: clamp(0.5rem, 1vw, 1rem) 0;       
+    // Office Info Section
     .office-info {
-        display: flex;
-        flex-wrap: wrap;
-        gap: clamp(0.8rem, 1.5vw, 1.5rem);
-
         .info-item {
-            display: flex;
-            align-items: center;
-            gap: clamp(0.5rem, 1vw, 1rem);
-            padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
-            border-radius: 1rem;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e2e8f0;
 
             i {
-                font-size: clamp(1.4rem, 1.5vw, 1.8rem);
-                color: #fff;
-            }
-
-            &:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+                font-size: clamp(1.6rem, 1.1vw, 1.7rem);
+                color: #facc15; // Accent Gold
             }
 
             span {
-                font-size: clamp(1.2rem, 1.2vw, 1.6rem);
+                font-size: clamp(1.75rem, 0.85vw, 1.875rem);
+                font-weight: 400;
+            }
+        }
+    }
+
+    // Marquee Wrapper & Content
+    .marquee-wrapper {
+        white-space: nowrap;
+
+        marquee {
+            display: block;
+            vertical-align: middle;
+        }
+
+        .info-item {
+            color: #000;
+
+            i {
+                font-size: clamp(1.85rem, 1vw, 1.1rem);
+                color: #010000; // Sky Blue Accent
+            }
+
+            span {
+                font-size: clamp(1.75rem, 0.85vw, 1.875rem);
             }
         }
     }
 
     // Site Navigation
     .site-nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: clamp(1rem, 1.5vw, 2rem);
-
         a {
             text-decoration: none;
-            font-size: clamp(1.2rem, 1.2vw, 1.5rem);
-            transition: all 0.3s ease;
+            font-size: clamp(1.75rem, 0.85vw, 1.875rem);
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-login {
-            border: 2px solid #fff;
-            color: #fff;
-            padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            padding: clamp(0.25rem, 0.5vw, 0.4rem) clamp(0.75rem, 1vw, 1.2rem);
             border-radius: 50px;
-            background: transparent;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.05);
 
             &:hover {
-                background: rgba(255,255,255,0.25);
-                transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+                background: rgba(255, 255, 255, 0.2);
+                border-color: #ffffff;
+                transform: translateY(-1px);
             }
         }
 
         .btn-register {
             background: linear-gradient(135deg, #facc15 0%, #f97316 100%);
-            color: #fff;
-            padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+            color: #0f172a;
+            font-weight: 600;
+            padding: clamp(0.25rem, 0.5vw, 0.4rem) clamp(0.75rem, 1vw, 1.2rem);
             border-radius: 50px;
             border: none;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
 
             &:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+                transform: translateY(-1px);
+                box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+                color: #000000;
             }
         }
     }
 }
 
-// Responsive
-@media (max-width: 768px) {
+// Mobile Responsive Adjustments
+@media (max-width: 767.98px) {
     .topheader {
-        .container {
-            flex-direction: column;
-            align-items: flex-start;
+        .marquee-wrapper {
+            padding-top: 0.35rem;
+            border-top: 1px dashed rgba(255, 255, 255, 0.15);
         }
 
         .site-nav {
-            gap: clamp(0.8rem, 1.5vw, 1.5rem);
-            margin-top: clamp(0.5rem, 1vw, 1rem);
-        }
-
-        .office-info {
-            gap: clamp(0.8rem, 1vw, 1.2rem);
+            a {
+                padding: 0.2rem 0.6rem;
+            }
         }
     }
 }

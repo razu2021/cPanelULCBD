@@ -155,7 +155,6 @@ class MaintenanceController extends Controller
         if($update){
             $update->update([
             'type'=>$request->type,
-            'address'=>$request->address,
             'title'=>$request->title,
             'description'=>$request->description,
             'order'=>$request->order,

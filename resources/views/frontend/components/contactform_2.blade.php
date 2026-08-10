@@ -1,7 +1,3 @@
-@extends('layouts/frontend')
-@section('web_content')
-{{-- @includeif('frontend/components/ui/team_card1') --}}
-
 <section class="get-in-touch-section py-5">
     <div class="container">
         
@@ -170,5 +166,3 @@
         </div>
     </div>
 </section>
-
-@endsection

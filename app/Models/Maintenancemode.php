@@ -2,9 +2,13 @@
 
 namespace App\Models;
 
+use App\Observers\MaintenancemodeObserver;
 use App\Traits\CacheBuster;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
+ 
+#[ObservedBy([MaintenancemodeObserver::class])]
 class Maintenancemode extends Model
 {
     use SoftDeletes,CacheBuster;

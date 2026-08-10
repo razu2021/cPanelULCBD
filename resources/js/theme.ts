@@ -115,6 +115,11 @@ export const contactFormThemes: Theme[] = [
     name: 'Theme Defualt',
     preview: 'https://picsum.photos/400/250?5'
   },
+  {
+    key: 'contactform_2',
+    name: 'Theme 2',
+    preview: 'https://picsum.photos/400/250?5'
+  },
 ];
 /**
   * ======================================================
@@ -185,6 +190,18 @@ export const googlemapsThemes: Theme[] = [
   {
     key: 'googlemap_main',
     name: 'Follow us Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+];
+/**
+  * ======================================================
+  *  Load get Appointment Section Theme 
+  * ======================================================
+  */
+export const getAppointmentThemes: Theme[] = [
+  {
+    key: 'getAppointment_main',
+    name: 'Get Appointment Theme Defualt',
     preview: 'https://picsum.photos/400/250?5'
   },
 ];
