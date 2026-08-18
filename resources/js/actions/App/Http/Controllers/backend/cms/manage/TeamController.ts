@@ -484,7 +484,7 @@ update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     update.form = updateForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::active
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:260
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:259
  * @route '/admin/dashboad/manage/section/team/active/{id}/{slug}'
  */
 export const active = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -499,7 +499,7 @@ active.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::active
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:260
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:259
  * @route '/admin/dashboad/manage/section/team/active/{id}/{slug}'
  */
 active.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -525,7 +525,7 @@ active.url = (args: { id: string | number, slug: string | number } | [id: string
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::active
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:260
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:259
  * @route '/admin/dashboad/manage/section/team/active/{id}/{slug}'
  */
 active.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -534,7 +534,7 @@ active.get = (args: { id: string | number, slug: string | number } | [id: string
 })
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::active
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:260
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:259
  * @route '/admin/dashboad/manage/section/team/active/{id}/{slug}'
  */
 active.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -544,7 +544,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::active
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:260
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:259
  * @route '/admin/dashboad/manage/section/team/active/{id}/{slug}'
  */
     const activeForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -554,7 +554,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::active
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:260
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:259
  * @route '/admin/dashboad/manage/section/team/active/{id}/{slug}'
  */
         activeForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -563,7 +563,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
         })
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::active
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:260
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:259
  * @route '/admin/dashboad/manage/section/team/active/{id}/{slug}'
  */
         activeForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -579,7 +579,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
     active.form = activeForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deactive
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:276
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:275
  * @route '/admin/dashboad/manage/section/team/deactive/{id}/{slug}'
  */
 export const deactive = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -594,7 +594,7 @@ deactive.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deactive
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:276
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:275
  * @route '/admin/dashboad/manage/section/team/deactive/{id}/{slug}'
  */
 deactive.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -620,7 +620,7 @@ deactive.url = (args: { id: string | number, slug: string | number } | [id: stri
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deactive
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:276
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:275
  * @route '/admin/dashboad/manage/section/team/deactive/{id}/{slug}'
  */
 deactive.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -629,7 +629,7 @@ deactive.get = (args: { id: string | number, slug: string | number } | [id: stri
 })
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deactive
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:276
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:275
  * @route '/admin/dashboad/manage/section/team/deactive/{id}/{slug}'
  */
 deactive.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -639,7 +639,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deactive
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:276
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:275
  * @route '/admin/dashboad/manage/section/team/deactive/{id}/{slug}'
  */
     const deactiveForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -649,7 +649,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deactive
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:276
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:275
  * @route '/admin/dashboad/manage/section/team/deactive/{id}/{slug}'
  */
         deactiveForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -658,7 +658,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
         })
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deactive
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:276
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:275
  * @route '/admin/dashboad/manage/section/team/deactive/{id}/{slug}'
  */
         deactiveForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -674,7 +674,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
     deactive.form = deactiveForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::softdelete
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:292
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:291
  * @route '/admin/dashboad/manage/section/team/softdelete/{id}'
  */
 export const softdelete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -689,7 +689,7 @@ softdelete.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::softdelete
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:292
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:291
  * @route '/admin/dashboad/manage/section/team/softdelete/{id}'
  */
 softdelete.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -717,7 +717,7 @@ softdelete.url = (args: { id: string | number } | [id: string | number ] | strin
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::softdelete
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:292
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:291
  * @route '/admin/dashboad/manage/section/team/softdelete/{id}'
  */
 softdelete.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -727,7 +727,7 @@ softdelete.delete = (args: { id: string | number } | [id: string | number ] | st
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::softdelete
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:292
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:291
  * @route '/admin/dashboad/manage/section/team/softdelete/{id}'
  */
     const softdeleteForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -742,7 +742,7 @@ softdelete.delete = (args: { id: string | number } | [id: string | number ] | st
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::softdelete
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:292
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:291
  * @route '/admin/dashboad/manage/section/team/softdelete/{id}'
  */
         softdeleteForm.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -758,7 +758,7 @@ softdelete.delete = (args: { id: string | number } | [id: string | number ] | st
     softdelete.form = softdeleteForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deleteMethod
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:307
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:306
  * @route '/admin/dashboad/manage/section/team/delete/{id}'
  */
 export const deleteMethod = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -773,7 +773,7 @@ deleteMethod.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deleteMethod
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:307
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:306
  * @route '/admin/dashboad/manage/section/team/delete/{id}'
  */
 deleteMethod.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -801,7 +801,7 @@ deleteMethod.url = (args: { id: string | number } | [id: string | number ] | str
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deleteMethod
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:307
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:306
  * @route '/admin/dashboad/manage/section/team/delete/{id}'
  */
 deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -811,7 +811,7 @@ deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | 
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deleteMethod
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:307
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:306
  * @route '/admin/dashboad/manage/section/team/delete/{id}'
  */
     const deleteMethodForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -826,7 +826,7 @@ deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | 
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::deleteMethod
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:307
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:306
  * @route '/admin/dashboad/manage/section/team/delete/{id}'
  */
         deleteMethodForm.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -842,7 +842,7 @@ deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | 
     deleteMethod.form = deleteMethodForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::recycle
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:336
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:335
  * @route '/admin/dashboad/manage/section/team/recycle'
  */
 export const recycle = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -857,7 +857,7 @@ recycle.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::recycle
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:336
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:335
  * @route '/admin/dashboad/manage/section/team/recycle'
  */
 recycle.url = (options?: RouteQueryOptions) => {
@@ -866,7 +866,7 @@ recycle.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::recycle
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:336
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:335
  * @route '/admin/dashboad/manage/section/team/recycle'
  */
 recycle.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -875,7 +875,7 @@ recycle.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::recycle
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:336
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:335
  * @route '/admin/dashboad/manage/section/team/recycle'
  */
 recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -885,7 +885,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::recycle
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:336
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:335
  * @route '/admin/dashboad/manage/section/team/recycle'
  */
     const recycleForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -895,7 +895,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::recycle
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:336
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:335
  * @route '/admin/dashboad/manage/section/team/recycle'
  */
         recycleForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -904,7 +904,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::recycle
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:336
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:335
  * @route '/admin/dashboad/manage/section/team/recycle'
  */
         recycleForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -920,7 +920,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     recycle.form = recycleForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::bulkAction
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:370
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:369
  * @route '/admin/dashboad/manage/section/team/bulk/action'
  */
 export const bulkAction = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -935,7 +935,7 @@ bulkAction.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::bulkAction
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:370
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:369
  * @route '/admin/dashboad/manage/section/team/bulk/action'
  */
 bulkAction.url = (options?: RouteQueryOptions) => {
@@ -944,7 +944,7 @@ bulkAction.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::bulkAction
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:370
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:369
  * @route '/admin/dashboad/manage/section/team/bulk/action'
  */
 bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -954,7 +954,7 @@ bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::bulkAction
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:370
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:369
  * @route '/admin/dashboad/manage/section/team/bulk/action'
  */
     const bulkActionForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -964,7 +964,7 @@ bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::bulkAction
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:370
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:369
  * @route '/admin/dashboad/manage/section/team/bulk/action'
  */
         bulkActionForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -975,7 +975,7 @@ bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     bulkAction.form = bulkActionForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::exportPdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:475
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:474
  * @route '/admin/dashboad/manage/section/team/export/single/pdf/{id}/{slug}'
  */
 export const exportPdf = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -990,7 +990,7 @@ exportPdf.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::exportPdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:475
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:474
  * @route '/admin/dashboad/manage/section/team/export/single/pdf/{id}/{slug}'
  */
 exportPdf.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -1016,7 +1016,7 @@ exportPdf.url = (args: { id: string | number, slug: string | number } | [id: str
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::exportPdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:475
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:474
  * @route '/admin/dashboad/manage/section/team/export/single/pdf/{id}/{slug}'
  */
 exportPdf.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1025,7 +1025,7 @@ exportPdf.get = (args: { id: string | number, slug: string | number } | [id: str
 })
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::exportPdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:475
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:474
  * @route '/admin/dashboad/manage/section/team/export/single/pdf/{id}/{slug}'
  */
 exportPdf.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1035,7 +1035,7 @@ exportPdf.head = (args: { id: string | number, slug: string | number } | [id: st
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::exportPdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:475
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:474
  * @route '/admin/dashboad/manage/section/team/export/single/pdf/{id}/{slug}'
  */
     const exportPdfForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1045,7 +1045,7 @@ exportPdf.head = (args: { id: string | number, slug: string | number } | [id: st
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::exportPdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:475
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:474
  * @route '/admin/dashboad/manage/section/team/export/single/pdf/{id}/{slug}'
  */
         exportPdfForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1054,7 +1054,7 @@ exportPdf.head = (args: { id: string | number, slug: string | number } | [id: st
         })
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::exportPdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:475
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:474
  * @route '/admin/dashboad/manage/section/team/export/single/pdf/{id}/{slug}'
  */
         exportPdfForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1070,7 +1070,7 @@ exportPdf.head = (args: { id: string | number, slug: string | number } | [id: st
     exportPdf.form = exportPdfForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_excel
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:504
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:503
  * @route '/admin/dashboad/manage/section/team/export/excel'
  */
 export const export_excel = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1085,7 +1085,7 @@ export_excel.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_excel
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:504
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:503
  * @route '/admin/dashboad/manage/section/team/export/excel'
  */
 export_excel.url = (options?: RouteQueryOptions) => {
@@ -1094,7 +1094,7 @@ export_excel.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_excel
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:504
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:503
  * @route '/admin/dashboad/manage/section/team/export/excel'
  */
 export_excel.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1103,7 +1103,7 @@ export_excel.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_excel
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:504
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:503
  * @route '/admin/dashboad/manage/section/team/export/excel'
  */
 export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1113,7 +1113,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_excel
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:504
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:503
  * @route '/admin/dashboad/manage/section/team/export/excel'
  */
     const export_excelForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1123,7 +1123,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_excel
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:504
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:503
  * @route '/admin/dashboad/manage/section/team/export/excel'
  */
         export_excelForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1132,7 +1132,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_excel
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:504
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:503
  * @route '/admin/dashboad/manage/section/team/export/excel'
  */
         export_excelForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1148,7 +1148,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     export_excel.form = export_excelForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_csv
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:511
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:510
  * @route '/admin/dashboad/manage/section/team/export/csv'
  */
 export const export_csv = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1163,7 +1163,7 @@ export_csv.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_csv
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:511
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:510
  * @route '/admin/dashboad/manage/section/team/export/csv'
  */
 export_csv.url = (options?: RouteQueryOptions) => {
@@ -1172,7 +1172,7 @@ export_csv.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_csv
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:511
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:510
  * @route '/admin/dashboad/manage/section/team/export/csv'
  */
 export_csv.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1181,7 +1181,7 @@ export_csv.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_csv
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:511
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:510
  * @route '/admin/dashboad/manage/section/team/export/csv'
  */
 export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1191,7 +1191,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_csv
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:511
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:510
  * @route '/admin/dashboad/manage/section/team/export/csv'
  */
     const export_csvForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1201,7 +1201,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_csv
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:511
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:510
  * @route '/admin/dashboad/manage/section/team/export/csv'
  */
         export_csvForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1210,7 +1210,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_csv
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:511
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:510
  * @route '/admin/dashboad/manage/section/team/export/csv'
  */
         export_csvForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1226,7 +1226,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     export_csv.form = export_csvForm
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_pdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:489
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:488
  * @route '/admin/dashboad/manage/section/team/export/pdf'
  */
 export const export_pdf = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1241,7 +1241,7 @@ export_pdf.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_pdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:489
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:488
  * @route '/admin/dashboad/manage/section/team/export/pdf'
  */
 export_pdf.url = (options?: RouteQueryOptions) => {
@@ -1250,7 +1250,7 @@ export_pdf.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_pdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:489
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:488
  * @route '/admin/dashboad/manage/section/team/export/pdf'
  */
 export_pdf.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1259,7 +1259,7 @@ export_pdf.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_pdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:489
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:488
  * @route '/admin/dashboad/manage/section/team/export/pdf'
  */
 export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1269,7 +1269,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_pdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:489
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:488
  * @route '/admin/dashboad/manage/section/team/export/pdf'
  */
     const export_pdfForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1279,7 +1279,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_pdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:489
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:488
  * @route '/admin/dashboad/manage/section/team/export/pdf'
  */
         export_pdfForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1288,7 +1288,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\manage\TeamController::export_pdf
- * @see app/Http/Controllers/backend/cms/manage/TeamController.php:489
+ * @see app/Http/Controllers/backend/cms/manage/TeamController.php:488
  * @route '/admin/dashboad/manage/section/team/export/pdf'
  */
         export_pdfForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({

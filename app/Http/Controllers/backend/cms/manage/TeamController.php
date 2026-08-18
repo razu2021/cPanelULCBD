@@ -202,7 +202,6 @@ class TeamController extends Controller
             'short_des'=>$request->short_des,
             'description'=>$request->description,
             'order'=>$request->order,
-            'url'=>$url,
             'public_status'=>$request->public_status ?? 0,
             'editor_id' => $editor_id,
             'updated_at' => Carbon::now()->toDateTimeString(),

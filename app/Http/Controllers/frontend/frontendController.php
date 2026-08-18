@@ -211,7 +211,10 @@ public function childCategoryPage($category, $subcategory, $childcategory) {
     // ================= News functionality end hre =================
     public function teamDetails($id,$slug){
         $all = Team::where('public_status', 1)->where('id', '!=', $id)->inRandomOrder()->take(6)->get();
-        $data = Team::where('id',$id)->where('url',$slug)->firstOrFail();
+        $data = Team::with(['tags'=>function($query){
+            $query->where('type','skills');
+
+        }])->where('id',$id)->where('url',$slug)->firstOrFail();
         return view('frontend.detailsPages.team_details',compact('data','all'));
     }
     // ================= News functionality end hre =================

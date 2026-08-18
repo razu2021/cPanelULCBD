@@ -509,3 +509,158 @@
         }
     }
 }
+
+
+
+
+// use contact form one 
+.contact-card {
+  background: #ffffff;
+  padding: clamp(2rem, 4vw, 4rem);
+  border-radius: clamp(1.2rem, 2vw, 2rem);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  border: 0.1rem solid #eef2f6;
+
+  .form-alert {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: clamp(1.2rem, 1.5vw, 1.6rem);
+    background-color: #fef2f2;
+    border: 0.1rem solid #fecaca;
+    color: #dc2626;
+    border-radius: clamp(0.8rem, 1vw, 1.2rem);
+    font-size: clamp(1.3rem, 1.4vw, 1.5rem);
+    margin-bottom: clamp(2rem, 3vw, 2.8rem);
+
+    i {
+      font-size: clamp(1.6rem, 1.8vw, 2rem);
+    }
+  }
+
+  .form-field {
+    position: relative;
+
+    .form-control {
+      width: 100%;
+      height: clamp(5rem, 5.5vw, 6rem);
+      padding: clamp(1.8rem, 2vw, 2.2rem) clamp(1.4rem, 1.6vw, 1.8rem) clamp(0.8rem, 1vw, 1rem);
+      font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+      color: #1e293b;
+      background-color: #f8fafc;
+      border: 0.15rem solid #e2e8f0;
+      border-radius: clamp(0.8rem, 1.2vw, 1.4rem);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:focus {
+        background-color: #ffffff;
+        border-color: #6366f1;
+        box-shadow: 0 0 0 0.4rem rgba(99, 102, 241, 0.12);
+        outline: none;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      // Floating label dynamics
+      &:focus ~ label,
+      &:not(:placeholder-shown) ~ label {
+        transform: translateY(-1.2rem) scale(0.85);
+        color: #6366f1;
+      }
+
+      &.is-invalid {
+        border-color: #ef4444;
+
+        &:focus {
+          box-shadow: 0 0 0 0.4rem rgba(239, 68, 68, 0.12);
+        }
+
+        ~ label {
+          color: #ef4444;
+        }
+      }
+    }
+
+    textarea.form-control {
+      height: clamp(12rem, 15vw, 18rem);
+      resize: vertical;
+    }
+
+    label {
+      position: absolute;
+      top: clamp(1.4rem, 1.6vw, 1.8rem);
+      left: clamp(1.4rem, 1.6vw, 1.8rem);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+      color: #64748b;
+      pointer-events: none;
+      transform-origin: left top;
+      transition: all 0.2s ease-in-out;
+
+      i {
+        font-size: clamp(1.6rem, 1.7vw, 1.8rem);
+      }
+    }
+  }
+
+  .field-error {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: clamp(1.2rem, 1.3vw, 1.3rem);
+    color: #ef4444;
+    margin-top: 0.6rem;
+    padding-left: 0.4rem;
+    font-weight: 500;
+
+    i {
+      font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+    }
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: clamp(1.4rem, 1.8vw, 1.8rem) clamp(2rem, 2.5vw, 3rem);
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: clamp(0.8rem, 1.2vw, 1.4rem);
+    font-size: clamp(1.5rem, 1.6vw, 1.7rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.4rem 1.2rem rgba(79, 70, 229, 0.25);
+
+    .btn-content {
+     // display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+
+      i {
+        font-size: clamp(1.6rem, 1.7vw, 1.8rem);
+      }
+    }
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0.8rem 2rem rgba(79, 70, 229, 0.35);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+}
+

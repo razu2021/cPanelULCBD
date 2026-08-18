@@ -13,7 +13,7 @@
                     </div>
                     
                     <div class="info-text">
-                        <h4>{{$team->name ?? ''}}</h4>
+                        <h4><a href="{{ route('details.team',[$team->id,$team->url]) }}">{{ $team->name ?? 'Team Member' }}</a></h4>
                         <p>{{$team->designation ?? ''}}</p>
                     </div>
 

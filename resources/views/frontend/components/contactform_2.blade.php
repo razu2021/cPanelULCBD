@@ -24,6 +24,7 @@
                     
                     <div class="d-flex flex-column gap-3">
                         <!-- Office Location -->
+                        {{$siteaddress}}
                         <div class="info-card d-flex align-items-start gap-3">
                             <div class="icon-box">
                                 <i class="bi bi-geo-alt-fill"></i>
@@ -72,7 +73,7 @@
                     </div>
 
                     <!-- Social Media Links -->
-                    <div class="social-links-card mt-4 p-4">
+                    {{-- <div class="social-links-card mt-4 p-4">
                         <span class="d-block mb-3">Connect On Social Media</span>
                         <div class="d-flex align-items-center gap-2">
                             <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
@@ -80,7 +81,7 @@
                             <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
                             <a href="#" class="social-btn"><i class="bi bi-whatsapp"></i></a>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -93,73 +94,11 @@
                         <p>Fill in your details below and we will get back to you within 24 hours.</p>
                     </div>
 
-                    <form action="#" method="POST" class="contact-form">
-                        @csrf
-                        <div class="row g-3">
-                            <!-- Full Name -->
-                            <div class="col-12 col-md-6">
-                                <div class="input-group-custom">
-                                    <label class="form-label">Your Name *</label>
-                                    <div class="input-wrapper">
-                                        <i class="bi bi-person input-icon"></i>
-                                        <input type="text" name="name" class="form-control" placeholder="e.g. Raju Ahmed" required>
-                                    </div>
-                                </div>
-                            </div>
+                    {{-- Contact Form Component --}}
+                    <livewire:usercontacttwo />
+                    {{-- contact form end here  --}}
 
-                            <!-- Email Address -->
-                            <div class="col-12 col-md-6">
-                                <div class="input-group-custom">
-                                    <label class="form-label">Email Address *</label>
-                                    <div class="input-wrapper">
-                                        <i class="bi bi-envelope input-icon"></i>
-                                        <input type="email" name="email" class="form-control" placeholder="raju@example.com" required>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Phone Number -->
-                            <div class="col-12 col-md-6">
-                                <div class="input-group-custom">
-                                    <label class="form-label">Phone Number *</label>
-                                    <div class="input-wrapper">
-                                        <i class="bi bi-telephone input-icon"></i>
-                                        <input type="tel" name="phone" class="form-control" placeholder="+880 1700-000000" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Subject -->
-                            <div class="col-12 col-md-6">
-                                <div class="input-group-custom">
-                                    <label class="form-label">Subject *</label>
-                                    <div class="input-wrapper">
-                                        <i class="bi bi-tag input-icon"></i>
-                                        <input type="text" name="subject" class="form-control" placeholder="Inquiry about Legal Consultation" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Message Body -->
-                            <div class="col-12">
-                                <div class="input-group-custom">
-                                    <label class="form-label">Your Message *</label>
-                                    <div class="input-wrapper align-items-start">
-                                        <i class="bi bi-pencil-square input-icon mt-2"></i>
-                                        <textarea name="message" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn-send w-100">
-                                    <span>Send Message</span>
-                                    <i class="bi bi-send-fill"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
 

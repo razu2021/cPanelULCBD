@@ -290,7 +290,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     index.form = indexForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::html_sitemap
- * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @see app/Http/Controllers/frontend/frontendController.php:247
  * @route '/html/sitemap'
  */
 export const html_sitemap = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -305,7 +305,7 @@ html_sitemap.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::html_sitemap
- * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @see app/Http/Controllers/frontend/frontendController.php:247
  * @route '/html/sitemap'
  */
 html_sitemap.url = (options?: RouteQueryOptions) => {
@@ -314,7 +314,7 @@ html_sitemap.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::html_sitemap
- * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @see app/Http/Controllers/frontend/frontendController.php:247
  * @route '/html/sitemap'
  */
 html_sitemap.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -323,7 +323,7 @@ html_sitemap.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::html_sitemap
- * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @see app/Http/Controllers/frontend/frontendController.php:247
  * @route '/html/sitemap'
  */
 html_sitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -333,7 +333,7 @@ html_sitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::html_sitemap
- * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @see app/Http/Controllers/frontend/frontendController.php:247
  * @route '/html/sitemap'
  */
     const html_sitemapForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -343,7 +343,7 @@ html_sitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::html_sitemap
- * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @see app/Http/Controllers/frontend/frontendController.php:247
  * @route '/html/sitemap'
  */
         html_sitemapForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -352,7 +352,7 @@ html_sitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::html_sitemap
- * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @see app/Http/Controllers/frontend/frontendController.php:247
  * @route '/html/sitemap'
  */
         html_sitemapForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -439,7 +439,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     dashboard.form = dashboardForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:266
+ * @see app/Http/Controllers/frontend/frontendController.php:269
  * @route '/section'
  */
 export const section = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -454,7 +454,7 @@ section.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:266
+ * @see app/Http/Controllers/frontend/frontendController.php:269
  * @route '/section'
  */
 section.url = (options?: RouteQueryOptions) => {
@@ -463,7 +463,7 @@ section.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:266
+ * @see app/Http/Controllers/frontend/frontendController.php:269
  * @route '/section'
  */
 section.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -472,7 +472,7 @@ section.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:266
+ * @see app/Http/Controllers/frontend/frontendController.php:269
  * @route '/section'
  */
 section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -482,7 +482,7 @@ section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:266
+ * @see app/Http/Controllers/frontend/frontendController.php:269
  * @route '/section'
  */
     const sectionForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -492,7 +492,7 @@ section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:266
+ * @see app/Http/Controllers/frontend/frontendController.php:269
  * @route '/section'
  */
         sectionForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -501,7 +501,7 @@ section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:266
+ * @see app/Http/Controllers/frontend/frontendController.php:269
  * @route '/section'
  */
         sectionForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
