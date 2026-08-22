@@ -7,6 +7,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\backend\cms\CategoryPageController;
 use App\Http\Controllers\backend\cms\ChildCategoryPageController;
 use App\Http\Controllers\backend\cms\manage\AboutController;
+use App\Http\Controllers\backend\cms\manage\Achivementcontroller;
 use App\Http\Controllers\backend\cms\manage\BlogController;
 use App\Http\Controllers\backend\cms\manage\BreadcrumbController;
 use App\Http\Controllers\backend\cms\manage\CasestudyController;
@@ -160,6 +161,8 @@ Route::controller(PageSectionController::class)->prefix('admin/dashboad/manage/p
     //change theme section 
     Route::get('change/section/theme/{id}/{slug}','changeTheme')->name('changeTheme');
     Route::patch('theme/update','themeUpdate')->name('theme_update');
+    Route::get('section/theme/settings/{id}/{slug}','themeSettings')->name('themeSettings');
+    Route::patch('section/theme/settings/style/paramitter/update','themeSettingsUpdate')->name('themeSettingsUpdate');
 
 
 
@@ -501,6 +504,9 @@ Route::controller(FaqController::class)->prefix('admin/dashboad/manage/section/f
     Route::get('export/csv','export_csv')->name('export_csv');
     Route::get('export/pdf','export_pdf')->name('export_pdf');
 });
+
+
+
 /**============ CTA  Route Start here =========== */
 Route::controller(CtaController::class)->prefix('admin/dashboad/manage/section/cta/')->name('cta_manage.')->group(function(){
     Route::get('all','index')->name('all');
@@ -520,6 +526,40 @@ Route::controller(CtaController::class)->prefix('admin/dashboad/manage/section/c
     Route::get('export/csv','export_csv')->name('export_csv');
     Route::get('export/pdf','export_pdf')->name('export_pdf');
 });
+
+/**============ Achivment Route Start here =========== */
+Route::controller(Achivementcontroller::class)->prefix('admin/dashboad/manage/section/achivment/')->name('achivement_manage.')->group(function(){
+    Route::get('all','index')->name('all');
+    Route::get('add/{id}/{slug}','add')->name('add');
+    Route::get('view/{id}/{slug}','view')->name('view');
+    Route::get('edit/{id}/{slug}','edit')->name('edit');
+    Route::post('submit','insert')->name('submit');
+    Route::patch('update','update')->name('update');
+    Route::get('active/{id}/{slug}','active')->name('active');
+    Route::get('deactive/{id}/{slug}','deactive')->name('deactive');
+    Route::delete('softdelete/{id}','softdelete')->name('softdelete');
+    Route::delete('delete/{id}','delete')->name('delete');
+    Route::get('recycle','recycle')->name('recycle');
+    Route::post('bulk/action' ,'bulkAction')->name('bulkAction');
+    Route::get('export/single/pdf/{id}/{slug}','exportPdf')->name('single_pdf_export');
+    Route::get('export/excel','export_excel')->name('export_excel');
+    Route::get('export/csv','export_csv')->name('export_csv');
+    Route::get('export/pdf','export_pdf')->name('export_pdf');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**============ team  Route Start here =========== */
 Route::controller(TeamController::class)->prefix('admin/dashboad/manage/section/team/')->name('team_manage.')->group(function(){
     Route::get('all','index')->name('all');

@@ -185,14 +185,6 @@ class PageSectionController extends Controller
             $category = ChildCategoryPage::where('id',$request->childcategorypage_id)->first();
         }
 
-   
-
-        $settings = [
-            'bg_color'   => '#ffffff',
-            'padding'    => '20px',
-            'show_title' => true,
-            'margin_top' => '10px',
-        ];
 
 
         // ----- insert record into database 
@@ -205,7 +197,7 @@ class PageSectionController extends Controller
             'description'=>$request->description,
             'order'=>$request->order,
             'dynamic_route'=>$baseSection,
-            'payload_json'=>$settings ?? [],
+            'payload_json'=>[],
             'public_status'=>$request->public_status ?? 0,
             'slug'=>$slug,
             'creator_id' => $creator_id,
@@ -557,8 +549,47 @@ class PageSectionController extends Controller
 
 
 
+/**
+ * ==========================================================
+ * page theme settings or layout settings for each section
+ * ==========================================================
+ */
+public function themeSettings($id,$slug){
+
+    $jsonData = PageSection::where('id',$id)->where('slug',$slug)->value('payload_json');
 
 
+    return Inertia::render('backend/cms/pagesection/layout_setting',[
+        'id'=>$id,
+        'slug'=>$slug,
+        'jsonData'=>$jsonData,
+    ]);
+}
+
+
+/**
+ * ======================================================
+ * update style paramitter data json data for each section
+ * ======================================================
+ */
+public function themeSettingsUpdate(Request $request){
+
+    $id = $request->id;
+    $slug = $request->slug;
+    $data = PageSection::where('id',$id)->where('slug',$slug)->firstOrFail();
+
+  
+
+    if($data){
+        $data->update([
+            'payload_json'=>$request->input('style_settings')
+        ]);
+        flash()->success('Layout Settings Updated successfully!');
+    }else{
+        flash()->error('Layout Settings Updated Faild !');
+    }
+
+}
 
 
 

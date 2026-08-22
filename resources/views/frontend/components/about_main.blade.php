@@ -1,6 +1,16 @@
+
+
 @if(!empty($contents) && $contents->count() > 0)
 @foreach ($contents->take(1) as $about)
-<section class="about about9 parallax" data-speed="1.5">
+@php
+    // JSON payload array extract
+    $styles = $sectionsdata->payload_json ?? [];
+@endphp
+{{ $styles['bg_color'] ?? 'transparent' }}
+<section class="about about9 parallax" data-speed="1.5" style="
+        background-color: {{ $styles['bg_color'] ?? 'transparent' }};
+      
+    ">
     <div class="container">
         <div class="row align-items-center">
 

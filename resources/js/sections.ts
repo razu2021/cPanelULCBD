@@ -6,6 +6,10 @@ export interface sections{
 
 export const allsections: sections[] = [
     {
+        key: 'achivement_main',
+        name : 'Achivment Section defualt'
+    },
+    {
         key: 'about_main',
         name : 'About Section defualt'
     },

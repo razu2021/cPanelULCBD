@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('page_sections', function (Blueprint $table) {
+        Schema::create('achivements', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('section_key')->nullable();
-            $table->morphs('sectionable');
-            $table->string('section_heading')->nullable();
-            $table->string('section_title')->nullable();
-            $table->text('description')->nullable();
+            $table->foreignId('page_section_id')->constrained('page_sections')->onDelete('cascade');
+            $table->string('icon')->nullable();
+            $table->string('count')->nullable();
+            $table->string('title')->nullable();
+            $table->text('short_des')->nullable();
+            // defualt 
             $table->integer('order')->nullable();
-            $table->string('dynamic_route')->nullable();
-            $table->longText('payload_json')->nullable();
             $table->string('slug',255)->nullable();
             $table->integer('creator_id')->nullable();
             $table->integer('editor_id')->nullable();
@@ -28,7 +27,6 @@ return new class extends Migration
             $table->integer('public_status')->default(0);
             $table->timestamps();
             $table->softDeletes();
-
         });
     }
 
@@ -37,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('page_sections');
+        Schema::dropIfExists('achivements');
     }
 };

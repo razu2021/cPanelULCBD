@@ -402,7 +402,7 @@ submit.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     submit.form = submitForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:235
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:227
  * @route '/admin/dashboad/manage/page-section/update'
  */
 export const update = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -417,7 +417,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:235
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:227
  * @route '/admin/dashboad/manage/page-section/update'
  */
 update.url = (options?: RouteQueryOptions) => {
@@ -426,7 +426,7 @@ update.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:235
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:227
  * @route '/admin/dashboad/manage/page-section/update'
  */
 update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -436,7 +436,7 @@ update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:235
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:227
  * @route '/admin/dashboad/manage/page-section/update'
  */
     const updateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -451,7 +451,7 @@ update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:235
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:227
  * @route '/admin/dashboad/manage/page-section/update'
  */
         updateForm.patch = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -467,7 +467,7 @@ update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     update.form = updateForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::active
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:296
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:288
  * @route '/admin/dashboad/manage/page-section/active/{id}/{slug}'
  */
 export const active = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -482,7 +482,7 @@ active.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::active
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:296
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:288
  * @route '/admin/dashboad/manage/page-section/active/{id}/{slug}'
  */
 active.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -508,7 +508,7 @@ active.url = (args: { id: string | number, slug: string | number } | [id: string
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::active
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:296
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:288
  * @route '/admin/dashboad/manage/page-section/active/{id}/{slug}'
  */
 active.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -517,7 +517,7 @@ active.get = (args: { id: string | number, slug: string | number } | [id: string
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::active
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:296
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:288
  * @route '/admin/dashboad/manage/page-section/active/{id}/{slug}'
  */
 active.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -527,7 +527,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::active
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:296
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:288
  * @route '/admin/dashboad/manage/page-section/active/{id}/{slug}'
  */
     const activeForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -537,7 +537,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::active
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:296
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:288
  * @route '/admin/dashboad/manage/page-section/active/{id}/{slug}'
  */
         activeForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -546,7 +546,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::active
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:296
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:288
  * @route '/admin/dashboad/manage/page-section/active/{id}/{slug}'
  */
         activeForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -562,7 +562,7 @@ active.head = (args: { id: string | number, slug: string | number } | [id: strin
     active.form = activeForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deactive
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:313
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:305
  * @route '/admin/dashboad/manage/page-section/deactive/{id}/{slug}'
  */
 export const deactive = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -577,7 +577,7 @@ deactive.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deactive
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:313
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:305
  * @route '/admin/dashboad/manage/page-section/deactive/{id}/{slug}'
  */
 deactive.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -603,7 +603,7 @@ deactive.url = (args: { id: string | number, slug: string | number } | [id: stri
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deactive
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:313
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:305
  * @route '/admin/dashboad/manage/page-section/deactive/{id}/{slug}'
  */
 deactive.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -612,7 +612,7 @@ deactive.get = (args: { id: string | number, slug: string | number } | [id: stri
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deactive
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:313
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:305
  * @route '/admin/dashboad/manage/page-section/deactive/{id}/{slug}'
  */
 deactive.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -622,7 +622,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deactive
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:313
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:305
  * @route '/admin/dashboad/manage/page-section/deactive/{id}/{slug}'
  */
     const deactiveForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -632,7 +632,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deactive
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:313
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:305
  * @route '/admin/dashboad/manage/page-section/deactive/{id}/{slug}'
  */
         deactiveForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -641,7 +641,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deactive
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:313
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:305
  * @route '/admin/dashboad/manage/page-section/deactive/{id}/{slug}'
  */
         deactiveForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -657,7 +657,7 @@ deactive.head = (args: { id: string | number, slug: string | number } | [id: str
     deactive.form = deactiveForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::softdelete
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:330
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:322
  * @route '/admin/dashboad/manage/page-section/softdelete/{id}'
  */
 export const softdelete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -672,7 +672,7 @@ softdelete.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::softdelete
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:330
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:322
  * @route '/admin/dashboad/manage/page-section/softdelete/{id}'
  */
 softdelete.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -700,7 +700,7 @@ softdelete.url = (args: { id: string | number } | [id: string | number ] | strin
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::softdelete
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:330
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:322
  * @route '/admin/dashboad/manage/page-section/softdelete/{id}'
  */
 softdelete.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -710,7 +710,7 @@ softdelete.delete = (args: { id: string | number } | [id: string | number ] | st
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::softdelete
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:330
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:322
  * @route '/admin/dashboad/manage/page-section/softdelete/{id}'
  */
     const softdeleteForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -725,7 +725,7 @@ softdelete.delete = (args: { id: string | number } | [id: string | number ] | st
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::softdelete
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:330
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:322
  * @route '/admin/dashboad/manage/page-section/softdelete/{id}'
  */
         softdeleteForm.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -741,7 +741,7 @@ softdelete.delete = (args: { id: string | number } | [id: string | number ] | st
     softdelete.form = softdeleteForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deleteMethod
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:345
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:337
  * @route '/admin/dashboad/manage/page-section/delete/{id}'
  */
 export const deleteMethod = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -756,7 +756,7 @@ deleteMethod.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deleteMethod
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:345
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:337
  * @route '/admin/dashboad/manage/page-section/delete/{id}'
  */
 deleteMethod.url = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -784,7 +784,7 @@ deleteMethod.url = (args: { id: string | number } | [id: string | number ] | str
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deleteMethod
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:345
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:337
  * @route '/admin/dashboad/manage/page-section/delete/{id}'
  */
 deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -794,7 +794,7 @@ deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | 
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deleteMethod
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:345
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:337
  * @route '/admin/dashboad/manage/page-section/delete/{id}'
  */
     const deleteMethodForm = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -809,7 +809,7 @@ deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | 
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::deleteMethod
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:345
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:337
  * @route '/admin/dashboad/manage/page-section/delete/{id}'
  */
         deleteMethodForm.delete = (args: { id: string | number } | [id: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -825,7 +825,7 @@ deleteMethod.delete = (args: { id: string | number } | [id: string | number ] | 
     deleteMethod.form = deleteMethodForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::recycle
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:361
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:353
  * @route '/admin/dashboad/manage/page-section/recycle'
  */
 export const recycle = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -840,7 +840,7 @@ recycle.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::recycle
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:361
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:353
  * @route '/admin/dashboad/manage/page-section/recycle'
  */
 recycle.url = (options?: RouteQueryOptions) => {
@@ -849,7 +849,7 @@ recycle.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::recycle
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:361
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:353
  * @route '/admin/dashboad/manage/page-section/recycle'
  */
 recycle.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -858,7 +858,7 @@ recycle.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::recycle
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:361
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:353
  * @route '/admin/dashboad/manage/page-section/recycle'
  */
 recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -868,7 +868,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::recycle
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:361
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:353
  * @route '/admin/dashboad/manage/page-section/recycle'
  */
     const recycleForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -878,7 +878,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::recycle
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:361
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:353
  * @route '/admin/dashboad/manage/page-section/recycle'
  */
         recycleForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -887,7 +887,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::recycle
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:361
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:353
  * @route '/admin/dashboad/manage/page-section/recycle'
  */
         recycleForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -903,7 +903,7 @@ recycle.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     recycle.form = recycleForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::bulkAction
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:395
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:387
  * @route '/admin/dashboad/manage/page-section/bulk/action'
  */
 export const bulkAction = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -918,7 +918,7 @@ bulkAction.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::bulkAction
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:395
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:387
  * @route '/admin/dashboad/manage/page-section/bulk/action'
  */
 bulkAction.url = (options?: RouteQueryOptions) => {
@@ -927,7 +927,7 @@ bulkAction.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::bulkAction
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:395
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:387
  * @route '/admin/dashboad/manage/page-section/bulk/action'
  */
 bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -937,7 +937,7 @@ bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::bulkAction
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:395
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:387
  * @route '/admin/dashboad/manage/page-section/bulk/action'
  */
     const bulkActionForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -947,7 +947,7 @@ bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::bulkAction
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:395
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:387
  * @route '/admin/dashboad/manage/page-section/bulk/action'
  */
         bulkActionForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -958,7 +958,7 @@ bulkAction.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     bulkAction.form = bulkActionForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::single_pdf_export
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:487
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:479
  * @route '/admin/dashboad/manage/page-section/export/single/pdf/{id}/{slug}'
  */
 export const single_pdf_export = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -973,7 +973,7 @@ single_pdf_export.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::single_pdf_export
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:487
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:479
  * @route '/admin/dashboad/manage/page-section/export/single/pdf/{id}/{slug}'
  */
 single_pdf_export.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -999,7 +999,7 @@ single_pdf_export.url = (args: { id: string | number, slug: string | number } | 
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::single_pdf_export
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:487
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:479
  * @route '/admin/dashboad/manage/page-section/export/single/pdf/{id}/{slug}'
  */
 single_pdf_export.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1008,7 +1008,7 @@ single_pdf_export.get = (args: { id: string | number, slug: string | number } | 
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::single_pdf_export
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:487
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:479
  * @route '/admin/dashboad/manage/page-section/export/single/pdf/{id}/{slug}'
  */
 single_pdf_export.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1018,7 +1018,7 @@ single_pdf_export.head = (args: { id: string | number, slug: string | number } |
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::single_pdf_export
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:487
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:479
  * @route '/admin/dashboad/manage/page-section/export/single/pdf/{id}/{slug}'
  */
     const single_pdf_exportForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1028,7 +1028,7 @@ single_pdf_export.head = (args: { id: string | number, slug: string | number } |
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::single_pdf_export
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:487
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:479
  * @route '/admin/dashboad/manage/page-section/export/single/pdf/{id}/{slug}'
  */
         single_pdf_exportForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1037,7 +1037,7 @@ single_pdf_export.head = (args: { id: string | number, slug: string | number } |
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::single_pdf_export
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:487
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:479
  * @route '/admin/dashboad/manage/page-section/export/single/pdf/{id}/{slug}'
  */
         single_pdf_exportForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1053,7 +1053,7 @@ single_pdf_export.head = (args: { id: string | number, slug: string | number } |
     single_pdf_export.form = single_pdf_exportForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_excel
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:516
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:508
  * @route '/admin/dashboad/manage/page-section/export/excel'
  */
 export const export_excel = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1068,7 +1068,7 @@ export_excel.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_excel
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:516
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:508
  * @route '/admin/dashboad/manage/page-section/export/excel'
  */
 export_excel.url = (options?: RouteQueryOptions) => {
@@ -1077,7 +1077,7 @@ export_excel.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_excel
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:516
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:508
  * @route '/admin/dashboad/manage/page-section/export/excel'
  */
 export_excel.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1086,7 +1086,7 @@ export_excel.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_excel
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:516
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:508
  * @route '/admin/dashboad/manage/page-section/export/excel'
  */
 export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1096,7 +1096,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_excel
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:516
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:508
  * @route '/admin/dashboad/manage/page-section/export/excel'
  */
     const export_excelForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1106,7 +1106,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_excel
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:516
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:508
  * @route '/admin/dashboad/manage/page-section/export/excel'
  */
         export_excelForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1115,7 +1115,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_excel
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:516
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:508
  * @route '/admin/dashboad/manage/page-section/export/excel'
  */
         export_excelForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1131,7 +1131,7 @@ export_excel.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     export_excel.form = export_excelForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_csv
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:523
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:515
  * @route '/admin/dashboad/manage/page-section/export/csv'
  */
 export const export_csv = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1146,7 +1146,7 @@ export_csv.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_csv
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:523
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:515
  * @route '/admin/dashboad/manage/page-section/export/csv'
  */
 export_csv.url = (options?: RouteQueryOptions) => {
@@ -1155,7 +1155,7 @@ export_csv.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_csv
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:523
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:515
  * @route '/admin/dashboad/manage/page-section/export/csv'
  */
 export_csv.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1164,7 +1164,7 @@ export_csv.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_csv
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:523
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:515
  * @route '/admin/dashboad/manage/page-section/export/csv'
  */
 export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1174,7 +1174,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_csv
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:523
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:515
  * @route '/admin/dashboad/manage/page-section/export/csv'
  */
     const export_csvForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1184,7 +1184,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_csv
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:523
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:515
  * @route '/admin/dashboad/manage/page-section/export/csv'
  */
         export_csvForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1193,7 +1193,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_csv
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:523
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:515
  * @route '/admin/dashboad/manage/page-section/export/csv'
  */
         export_csvForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1209,7 +1209,7 @@ export_csv.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     export_csv.form = export_csvForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_pdf
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:501
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:493
  * @route '/admin/dashboad/manage/page-section/export/pdf'
  */
 export const export_pdf = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1224,7 +1224,7 @@ export_pdf.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_pdf
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:501
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:493
  * @route '/admin/dashboad/manage/page-section/export/pdf'
  */
 export_pdf.url = (options?: RouteQueryOptions) => {
@@ -1233,7 +1233,7 @@ export_pdf.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_pdf
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:501
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:493
  * @route '/admin/dashboad/manage/page-section/export/pdf'
  */
 export_pdf.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1242,7 +1242,7 @@ export_pdf.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_pdf
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:501
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:493
  * @route '/admin/dashboad/manage/page-section/export/pdf'
  */
 export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1252,7 +1252,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_pdf
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:501
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:493
  * @route '/admin/dashboad/manage/page-section/export/pdf'
  */
     const export_pdfForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1262,7 +1262,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_pdf
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:501
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:493
  * @route '/admin/dashboad/manage/page-section/export/pdf'
  */
         export_pdfForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1271,7 +1271,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::export_pdf
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:501
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:493
  * @route '/admin/dashboad/manage/page-section/export/pdf'
  */
         export_pdfForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1521,7 +1521,7 @@ getchildcategory.head = (options?: RouteQueryOptions): RouteDefinition<'head'> =
     getchildcategory.form = getchildcategoryForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::changeTheme
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:530
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:522
  * @route '/admin/dashboad/manage/page-section/change/section/theme/{id}/{slug}'
  */
 export const changeTheme = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1536,7 +1536,7 @@ changeTheme.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::changeTheme
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:530
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:522
  * @route '/admin/dashboad/manage/page-section/change/section/theme/{id}/{slug}'
  */
 changeTheme.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -1562,7 +1562,7 @@ changeTheme.url = (args: { id: string | number, slug: string | number } | [id: s
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::changeTheme
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:530
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:522
  * @route '/admin/dashboad/manage/page-section/change/section/theme/{id}/{slug}'
  */
 changeTheme.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1571,7 +1571,7 @@ changeTheme.get = (args: { id: string | number, slug: string | number } | [id: s
 })
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::changeTheme
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:530
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:522
  * @route '/admin/dashboad/manage/page-section/change/section/theme/{id}/{slug}'
  */
 changeTheme.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1581,7 +1581,7 @@ changeTheme.head = (args: { id: string | number, slug: string | number } | [id: 
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::changeTheme
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:530
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:522
  * @route '/admin/dashboad/manage/page-section/change/section/theme/{id}/{slug}'
  */
     const changeThemeForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1591,7 +1591,7 @@ changeTheme.head = (args: { id: string | number, slug: string | number } | [id: 
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::changeTheme
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:530
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:522
  * @route '/admin/dashboad/manage/page-section/change/section/theme/{id}/{slug}'
  */
         changeThemeForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1600,7 +1600,7 @@ changeTheme.head = (args: { id: string | number, slug: string | number } | [id: 
         })
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::changeTheme
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:530
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:522
  * @route '/admin/dashboad/manage/page-section/change/section/theme/{id}/{slug}'
  */
         changeThemeForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1616,7 +1616,7 @@ changeTheme.head = (args: { id: string | number, slug: string | number } | [id: 
     changeTheme.form = changeThemeForm
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::theme_update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:539
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:531
  * @route '/admin/dashboad/manage/page-section/theme/update'
  */
 export const theme_update = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -1631,7 +1631,7 @@ theme_update.definition = {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::theme_update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:539
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:531
  * @route '/admin/dashboad/manage/page-section/theme/update'
  */
 theme_update.url = (options?: RouteQueryOptions) => {
@@ -1640,7 +1640,7 @@ theme_update.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::theme_update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:539
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:531
  * @route '/admin/dashboad/manage/page-section/theme/update'
  */
 theme_update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -1650,7 +1650,7 @@ theme_update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => 
 
     /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::theme_update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:539
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:531
  * @route '/admin/dashboad/manage/page-section/theme/update'
  */
     const theme_updateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1665,7 +1665,7 @@ theme_update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => 
 
             /**
 * @see \App\Http\Controllers\backend\cms\PageSectionController::theme_update
- * @see app/Http/Controllers/backend/cms/PageSectionController.php:539
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:531
  * @route '/admin/dashboad/manage/page-section/theme/update'
  */
         theme_updateForm.patch = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1679,6 +1679,166 @@ theme_update.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => 
         })
     
     theme_update.form = theme_updateForm
+/**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettings
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:557
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}'
+ */
+export const themeSettings = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: themeSettings.url(args, options),
+    method: 'get',
+})
+
+themeSettings.definition = {
+    methods: ["get","head"],
+    url: '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettings
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:557
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}'
+ */
+themeSettings.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
+    if (Array.isArray(args)) {
+        args = {
+                    id: args[0],
+                    slug: args[1],
+                }
+    }
+
+    args = applyUrlDefaults(args)
+
+    const parsedArgs = {
+                        id: args.id,
+                                slug: args.slug,
+                }
+
+    return themeSettings.definition.url
+            .replace('{id}', parsedArgs.id.toString())
+            .replace('{slug}', parsedArgs.slug.toString())
+            .replace(/\/+$/, '') + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettings
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:557
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}'
+ */
+themeSettings.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: themeSettings.url(args, options),
+    method: 'get',
+})
+/**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettings
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:557
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}'
+ */
+themeSettings.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: themeSettings.url(args, options),
+    method: 'head',
+})
+
+    /**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettings
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:557
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}'
+ */
+    const themeSettingsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: themeSettings.url(args, options),
+        method: 'get',
+    })
+
+            /**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettings
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:557
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}'
+ */
+        themeSettingsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: themeSettings.url(args, options),
+            method: 'get',
+        })
+            /**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettings
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:557
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/{id}/{slug}'
+ */
+        themeSettingsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: themeSettings.url(args, {
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    themeSettings.form = themeSettingsForm
+/**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettingsUpdate
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:575
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/style/paramitter/update'
+ */
+export const themeSettingsUpdate = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+    url: themeSettingsUpdate.url(options),
+    method: 'patch',
+})
+
+themeSettingsUpdate.definition = {
+    methods: ["patch"],
+    url: '/admin/dashboad/manage/page-section/section/theme/settings/style/paramitter/update',
+} satisfies RouteDefinition<["patch"]>
+
+/**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettingsUpdate
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:575
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/style/paramitter/update'
+ */
+themeSettingsUpdate.url = (options?: RouteQueryOptions) => {
+    return themeSettingsUpdate.definition.url + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettingsUpdate
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:575
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/style/paramitter/update'
+ */
+themeSettingsUpdate.patch = (options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+    url: themeSettingsUpdate.url(options),
+    method: 'patch',
+})
+
+    /**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettingsUpdate
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:575
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/style/paramitter/update'
+ */
+    const themeSettingsUpdateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
+        action: themeSettingsUpdate.url({
+                    [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                        _method: 'PATCH',
+                        ...(options?.query ?? options?.mergeQuery ?? {}),
+                    }
+                }),
+        method: 'post',
+    })
+
+            /**
+* @see \App\Http\Controllers\backend\cms\PageSectionController::themeSettingsUpdate
+ * @see app/Http/Controllers/backend/cms/PageSectionController.php:575
+ * @route '/admin/dashboad/manage/page-section/section/theme/settings/style/paramitter/update'
+ */
+        themeSettingsUpdateForm.patch = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
+            action: themeSettingsUpdate.url({
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'PATCH',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'post',
+        })
+    
+    themeSettingsUpdate.form = themeSettingsUpdateForm
 const page_section = {
     all: Object.assign(all, all),
 add: Object.assign(add, add),
@@ -1701,6 +1861,8 @@ getsubcategory: Object.assign(getsubcategory, getsubcategory),
 getchildcategory: Object.assign(getchildcategory, getchildcategory),
 changeTheme: Object.assign(changeTheme, changeTheme),
 theme_update: Object.assign(theme_update, theme_update),
+themeSettings: Object.assign(themeSettings, themeSettings),
+themeSettingsUpdate: Object.assign(themeSettingsUpdate, themeSettingsUpdate),
 }
 
 export default page_section

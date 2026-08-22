@@ -16,6 +16,7 @@ import PromotController from './PromotController'
 import PartnerController from './PartnerController'
 import FaqController from './FaqController'
 import CtaController from './CtaController'
+import Achivementcontroller from './Achivementcontroller'
 import TeamController from './TeamController'
 import VideoGalleryController from './VideoGalleryController'
 import ImagegalleryController from './ImagegalleryController'
@@ -40,6 +41,7 @@ PromotController: Object.assign(PromotController, PromotController),
 PartnerController: Object.assign(PartnerController, PartnerController),
 FaqController: Object.assign(FaqController, FaqController),
 CtaController: Object.assign(CtaController, CtaController),
+Achivementcontroller: Object.assign(Achivementcontroller, Achivementcontroller),
 TeamController: Object.assign(TeamController, TeamController),
 VideoGalleryController: Object.assign(VideoGalleryController, VideoGalleryController),
 ImagegalleryController: Object.assign(ImagegalleryController, ImagegalleryController),
