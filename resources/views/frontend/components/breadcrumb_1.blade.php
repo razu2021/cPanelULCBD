@@ -1,12 +1,3 @@
-@extends('layouts/frontend')
-@section('web_content')
-{{-- @includeif('frontend/components/ui/team_card1') --}}
-<!-- Hero Section -->
-
-
-<!-- Hero Section 12 -->
-
-
 <section class="legal-breadcrumb">
     <div class="container">
         <div class="legal-breadcrumb__inner">
@@ -59,15 +50,3 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-{{-- ban --}}
-
-@endsection
