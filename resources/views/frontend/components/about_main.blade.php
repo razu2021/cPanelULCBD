@@ -7,10 +7,7 @@
     $styles = $sectionsdata->payload_json ?? [];
 @endphp
 {{ $styles['bg_color'] ?? 'transparent' }}
-<section class="about about9 parallax" data-speed="1.5" style="
-        background-color: {{ $styles['bg_color'] ?? 'transparent' }};
-      
-    ">
+<section class="about about9 parallax" data-speed="1.5">
     <div class="container">
         <div class="row align-items-center">
 

@@ -212,8 +212,18 @@ export const getAppointmentThemes: Theme[] = [
   */
 export const globalsectionThemes: Theme[] = [
   {
-    key: 'googlemap_main',
-    name: 'Follow us Theme Defualt',
+    key: 'globalsection_main',
+    name: 'Global Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'globalsection_1',
+    name: 'Example Design 1',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'globalsection_2',
+    name: 'Example Design 2',
     preview: 'https://picsum.photos/400/250?5'
   },
 ];

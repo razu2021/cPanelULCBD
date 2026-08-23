@@ -180,7 +180,7 @@ class Achivementcontroller extends Controller
         /**======== upload image via the service end ====== */
         if($update){
             flash()->success('Information Updated successfully!');
-            return redirect()->route('achivment_manage.view',[$id,$slug]);
+            return redirect()->route('achivement_manage.view',[$id,$slug]);
         }else{
             flash()->error('Information Updated Faild !');
             return redirect()->back();
