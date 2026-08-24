@@ -40,6 +40,33 @@ export const abouteThemes: Theme[] = [
   },
 
 ];
+
+
+/**
+ * =============================================
+ * achivment section theme 
+ * =============================================
+ */
+export const achivementThemes: Theme[] = [
+  {
+    key: 'achivement_main',
+    name: 'Achivement Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'achivement_1',
+    name: 'Achivement Theme 2',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'achivement_2',
+    name: 'Achivement Theme 3',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+
+
+];
+
 /**
   * ======================================================
   *  Load blog Section Theme 
