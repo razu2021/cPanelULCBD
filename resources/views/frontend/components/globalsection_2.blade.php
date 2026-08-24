@@ -22,9 +22,9 @@
           <h1 class="details-title fw-bold text-dark mb-3">
            {{$data->heading ?? ''}}
           </h1>
-          <p class="details-subtitle text-secondary">
-            {{$data->short_des ?? ''}}
-          </p>
+          {{-- <p class="details-subtitle text-secondary">
+           
+          </p> --}}
         </header>
 
         <!-- Divider -->
@@ -33,7 +33,7 @@
         <!-- Main Content Area -->
         <article class="details-content">
           
-          {!! $data->des ?? '' !!}
+          {!! $data->description ?? '' !!}
         
         </article>
 
