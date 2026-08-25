@@ -22,7 +22,7 @@
                   {{ $data->heading ?? 'heading!' }} <br>  <span class="text-neon">{{ $data->sub_heading ?? 'sub heading !' }}</span> 
                 </h1>
                 
-                <p class="vivid-desc" data-swiper-parallax="-400">
+                <p class="vivid-desc " data-swiper-parallax="-400">
                  {{ $data->short_des ?? 'Description' }}
                 </p>
                 
@@ -40,9 +40,6 @@
 
     </div>
 
-    <div class="swiper-pagination custom-pagination-center"></div>
-    
-    <div class="swiper-button-prev prev-vivid"></div>
-    <div class="swiper-button-next next-vivid"></div>
+
   </div>
 </section>

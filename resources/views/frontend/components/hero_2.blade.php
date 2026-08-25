@@ -16,7 +16,7 @@
             <div class="content-inner ">
               <h6 class="category" data-swiper-parallax="-100">{{ $data->title ?? 'Hero Title' }}</h6>
               <h2 class="title" data-swiper-parallax="-300">{{ $data->heading ?? 'Hero Heading !' }} <br> <span class="accent">{{ $data->sub_heading ??  'Sub Heading !' }}</span></h2>
-              <p class="descataription" d-swiper-parallax="-500">
+              <p class="descataription text-white" d-swiper-parallax="-500">
                {{ $data->short_des ?? 'Please! , Writte some Description !!' }}
               </p>
               <div class="action-area" data-swiper-parallax="-700">
