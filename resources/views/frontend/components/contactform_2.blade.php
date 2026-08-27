@@ -1,17 +1,27 @@
+
+
+
+
+
+
 <section class="get-in-touch-section py-5">
     <div class="container">
-        
+       
         <!-- Section Header -->
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <span class="badge-subtitle mb-3 d-inline-flex align-items-center gap-2">
-                    <i class="bi bi-chat-left-dots-fill"></i> Reach Out To Us
+                    <i class="bi bi-chat-left-dots-fill"></i>{{$sectionsdata->section_title ?? 'Reach Out To Us' }} 
                 </span>
                 <h2 class="section-title mb-3">
+                    @if($sectionsdata->section_heading)
+                        {{$sectionsdata->section_heading}}
+                    @else
                     Have Questions? <span>Get In Touch</span> With Us
+                    @endif
                 </h2>
                 <p class="section-desc">
-                    Our dedicated legal experts are here to assist you. Send us a message or visit our chamber for direct consultation.
+                   {{$sectionsdata->section_heading ?? ' Our dedicated legal experts are here to assist you. Send us a message or visit our chamber for direct consultation.'}}
                 </p>
             </div>
         </div>
@@ -24,14 +34,16 @@
                     
                     <div class="d-flex flex-column gap-3">
                         <!-- Office Location -->
-                        {{$siteaddress}}
+                      
                         <div class="info-card d-flex align-items-start gap-3">
                             <div class="icon-box">
                                 <i class="bi bi-geo-alt-fill"></i>
                             </div>
                             <div>
-                                <h4>Visit Our Chamber</h4>
-                                <p>Suite 402, Universitas Law Chambers, Motijheel C/A, Dhaka-1000</p>
+                                <h4>Visit Address</h4>
+                                @if($siteaddress && $siteaddress->isNotEmpty())
+                                <p>{{ $siteaddress->where('type', 'secondary')->first()->address ?? '' }}</p>
+                                @endif
                             </div>
                         </div>
 
@@ -42,8 +54,12 @@
                             </div>
                             <div>
                                 <h4>Call For Support</h4>
-                                <p><a href="tel:+8801700000000">+880 1700-000000</a></p>
-                                <p><a href="tel:+88029550000">+880 2-9550000</a></p>
+                                @forelse($sitephones ?? [] as $phone)
+                                    <p><a href="tel:{{ $phone->phone ?? '' }}">{{ $phone->phone ?? '' }}</a></p>
+                                @empty
+                                    <p> -- </p>
+                                @endforelse
+                                
                             </div>
                         </div>
 
@@ -54,8 +70,14 @@
                             </div>
                             <div>
                                 <h4>Email Us</h4>
-                                <p><a href="mailto:info@lawfirm.com">info@lawfirm.com</a></p>
-                                <p><a href="mailto:support@lawfirm.com">support@lawfirm.com</a></p>
+                               
+                                @forelse($siteemails ?? [] as $email)
+                                <p><a href="mailto:{{$email->email ?? ''}}">{{$email->email ?? ''}}</a></p>
+                                @empty
+
+                                @endforelse
+                              
+                                
                             </div>
                         </div>
 
@@ -65,23 +87,26 @@
                                 <i class="bi bi-clock-fill"></i>
                             </div>
                             <div>
-                                <h4>Chamber Hours</h4>
-                                <p>Saturday - Thursday: 09:00 AM - 08:00 PM</p>
+                                <h4>Opening Hours</h4>
+                               
+                                <p> {{$siteinfo->opening ?? ''}}</p>
                                 <span class="text-closed">Friday: Closed</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Social Media Links -->
-                    {{-- <div class="social-links-card mt-4 p-4">
+                    <div class="social-links-card mt-4 p-4">
                         <span class="d-block mb-3">Connect On Social Media</span>
                         <div class="d-flex align-items-center gap-2">
-                            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#" class="social-btn"><i class="bi bi-whatsapp"></i></a>
+                            @forelse($sitesocials ?? [] as $social)
+                            <a href="{{$social->url ?? '#'}}" class="social-btn"><i class="{{$social->icon}}"></i></a>
+                            @empty
+                                <p> </p>
+                            @endforelse
+                           
                         </div>
-                    </div> --}}
+                    </div>
 
                 </div>
             </div>

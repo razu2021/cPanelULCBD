@@ -37,5 +37,24 @@ public function storeContactFormData($sanitizedData){
 }
 
 
+/**
+ * =============================================================
+ *  submit Get appointment form data submit here     
+ * =============================================================
+ */
+public function storeAppointmentFormData($sanitizedData){
+    try{
+        
+       // stor clinet contact form data in database using repository class
+       $data = $this->repositories->storeAppointmentFormData($sanitizedData);
+       return $data;
+    }catch(\Exception $e){
+       
+        return false;
+    }
+
+}
+
+
 
 }

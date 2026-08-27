@@ -6,8 +6,8 @@
     <h1 class="page-title">{{$banner->heading ?? 'Banner Heading'}}</h1>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb modern-breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Category</a></li>
+        <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
+       
       </ol>
     </nav>
   </div>

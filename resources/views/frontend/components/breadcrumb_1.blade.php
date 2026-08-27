@@ -1,3 +1,8 @@
+@if(!empty($contents) && $contents->count() > 0)
+@php
+    $data = $banner ?? $contents->first();
+@endphp
+
 <section class="legal-breadcrumb">
     <div class="container">
         <div class="legal-breadcrumb__inner">
@@ -6,32 +11,25 @@
 
                 <span class="legal-breadcrumb__eyebrow">
                     <i class="bi bi-bank2"></i>
-                    Legal Services
+                    {{$data->title ?? ''}}
                 </span>
 
                 <h1 class="legal-breadcrumb__title">
-                    About Our Chambers
+                    {{$data->heading ?? 'Banner Heading'}}
                 </h1>
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb legal-breadcrumb__nav">
 
                         <li class="breadcrumb-item">
-                            <a href="#">
+                            <a href="{{route('index')}}">
                                 <i class="bi bi-house-door"></i>
                                 Home
                             </a>
                         </li>
 
-                        <li class="breadcrumb-item">
-                            <a href="#">
-                                Legal Services
-                            </a>
-                        </li>
+                       
 
-                        <li class="breadcrumb-item active" aria-current="page">
-                            About Our Chambers
-                        </li>
 
                     </ol>
                 </nav>
@@ -50,3 +48,5 @@
         </div>
     </div>
 </section>
+
+@endif

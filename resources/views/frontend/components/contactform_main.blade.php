@@ -1,4 +1,7 @@
+@php
+    $address = $siteaddress->where('type','secondary')->first();
 
+@endphp
 <section class="contact py-5">
   <div class="container">
     <!-- Header -->
@@ -31,10 +34,10 @@
           @endforeach
           @endif
 
-          <!-- <div class="contact__item">
+           <div class="contact__item">
             <span>📍</span>
-            <p>Dhaka, Bangladesh</p>
-          </div> -->
+            <p>{{$address->address ?? ''}}</p>
+          </div> 
 
         </div>
       </div>
