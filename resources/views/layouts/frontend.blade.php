@@ -15,6 +15,10 @@
     {{-- ============= include header section ================== --}}
 </head>
 <body>
+@php
+    $whatsappapi = $apisettings->where('group','Messages')->where('key','whatsapp_number')->first(); 
+@endphp
+
 
 @includeif('frontend/components/ui/announcement')
 @includeif('frontend/components/ui/maintainance_header')
@@ -64,5 +68,26 @@
         <i class="bi bi-chevron-up"></i> 
     </div>
 </div>
+
+@if ($whatsappapi && filled($whatsappapi->value))
+    <a href="https://wa.me/{{$whatsappapi->value}}?text= I would like to know more about your services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp">
+
+    <span class="whatsapp-text">Chat with us</span>
+    <span class="whatsapp-icon">
+        <i class="bi bi-whatsapp"></i>
+    </span>
+
+</a>
+@endif
+
+
+
+
+
+
 </body>
 </html>

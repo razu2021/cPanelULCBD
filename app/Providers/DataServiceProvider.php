@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\AnaliticsTracking;
 use App\Models\Announcment;
+use App\Models\Apisetting;
 use App\Models\CategoryPage;
 use App\Models\Copyright;
 use App\Models\Customcss;
@@ -73,7 +74,12 @@ class DataServiceProvider extends ServiceProvider
                             }
                         ]);
                     }
-                ])->whereNotIn('url', ['index', 'home'])->active()->ordered()->get()
+                ])->whereNotIn('url', ['index', 'home'])->active()->ordered()->get(),
+
+            // apisetting data share 
+            'apisettings' => Apisetting::where('public_status',1)->get(['group','key','value'])
+
+
         ];
     });
 

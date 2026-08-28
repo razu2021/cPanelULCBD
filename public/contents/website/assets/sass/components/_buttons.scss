@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .btn-wrap {
     display: flex;
     gap: 1.2rem;
@@ -507,5 +510,92 @@
 
     &:hover {
         color:#fff;
+    }
+}
+
+
+
+
+
+
+
+
+// whatsapp button design starat here ===========================
+.whatsapp-float {
+    position: fixed;
+    right: 2rem;
+    bottom: 9rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    z-index: 9999;
+
+    .whatsapp-text {
+        background: #fff;
+        color: #1f2937;
+        padding: 1rem 1.5rem;
+        border-radius: 5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        box-shadow: 0 .8rem 2.5rem rgba(0, 0, 0, .15);
+        opacity: 0;
+        transform: translateX(1rem);
+        transition: .3s ease;
+        white-space: nowrap;
+    }
+
+    .whatsapp-icon {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 3rem;
+        box-shadow: 0 1rem 3rem rgba(37, 211, 102, .35);
+        transition: .3s ease;
+        animation: whatsappPulse 2s infinite;
+    }
+
+    &:hover {
+        .whatsapp-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .whatsapp-icon {
+            transform: scale(1.08);
+            box-shadow: 0 1.5rem 3.5rem rgba(37, 211, 102, .45);
+        }
+    }
+
+    @include respond-to(sm) {
+        right: 2.5rem;
+        bottom: 10rem;
+    }
+
+    @include respond-to(md) {
+        right: 3rem;
+        bottom: 10rem;
+    }
+}
+
+@keyframes whatsappPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 1rem 3rem rgba(37, 211, 102, .35);
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 1rem 3.5rem rgba(37, 211, 102, .55);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 1rem 3rem rgba(37, 211, 102, .35);
     }
 }

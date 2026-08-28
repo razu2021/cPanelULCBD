@@ -34,6 +34,10 @@ export const groups: apioption[] = [
         key: 'STORAGE',
         name : 'STORAGE'
     },
+    {
+        key: 'Messages',
+        name : 'Chat '
+    },
    
 ];
 
@@ -102,6 +106,10 @@ export const apikeys: apioption[] = [
     },
 
     // ----------- map end 
+    {
+        key:'whatsapp_number',
+        name:'WhatsApp Number',
+    }
 
 
 ];
