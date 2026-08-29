@@ -6,130 +6,61 @@
 
 <!-- Hero Section 12 -->
 
-
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card10">
-    <div class="row g-0 align-items-stretch">
-
-        <!-- Profile Image -->
-        <div class="col-md-4">
-            <div class="card10-image">
-                <img src="https://i.pinimg.com/736x/7e/46/c6/7e46c6d2798eff446b365c5246f4c9ca.jpg"
-                     alt="Dr. Md. Habibur Rahman">
-
-                <div class="card10-image-overlay"></div>
-
-                <div class="card10-image-content">
-                    <span>
-                        <i class="bi bi-patch-check-fill"></i>
-                        Senior Legal Professional
-                    </span>
-                </div>
+<section class="details_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400" alt="Featured Image" class="details_banner w-100 img-fluid">
             </div>
         </div>
 
-        <!-- Content -->
-        <div class="col-md-8">
-            <div class="card10-content">
+        <div class="content_wrapper">
+            <div class="meta_info">
+                <div class="meta_item"><i class="bi bi-calendar3"></i> April 2, 2026</div>
+                <div class="meta_item"><i class="bi bi-folder2-open"></i> Technology</div>
+                <div class="meta_item"><i class="bi bi-person-circle"></i> By Admin</div>
+            </div>
 
-                <div class="card10-top">
-                    <div>
-                        <span class="card10-label">
-                            <i class="bi bi-bank2"></i>
-                            Head of Chambers
-                        </span>
+            <h1>Universal Design Trends for Future Web Experiences</h1>
 
-                        <h3>Dr. Md. Habibur Rahman</h3>
+            <div class="rich_text">
+                <p>
+                    Amader ei details section-ti emon bhabe toiri kora hoyeche jate Blog, News ba Event—jekono dhoronir details ekhane fit hoye jay. Bootstrap 5 layout use korar fole eta responsive ebong developer-friendly.
+                </p>
 
-                        <p>Head of Chambers of ULC</p>
-                    </div>
+                <blockquote>
+                    "Innovation distinguish between a leader and a follower. Great design is not just what it looks like, it's how it works."
+                </blockquote>
 
-                    <div class="card10-number">
-                        <i class="bi bi-award"></i>
-                    </div>
+                <p>
+                    Apni jodi kono event details dekhan, tobe ekhane location ebong time-er meta info add korte parben. Blog hole boro image ebong formatting-er subidha thakbe.
+                </p>
+
+                <ul>
+                    <li>Responsive grid system using Bootstrap 5.</li>
+                    <li>Clean typography focused on readability ($1rem = 10px$).</li>
+                    <li>Dynamic SCSS classes for easy customization.</li>
+                </ul>
+
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000" alt="Sub Image">
+            </div>
+
+            <div class="details_footer">
+                <div class="tags">
+                    <a href="#">#Design</a>
+                    <a href="#">#Tech</a>
+                    <a href="#">#Web</a>
                 </div>
-
-                <!-- Expertise -->
-                <div class="card10-expertise">
-                    <span>
-                        <i class="bi bi-shield-check"></i>
-                        Legal Advisor
-                    </span>
-
-                    <span>
-                        <i class="bi bi-arrow-repeat"></i>
-                        Restorative Justice
-                    </span>
-
-                    <span>
-                        <i class="bi bi-diagram-3"></i>
-                        Arbitrator
-                    </span>
-
-                    <span>
-                        <i class="bi bi-people"></i>
-                        Mediator
-                    </span>
-
-                    <span>
-                        <i class="bi bi-globe2"></i>
-                        Certified Human Rights, Equality & Diversity Expert
-                    </span>
+                <div class="share_links">
+                    <span>Share:</span>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
                 </div>
-
-                <!-- IBA -->
-                <div class="card10-iba">
-                    <div class="card10-iba-icon">
-                        <i class="bi bi-globe-americas"></i>
-                    </div>
-
-                    <div>
-                        <small>International Member at</small>
-                        <strong>International Bar Association (IBA)</strong>
-                    </div>
-                </div>
-
-                <!-- Qualifications -->
-                <div class="card10-education">
-                    <div class="card10-title">
-                        <span>
-                            Academic & Professional Qualifications
-                        </span>
-
-                        <i class="bi bi-mortarboard-fill"></i>
-                    </div>
-
-                    <div class="card10-qualifications">
-                        <span>PhD in Law</span>
-                        <span>BSS</span>
-                        <span>LLB (Hons)</span>
-                        <span>LLM (Gen)</span>
-                        <span>LLM (Commercial Law)</span>
-                        <span>MBA (HRM)</span>
-                        <span>MBA + Master in Team Management and Leadership</span>
-                        <span>Dip. in Restorative Justice</span>
-                        <span>Dip. in Alternative Dispute Resolution (ADR)</span>
-                        <span>Dip. in Ethics</span>
-                        <span>Dip. in Banking and Finance</span>
-                        <span>Level 5 Dip. in Family Law</span>
-                        <span>Specialization in Innovation and Project Management</span>
-                        <span>Global Islamic Finance and Banking Course</span>
-                    </div>
-                </div>
-
             </div>
         </div>
-
     </div>
-</div>
-
-
-        </div>
-    </div>
-</div>
-
+</section>
 
 
 

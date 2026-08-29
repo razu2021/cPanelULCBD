@@ -73,23 +73,8 @@
 
 
 // -----------------------------------------------------------------------------
-// LOGO & BRAND COLORS
-// -----------------------------------------------------------------------------
-$logo-pink:    #000;
-$logo-purple:  #000;
-$logo-blue:    #000;
-
-// -----------------------------------------------------------------------------
 // MODERN LOGO MIXIN
 // -----------------------------------------------------------------------------
 @mixin logo-gradient-text {
-  background: linear-gradient(
-    135deg, 
-    $logo-pink 0%, 
-    $logo-purple 50%, 
-    $logo-blue 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: $brand-primary-dark;
 }

@@ -6,12 +6,46 @@ $color-purpel:     #9333ea; // সাকসেস বা সেকেন্ড�
 $color-blue:        #2563eb; // হাইলাইট বা এরর কালার
 
 
+$brand-primary: #09284E;
+$brand-secondary: #D2AC67;
+
+$brand-primary-dark: #0F1E2F;
+$brand-primary-light: #1B416D;
+
+$brand-secondary-dark: #A9823E;
+$brand-secondary-light: #E8CD93;
+
+
+// ========================================
+// Neutral Colors
+// ========================================
+
+$color-dark: #151515;
+$color-light: #F8F6F1;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-text: #333333;
+$color-text-light: #777777;
+$color-border: #E5E5E5;
+$color-muted: #999999;
+
+
+
+
+
 // -----------------------------------------------------------------------------
 // 2. Backgroun color 
 // -----------------------------------------------------------------------------
-$bg_primay : #09072c;
-$bg_secondary : #0749b3;
+$bg_primay : $brand-primary;
+$bg_secondary : $brand-secondary;
+$bg_light : $brand-secondary;
 $bg_3 : #8e44ad;
+
+$bg-light: $color-light;
+$bg-dark: $color-dark;
+$bg-white: $color-white;
+
 
 
 $bg_mainmenu : #ffff;

@@ -21,7 +21,7 @@
                         </div>
                     </div> 
                     <div class="team__content text-center">
-                        <h4 class="team__name">{{$team->name ?? ""}}</h4>
+                       <a href="{{ route('details.team',[$team->id,$team->url]) }}"> <h4 class="team__name">{{$team->name ?? ""}}</h4></a><br>
                         <span class="team__role">{{$team->designation ?? ''}}</span>
                     </div>
                 </div>

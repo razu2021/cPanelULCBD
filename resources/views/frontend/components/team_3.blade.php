@@ -13,12 +13,11 @@
             </div>
             
             <div class="content-overlay">
-                <h4>Mahmudul Hasan</h4>
-                <span>Lead Developer</span>
+                    <a href="{{ route('details.team',[$team->id,$team->url]) }}"><h3>{{$team->name ?? 'Team Member'}}</h3></a>
+                    <span>{{$team->designation ?? 'Team Member'}}</span>
 
                 <div class="social-btns">
                     <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-github"></i></a>
                     <a href="#"><i class="bi bi-twitter-x"></i></a>
                 </div>
             </div>

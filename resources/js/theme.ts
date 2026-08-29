@@ -258,6 +258,26 @@ export const globalsectionThemes: Theme[] = [
     name: 'Example Design 2',
     preview: 'https://picsum.photos/400/250?5'
   },
+  {
+    key: 'globalsection_3',
+    name: 'Example Design Example 3',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'globalsection_4',
+    name: 'Example Design Example 4',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'globalsection_5',
+    name: 'Example Design Example 5',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'globalsection_6',
+    name: 'Example Design Example 6',
+    preview: 'https://picsum.photos/400/250?5'
+  },
 ];
 
 /**

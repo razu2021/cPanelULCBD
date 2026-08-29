@@ -13,14 +13,13 @@
                 </div>
                 
                 <div class="info-box">
-                    <h4>Tanvir Hasan</h4>
-                    <p>Software Architect</p>
+                    <a href="{{ route('details.team',[$team->id,$team->url]) }}"><h3>{{$team->name ?? 'Team Member'}}</h3></a>
+                    <p>{{$team->designation ?? 'Team Member'}}</p>
 
                     <div class="social-links">
                         <a href="#"><i class="bi bi-facebook"></i></a>
                         <a href="#"><i class="bi bi-linkedin"></i></a>
-                        <a href="#"><i class="bi bi-github"></i></a>
-                        <a href="#"><i class="bi bi-globe"></i></a>
+                      
                     </div>
                 </div>
             </div>
