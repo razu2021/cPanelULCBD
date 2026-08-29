@@ -38,6 +38,7 @@ const form  = useForm(
     order: props.data.order,
     public_status : Boolean(props.data.public_status),
     is_nav : Boolean(props.data.is_nav),
+    internal_status : '',
     slug :props.data.slug
   })
 
@@ -144,16 +145,15 @@ const handleUpdate = () => {
                         </label>
                     </div>
                     <!-- end -->
-                    <div class="mb-3">
-                        <h3 class="text-sm font-semibold text-slate-800 mb-4">
-                        Menu Status
-                    </h3>
+                     <div class="mb-4">
+                        <label for="subcategory" class="block text-sm font-medium text-slate-700 mb-1" >Menu set As </label>
 
-                        <label class="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-                            <span class="text-sm text-slate-600">Added to Main Menu </span>
-                            <input type="checkbox" v-model="form.is_nav"
-                            class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
-                        </label>
+                        <select id="category" v-model="form.is_nav" required class="block w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-700 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:outline-none transition-colors duration-200">
+                        <option :value="1">Primary Menu</option>
+                        <option :value="0">Secondary Menu</option>
+                        <option :value="2">Footer Menu</option>
+                        </select>
+                        <p v-if="form.errors.is_nav"class="mt-1 text-sm text-red-500"> {{ form.errors.is_nav }}</p>
                     </div>
                     <!-- end -->
 
@@ -164,6 +164,18 @@ const handleUpdate = () => {
                 <h3 class="text-sm font-semibold mb-3">
                     Actions
                 </h3>
+                  <div class="mb-2">
+                <h3 class="text-sm font-semibold text-slate-800 mb-4">
+                Link Status Internal / External
+              </h3>
+
+              <label class="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                <span class="text-sm text-slate-600">Set as Internal </span>
+                <input type="checkbox" v-model="form.internal_status"
+                  class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+              </label>
+
+              </div>
                 <div>
                     <label class="text-sm font-medium text-slate-600">Slug </label>
                     <input type="text" placeholder="Enter title" v-model="form.url"

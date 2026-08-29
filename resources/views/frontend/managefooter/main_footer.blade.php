@@ -1,5 +1,3 @@
-
-
 <section class="main_footer">
     <div class="container">
         <div class="row">
@@ -22,8 +20,8 @@
                     <h4> Useful links  </h4>
                     <div class="footer_menu">
                         <ul>
-                            @if(!empty($categorys) && $categorys->count() > 0)
-                            @foreach($categorys->take(6) as $cate)
+                            @if(!empty($footermenussecondary) && $footermenussecondary->count() > 0)
+                            @foreach($footermenussecondary->take(6) as $cate)
                             <li><a href="{{$cate->url ?? '#'}}">{{$cate->name ?? ''}}</a></li>
                             @endforeach
                             @endif
@@ -34,12 +32,20 @@
             {{-- col end --}}
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                 <div class="footer_column">
-                    <h4> Social Links </h4>
+                    <h4> Quick Links </h4>
                     <div class="footer_menu">
-                        <ul>
+                        {{-- <ul>
                             @if(!empty($sitesocials) && $sitesocials->count() > 0)
                             @foreach($sitesocials->take(6) as $social)
                             <li><a href="{{$social->url ?? '#'}}">{{$social->title ?? ''}}</a></li>
+                            @endforeach
+                            @endif
+                        </ul> --}}
+
+                        <ul>
+                            @if(!empty($footermenus) && $footermenus->count() > 0)
+                            @foreach($footermenus as $fmenu)
+                            <li><a target="_blank" href="{{$fmenu->url ?? '#'}}">{{$fmenu->name ?? ''}}</a></li>
                             @endforeach
                             @endif
                         </ul>
@@ -64,7 +70,25 @@
                             @endforeach
                             @endif
                             <!-- email end  -->
+                        
                         </ul>
+                            <div class="footer-social-box">
+                                    @if(!empty($sitesocials) && $sitesocials->count() > 0)
+                                        <div class="footer-social-list">
+                                            @foreach($sitesocials->take(6) as $social)
+                                                <a href="{{ $social->url ?? '#' }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="footer-social-item"
+                                                title="{{ $social->title ?? $social->name ?? 'Social Link' }}">
+                                                    <i class="{{ $social->icon ?? 'bi bi-globe' }}"></i>
+                                                </a>
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                </div>
+
+                        
                     </div>
                 </div>
             </div>

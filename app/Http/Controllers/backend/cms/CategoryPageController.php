@@ -84,6 +84,7 @@ class CategoryPageController extends Controller
      * =======================================================================
      */
     public function insert(Request $request){
+    
          /**--- validation code -- */
         $request->validate( [
                 'name' => ['required', 'string', 'max:255',Rule::unique('category_pages','name')],
@@ -102,14 +103,24 @@ class CategoryPageController extends Controller
         $slug = uniqid('20').Str::random(20) . '_'.mt_rand(10000, 100000).'-'.time();
 
         //------- make a custom url for -------
-        $categoryname = strtolower($request->name);
-        $user_input_url  = strtolower($request->slug) ;
-        if(!empty($user_input_url)){
-            $url = Str::slug($user_input_url); // Output: "my-new-category-name"
-        }else{
-            $url = Str::slug($categoryname); // Output: "my-new-category-name"
-        }
+            $categoryname   = strtolower($request->name);
+            $user_input_url = strtolower($request->slug);
 
+            // ১. ইউজার যদি slug/url ইনপুট দিয়ে থাকে
+            if (!empty($user_input_url)) {
+                if ($request->internal_status == true) {
+                    // Internal link হলে slug বানিয়ে নিবে
+                    $url = Str::slug($user_input_url);
+                } else {
+                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
+                    $url = $user_input_url; 
+                }
+            } 
+            // ২. ইউজার যদি slug খালি রাখে, তবে ক্যাটাগরির নাম থেকে অটো slug তৈরি হবে
+            else {
+                $url = Str::slug($categoryname);
+            }
+          
         // ----- insert record into database 
         $insert = CategoryPage::create([
             'name'=>$request->name,
@@ -176,14 +187,26 @@ class CategoryPageController extends Controller
         $id = $request->id;
 
         //------- make a custom url for -------
-        $categoryname = strtolower($request->name);
-        $user_input_url  = strtolower($request->url) ;
-        if(!empty($user_input_url)){
-            $url = Str::slug($user_input_url); // Output: "my-new-category-name"
-        }else{
-            $url = Str::slug($categoryname); // Output: "my-new-category-name"
-        }
+        //------- make a custom url for -------
+            $categoryname   = strtolower($request->name);
+            $user_input_url = strtolower($request->url);
 
+            // ১. ইউজার যদি slug/url ইনপুট দিয়ে থাকে
+            if (!empty($user_input_url)) {
+                if ($request->internal_status == true) {
+                    // Internal link হলে slug বানিয়ে নিবে
+                    $url = Str::slug($user_input_url);
+                } else {
+                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
+                    $url = $user_input_url; 
+                }
+            } 
+            // ২. ইউজার যদি slug খালি রাখে, তবে ক্যাটাগরির নাম থেকে অটো slug তৈরি হবে
+            else {
+                $url = Str::slug($categoryname);
+            }
+          
+          
         // ----- insert record into database 
         $update = CategoryPage::where('id',$id)->where('slug',$slug)->firstOrFail();
 

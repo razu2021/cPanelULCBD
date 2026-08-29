@@ -1,16 +1,4 @@
-@extends('layouts/frontend')
-@section('web_content')
-{{-- @includeif('frontend/components/ui/team_card1') --}}
-<!-- Hero Section -->
-
-
-<!-- Hero Section 12 -->
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card10">
+         <div class="card10">
     <div class="row g-0 align-items-stretch">
 
         <!-- Profile Image -->
@@ -124,15 +112,3 @@
 
     </div>
 </div>
-
-
-        </div>
-    </div>
-</div>
-
-
-
-
-{{-- ban --}}
-
-@endsection
