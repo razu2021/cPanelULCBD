@@ -3477,6 +3477,114 @@ html {
     margin-top: 2.2rem;
   }
 }
+.clientmini {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-height: 12rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid rgba(9, 40, 78, 0.08);
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+.clientmini:hover {
+  border-color: rgba(210, 172, 103, 0.5);
+  box-shadow: 0 1rem 2.5rem rgba(9, 40, 78, 0.08);
+  transform: translateY(-0.3rem);
+}
+.clientmini:hover .clientmini__image img {
+  transform: scale(1.08);
+}
+.clientmini__image {
+  position: relative;
+  flex: 0 0 8rem;
+  width: 8rem;
+  height: 9rem;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  background: #09284E;
+}
+.clientmini__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.clientmini__content {
+  min-width: 0;
+  padding-right: 0.5rem;
+}
+.clientmini__name {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #A9823E;
+  font-size: 1.15rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.clientmini__content h3 {
+  display: -webkit-box;
+  margin: 0;
+  color: #0F1E2F;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  font-weight: 700;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.clientmini__content p {
+  display: -webkit-box;
+  margin: 0.6rem 0 0;
+  color: #667085;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 576px) {
+  .clientmini {
+    min-height: 11rem;
+  }
+  .clientmini__image {
+    flex-basis: 7.5rem;
+    width: 7.5rem;
+    height: 8.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .clientmini {
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+  .clientmini__image {
+    flex-basis: 7rem;
+    width: 7rem;
+    height: 8rem;
+  }
+  .clientmini__content h3 {
+    font-size: 1.35rem;
+  }
+  .clientmini__content p {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .clientmini {
+    min-height: 11rem;
+  }
+  .clientmini__image {
+    flex-basis: 7.5rem;
+    width: 7.5rem;
+    height: 8.5rem;
+  }
+}
 .clintstory1 {
   position: relative;
   padding: clamp(7rem, 9vw, 11rem) 0;

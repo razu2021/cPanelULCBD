@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('research', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->foreignId('page_section_id')->constrained('page_sections')->onDelete('cascade');
+            $table->string('type')->nullable();
             $table->string('heading')->nullable();
             $table->string('sub_heading')->nullable();
             $table->string('title')->nullable();

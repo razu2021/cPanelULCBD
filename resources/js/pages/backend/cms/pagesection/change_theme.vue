@@ -3,7 +3,7 @@ import { Head, Link, useForm, usePage } from '@inertiajs/vue3';
 import { route } from 'ziggy-js';
 import AdminLayout from '@/layouts/AdminLayout.vue';
 import { computed, ref } from 'vue';
-import {abouteThemes,achivementThemes, breadcrumbThemes,countryThemes,contactFormThemes,ctaThemes,heroThemes,faqThemes,folloqusThemes,googlemapsThemes,
+import {abouteThemes,achivementThemes, breadcrumbThemes,countryThemes,contactFormThemes,ctaThemes,clientThemes,heroThemes,faqThemes,folloqusThemes,googlemapsThemes,
   imageGalleryThemes, globalsectionThemes,newsThemes,
   partnerThemes,
   serviceThemes,eventThemes ,Theme, 
@@ -54,6 +54,9 @@ const activeTheme = computed(()=>{
       
       case 'cta_manage':
         return ctaThemes
+      
+      case 'clients_manage':
+        return clientThemes
       
       case 'event_manage':
         return eventThemes

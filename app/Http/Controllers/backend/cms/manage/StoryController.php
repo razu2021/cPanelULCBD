@@ -94,8 +94,10 @@ class StoryController extends Controller
         $request->validate( [
                 'title' => ['required', 'string', 'max:255',Rule::unique('stories','title')],
                 'short_des' => ['required', 'string'],
+                'type' => ['required', 'string'],
                 
             ],[
+                'type.required'=> 'type field is Required !',
                 'title.required'=> 'Title field is Required !',
                 'title.unique'=> 'This Title already exists. !',
                 'short_des'=> 'Short Description is Required . !',
@@ -110,6 +112,7 @@ class StoryController extends Controller
         // ----- insert record into database 
         $insert = story::create([
             'page_section_id'=>$request->section_id,
+            'type'=>$request->type,
             'heading'=>$request->heading,
             'sub_heading'=>$request->sub_heading,
             'title'=>$request->title,
@@ -174,9 +177,11 @@ class StoryController extends Controller
               /**--- validation code -- */
         $request->validate( [
                 'title' => ['required', 'string', 'max:255',Rule::unique('stories','title')->ignore($request->id)],
+                'type' => ['required', 'string'],
                 'short_des' => ['required', 'string'],
                 
             ],[
+                'type.required'=> 'Title field is Required !',
                 'title.required'=> 'Title field is Required !',
                 'title.unique'=> 'This Title already exists. !',
                 'short_des'=> 'Short Description is Required . !',
@@ -192,6 +197,7 @@ class StoryController extends Controller
         // ----- insert record into database 
         $update = story::where('id',$id)->where('slug',$slug)->firstOrFail();
         $update->update([
+            'type'=>$request->type,
             'heading'=>$request->heading,
             'sub_heading'=>$request->sub_heading,
             'title'=>$request->title,

@@ -272,9 +272,9 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
               <input type="checkbox" :checked="isAnySelected" @change="toggleSelectAll(rows)" class="h-4 w-4 text-blue-600 rounded border-gray-300"/>
             </th>
             <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">ID</th>
-            <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Heading</th>
-            <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Title</th>
-            <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Description</th>
+            <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Name</th>
+            <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Email</th>
+            <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">phone</th>
             <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Order</th>
             <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Image</th>
             <th class="px-4 py-3 text-left text-gray-700 font-semibold text-sm">Status</th>
@@ -287,9 +287,9 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
           <tr v-for="data in rows" :key="data.id" class="hover:bg-blue-50 transition-colors duration-200">
             <td class="px-4 py-3"><input type="checkbox" :value="data.id" v-model="selectedIds"  class="h-4 w-4 text-blue-600 rounded border-gray-300"/></td>
             <td class="px-4 py-3 font-medium text-gray-800 text-sm">{{ data.id ?? '' }}</td>
-            <td class="px-4 py-3 font-medium text-gray-800 text-sm">{{ data.heading ?? '' }}</td>
-            <td class="px-4 py-3 font-medium text-gray-800 text-sm">{{ data.title ?? '' }}</td>
-            <td class="px-4 py-3 font-medium text-gray-800 text-sm"> {{ data.description ?? '' }}</td>
+            <td class="px-4 py-3 font-medium text-gray-800 text-sm">{{ data.name ?? '' }}</td>
+            <td class="px-4 py-3 font-medium text-gray-800 text-sm">{{ data.email ?? '' }}</td>
+            <td class="px-4 py-3 font-medium text-gray-800 text-sm"> {{ data.phone ?? '' }}</td>
             <td class="px-4 py-3 font-medium text-gray-800 text-sm"> {{ data.order ?? '' }}</td>
             <td class="px-4 py-3 font-medium text-gray-800 text-sm"> <img class=" h-20 w-auto rounded-lg shadow-lg" v-if="data.cover_image" :src="`/${data.cover_image}`" alt="image"></td>
             <td class="px-4 py-3 font-medium text-green-600 text-sm" v-if="data.public_status == 1">Active </td>

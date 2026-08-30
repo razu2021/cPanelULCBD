@@ -308,3 +308,138 @@
     }
 }
 
+
+// ===================== client card mini 1================
+.clientmini {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    min-height: 12rem;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid rgba(9, 40, 78, .08);
+    border-radius: .8rem;
+    transition: all .3s ease;
+
+    &:hover {
+        border-color: rgba(210, 172, 103, .5);
+        box-shadow: 0 1rem 2.5rem rgba(9, 40, 78, .08);
+        transform: translateY(-.3rem);
+
+        .clientmini__image img {
+            transform: scale(1.08);
+        }
+    }
+
+
+    &__image {
+        position: relative;
+        flex: 0 0 8rem;
+        width: 8rem;
+        height: 9rem;
+        overflow: hidden;
+        border-radius: .6rem;
+        background: $brand-primary;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease;
+        }
+    }
+
+
+    &__content {
+        min-width: 0;
+        padding-right: .5rem;
+    }
+
+
+    &__name {
+        display: block;
+        margin-bottom: .3rem;
+        color: $brand-secondary-dark;
+        font-size: 1.15rem;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    &__content h3 {
+        display: -webkit-box;
+        margin: 0;
+        color: $brand-primary-dark;
+        font-size: 1.45rem;
+        line-height: 1.3;
+        font-weight: 700;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+
+    &__content p {
+        display: -webkit-box;
+        margin: .6rem 0 0;
+        color: #667085;
+        font-size: 1.15rem;
+        line-height: 1.45;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+
+@include respond-to(sm) {
+
+    .clientmini {
+        min-height: 11rem;
+
+        &__image {
+            flex-basis: 7.5rem;
+            width: 7.5rem;
+            height: 8.5rem;
+        }
+    }
+}
+
+
+@include respond-to(lg) {
+
+    .clientmini {
+        gap: 1rem;
+        padding: .8rem;
+
+        &__image {
+            flex-basis: 7rem;
+            width: 7rem;
+            height: 8rem;
+        }
+
+        &__content h3 {
+            font-size: 1.35rem;
+        }
+
+        &__content p {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+
+@include respond-to(xl) {
+
+    .clientmini {
+        min-height: 11rem;
+
+        &__image {
+            flex-basis: 7.5rem;
+            width: 7.5rem;
+            height: 8.5rem;
+        }
+    }
+}

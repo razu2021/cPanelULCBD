@@ -1,19 +1,15 @@
-@extends('layouts/frontend')
-@section('web_content')
-{{-- @includeif('frontend/components/ui/team_card1') --}}
-<!-- Hero Section -->
-
-
-<!-- Hero Section 12 -->
-
-<section>
+<section class="py-5">
     <div class="container">
-        <div class="row g-3">
+        <!-- section heading start here  -->
+        @includeif('frontend/components/ui/sectionheading5',['data' => $sectionsdata,])
+        <!-- section heading end here  -->
+          
+        <div class="row g-3 py-5">
        @for ($i = 0; $i < 11; $i++)
         
     
     
-        <div class="col-12 col-sm-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3 ">
             <div class="clientmini">
                 <div class="clientmini__image">
                     <img src="https://i.pinimg.com/736x/0e/bd/b9/0ebdb9f8cb628dc5224bd2f84a2ff9e2.jpg" alt="Client">
@@ -32,17 +28,6 @@
         </div>
     @endfor
 
-   
-
-  
-
- 
-
-</div>
+    </div>
     </div>
 </section>
-
-
-{{-- ban --}}
-
-@endsection

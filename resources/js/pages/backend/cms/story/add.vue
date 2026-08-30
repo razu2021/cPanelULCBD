@@ -17,6 +17,7 @@ const props = defineProps<{
 // UseForm with remembering state=====================
 const form = useForm('story_manage', {
   section_id:  props.section_id,
+  type: '',
   heading: '',
   sub_heading: '',
   title: '',
@@ -86,6 +87,15 @@ const handleSubmit = () => {
             </div>
               <input type="hidden" name="section_id" id="section_id" v-model="form.section_id"/>
                 <div class="grid grid-cols-12 gap-4">
+                  <div class="col-span-12 md:col-span-6">
+                    <div>
+                      <label class="text-sm font-medium text-slate-600">type</label>
+                      <input type="text" placeholder="Heading" v-model="form.type"
+                        class="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-indigo-500 focus:bg-white focus:ring-indigo-500">
+                        <div class="text-small text-red-500" v-if="form.errors.type">{{ form.errors.type }}</div>
+                    </div>
+                  </div>
+                  <!-- end -->
                   <div class="col-span-12 md:col-span-6">
                     <div>
                       <label class="text-sm font-medium text-slate-600">Heading</label>

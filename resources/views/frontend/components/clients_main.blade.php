@@ -1,40 +1,22 @@
+@if(!empty($contents) && $contents->count() > 0)
+
 
 <section class="clients-section section-padding">
     <div class="container">
 
         <!-- Section Header -->
         <div class="clients-section__header">
-            <div class="section-heading">
-                <span class="section-heading__subtitle">
-                    <i class="bi bi-briefcase"></i>
-                    Our Clients
-                </span>
-
-                <h2 class="section-heading__title">
-                    Trusted by Clients,
-                    <span>Driven by Justice.</span>
-                </h2>
-
-                <p class="section-heading__text">
-                    We represent individuals, organizations, and businesses
-                    with dedication, professionalism, and a commitment to
-                    achieving meaningful legal outcomes.
-                </p>
-            </div>
-
-            <a href="#" class="clients-section__all-btn">
-                View All Cases
-                <i class="bi bi-arrow-up-right"></i>
-            </a>
+                   <!-- section heading start here  -->
+        @includeif('frontend/components/ui/sectionheading5',['data' => $sectionsdata,])
+        <!-- section heading end here  -->
+          
         </div>
 
         <!-- Clients Grid -->
         <div class="row g-4">
 
             <!-- Client Card -->
-            @for ($i = 0; $i < 10; $i++)
-                
-           
+            @foreach ($contents->take(1) as $client)
             <div class="col-12 col-md-6 col-xl-4">
                 <article class="client-card">
 
@@ -44,7 +26,7 @@
                              loading="lazy">
 
                         <span class="client-card__category">
-                            Corporate Law
+                            {{ $client->type ?? '' }}
                         </span>
                     </div>
 
@@ -53,34 +35,32 @@
                         <div class="client-card__meta">
                             <span>
                                 <i class="bi bi-person"></i>
-                                Md. Rahman
+                               {{ $client->name ?? '' }}
                             </span>
 
                             <span>
                                 <i class="bi bi-calendar3"></i>
-                                2025
+                               {{ $client->created_at->format('Y') }}
                             </span>
                         </div>
 
                         <h3 class="client-card__title">
-                            Corporate Business Dispute Resolution
+                            {{ $client->case_title ?? '' }}
                         </h3>
 
                         <p class="client-card__description">
-                            Providing strategic legal representation in a
-                            complex corporate dispute and achieving a
-                            favorable resolution for our client.
+                            {{ Str::words($client->short_des ?? ''  , 20 ) }}
                         </p>
 
-                        <a href="#" class="client-card__btn">
+                        {{-- <a href="#" class="client-card__btn">
                             View Case
                             <i class="bi bi-arrow-right"></i>
-                        </a>
+                        </a> --}}
 
                     </div>
                 </article>
             </div>
-             @endfor
+           @endforeach
 
             <!-- Client Card -->
            
@@ -91,3 +71,4 @@
     </div>
 </section>
 
+@endif

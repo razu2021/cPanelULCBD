@@ -172,8 +172,13 @@ export const ctaThemes: Theme[] = [
   */
 export const clientThemes: Theme[] = [
   {
-    key: 'client_main',
+    key: 'clients_main',
     name: 'Clients Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+  {
+    key: 'clients_1',
+    name: 'Clients Theme mini Defualt',
     preview: 'https://picsum.photos/400/250?5'
   },
 ];

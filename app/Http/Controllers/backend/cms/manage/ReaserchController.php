@@ -93,9 +93,11 @@ class ReaserchController extends Controller
          /**--- validation code -- */
         $request->validate( [
                 'title' => ['required', 'string', 'max:255',Rule::unique('research','title')],
+                'type' => ['required', 'string'],
                 'short_des' => ['required', 'string'],
                 
             ],[
+                'type.required'=> 'type field is Required !',
                 'title.required'=> 'Title field is Required !',
                 'title.unique'=> 'This Title already exists. !',
                 'short_des'=> 'Short Description is Required . !',
@@ -110,6 +112,7 @@ class ReaserchController extends Controller
         // ----- insert record into database 
         $insert = Research::create([
             'page_section_id'=>$request->section_id,
+            'type'=>$request->type,
             'heading'=>$request->heading,
             'sub_heading'=>$request->sub_heading,
             'title'=>$request->title,
@@ -174,9 +177,11 @@ class ReaserchController extends Controller
               /**--- validation code -- */
         $request->validate( [
                 'title' => ['required', 'string', 'max:255',Rule::unique('research','title')->ignore($request->id)],
+                'type' => ['required', 'string'],
                 'short_des' => ['required', 'string'],
                 
             ],[
+                'type.required'=> 'Title field is Required !',
                 'title.required'=> 'Title field is Required !',
                 'title.unique'=> 'This Title already exists. !',
                 'short_des'=> 'Short Description is Required . !',
@@ -192,6 +197,7 @@ class ReaserchController extends Controller
         // ----- insert record into database 
         $update = Research::where('id',$id)->where('slug',$slug)->firstOrFail();
         $update->update([
+            'type'=>$request->type,
             'heading'=>$request->heading,
             'sub_heading'=>$request->sub_heading,
             'title'=>$request->title,

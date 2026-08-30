@@ -60,6 +60,11 @@ const {data} = defineProps<{
                       <!-- Table Body -->
                       <tbody class="divide-y divide-gray-200">
                         <tr class="hover:bg-blue-50 transition-colors duration-200">
+                          <td class="py-3 px-5 text-gray-800">Type</td>
+                          <td class="py-3 px-5 text-gray-800">:</td>
+                          <td class="py-3 px-5 text-gray-800">{{ data.type ?? 'N/A' }}</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors duration-200">
                           <td class="py-3 px-5 text-gray-800">Client Name</td>
                           <td class="py-3 px-5 text-gray-800">:</td>
                           <td class="py-3 px-5 text-gray-800">{{ data.name ?? 'N/A' }}</td>

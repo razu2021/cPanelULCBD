@@ -10,6 +10,7 @@ import tiptap from '@/components/TipTap.vue'
 const props= defineProps<{
     data: {
         order: number,
+        type: string,
         heading: string,
         sub_heading: string,
         title: string,
@@ -31,6 +32,7 @@ const props= defineProps<{
 const form  = useForm(
   {
     id: props.data.id,
+    type: props.data.type,
     heading: props.data.heading,
     sub_heading: props.data.sub_heading,
     title: props.data.title,

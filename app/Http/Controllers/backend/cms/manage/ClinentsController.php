@@ -92,8 +92,9 @@ class ClinentsController extends Controller
     public function insert(Request $request){
          /**--- validation code -- */
         $request->validate( [
-                'name' => ['required', 'string', 'max:255',Rule::unique('sectionxes','title')],
+                'name' => ['required', 'string', 'max:255',Rule::unique('clients','case_title')],
                 'phone' => ['required', 'string'],
+                'type' => ['required', 'string'],
                 'email' => ['required', 'string'],
                 'case_title' => ['required', 'string'],
                 'short_des' => ['required', 'string'],
@@ -101,7 +102,7 @@ class ClinentsController extends Controller
             ],[
                 'name.required'=> 'Name field is Required !',
                 'phone.required'=> 'Phone field is Required !',
-                
+                'type.required'=> 'type field is Required !',
                 'email'=> 'Email is Required . !',
                 'case_title'=> 'Case Title is Required . !',
                 'short_des'=> 'Short Description is Required . !',
@@ -116,6 +117,7 @@ class ClinentsController extends Controller
         // ----- insert record into database 
         $insert = clients::create([
             'page_section_id'=>$request->section_id,
+            'type'=>$request->type,
             'name'=>$request->name,
             'email'=>$request->email,
             'phone'=>$request->phone,
@@ -180,7 +182,8 @@ class ClinentsController extends Controller
     public function update(Request $request){
         /**--- validation code -- */
           $request->validate( [
-                'name' => ['required', 'string', 'max:255',Rule::unique('sectionxes','title')],
+                'name' => ['required', 'string', 'max:255',Rule::unique('sectionxes','case_title')],
+                'type' => ['required', 'string'],
                 'phone' => ['required', 'string'],
                 'email' => ['required', 'string'],
                 'case_title' => ['required', 'string'],
@@ -189,6 +192,7 @@ class ClinentsController extends Controller
             ],[
                 'name.required'=> 'Name field is Required !',
                 'phone.required'=> 'Phone field is Required !',
+                'type.required'=> 'type field is Required !',
                 
                 'email'=> 'Email is Required . !',
                 'case_title'=> 'Case Title is Required . !',
@@ -205,6 +209,7 @@ class ClinentsController extends Controller
         // ----- insert record into database 
         $update = clients::where('id',$id)->where('slug',$slug)->firstOrFail();
         $update->update([
+            'type'=>$request->type,
             'name'=>$request->name,
             'email'=>$request->email,
             'phone'=>$request->phone,

@@ -10,6 +10,7 @@ import tiptap from '@/components/TipTap.vue'
 const props= defineProps<{
     data: {
         order: number,
+        type: string,
         name: string,
         email: string,
         phone: string,
@@ -32,6 +33,7 @@ const props= defineProps<{
 const form  = useForm(
   {
     id: props.data.id,
+    type: props.data.type,
     name: props.data.name,
     email: props.data.email,
     phone: props.data.phone,
@@ -117,6 +119,15 @@ const handleUpdate = () => {
                 </div>
                 <!-- end -->
                 <div class="grid grid-cols-12 gap-4">
+                   <div class="col-span-12 md:col-span-12">
+                    <div>
+                      <label class="text-sm font-medium text-slate-600">Type</label>
+                      <input type="text" placeholder="Criminal" v-model="form.type"
+                        class="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm focus:border-indigo-500 focus:bg-white focus:ring-indigo-500">
+                        <div class="text-small text-red-500" v-if="form.type">{{ form.errors.type }}</div>
+                    </div>
+                  </div>
+                  <!-- end -->
                   <div class="col-span-12 md:col-span-6">
                     <div>
                       <label class="text-sm font-medium text-slate-600">Client Name</label>
