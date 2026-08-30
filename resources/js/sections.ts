@@ -38,6 +38,10 @@ export const allsections: sections[] = [
         key: 'cta_main',
         name : 'Call to Action Section '
     },
+    {
+        key: 'clients_main',
+        name : 'Clients Section '
+    },
     
     {
         key: 'event_main',
@@ -69,6 +73,10 @@ export const allsections: sections[] = [
         name : 'Image Gallery Section defualt'
     },
     {
+        key: 'media_main',
+        name : 'Media Section defualt'
+    },
+    {
         key: 'news_main',
         name : 'News Section defualt'
     },
@@ -93,6 +101,15 @@ export const allsections: sections[] = [
         key: 'roadmap_main',
         name : 'How to work Section defualt'
     },
+    {
+        key: 'research_main',
+        name : 'Research Section defualt'
+    },
+    {
+        key: 'story_main',
+        name : 'Stories Section defualt'
+    },
+
     {
         key: 'service_main',
         name : 'Service Section defualt'

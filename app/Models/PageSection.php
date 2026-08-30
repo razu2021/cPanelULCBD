@@ -49,6 +49,9 @@ class PageSection extends Model
     public function casestudySection(){
         return $this->hasMany(Casestudy::class,'page_section_id','id')->active()->ordered();
     }
+    public function clientsSection(){
+        return $this->hasMany(clients::class,'page_section_id','id')->active()->ordered();
+    }
     public function countrydestinationSection(){
         return $this->hasMany(Countrydestination::class,'page_section_id','id')->active()->ordered();
     }
@@ -66,6 +69,9 @@ class PageSection extends Model
     }
     public function imagegallerySection(){
         return $this->hasMany(Imagegallery::class,'page_section_id','id')->active()->ordered();
+    }
+    public function mediaSection(){
+        return $this->hasMany(Media::class,'page_section_id','id')->active()->ordered();
     }
     public function newsSection(){
         return $this->hasMany(News::class,'page_section_id','id')->active()->ordered();
@@ -85,11 +91,17 @@ class PageSection extends Model
     public function roadmapSection(){
         return $this->hasMany(Roadmap::class,'page_section_id','id')->active()->ordered();
     }
+    public function researchSection(){
+        return $this->hasMany(Research::class,'page_section_id','id')->active()->ordered();
+    }
     public function sectionxSection(){
         return $this->hasMany(sectionx::class,'page_section_id','id')->active()->ordered();
     }
     public function serviceSection(){
         return $this->hasMany(Service::class,'page_section_id','id')->active()->ordered();
+    }
+    public function storySection(){
+        return $this->hasMany(story::class,'page_section_id','id')->active()->ordered();
     }
     public function teamSection(){
         return $this->hasMany(Team::class,'page_section_id','id')->active()->ordered();
@@ -112,10 +124,12 @@ class PageSection extends Model
         'casestudy_manage' => 'casestudySection',
         'cta_manage' => 'ctaSection',
         'countrydestination_manage' => 'countrydestinationSection',
+        'clients_manage' => 'clientsSection',
         'event_manage' => 'eventSection',
         'faq_manage' => 'faqSection',
         'hero_manage' => 'heroSection',
         'imagegallery_manage' => 'imagegallerySection',
+        'media_manage' => 'mediaSection',
         'news_manage' => 'newsSection',
         'globalsection_manage' => 'sectionxSection',
         'post_manage' => 'postSection',
@@ -123,7 +137,9 @@ class PageSection extends Model
         'protfolio_manage' => 'protfoliioSection',
         'promot_manage' => 'promotSection',
         'roadmap_manage' => 'roadmapSection',
+        'reaserch_manage' => 'researchSection',
         'service_manage' => 'serviceSection',
+        'story_manage' => 'storySection',
         'team_manage' => 'teamSection',
         'testimonial_manage' => 'testimonialSection',
         'videogallery_manage' => 'videogallerySection',

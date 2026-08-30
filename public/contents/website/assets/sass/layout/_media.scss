@@ -1,0 +1,285 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.midia1 {
+    position: relative;
+    padding: clamp(7rem, 9vw, 11rem) 0;
+    background: $brand-primary-dark;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -18rem;
+        right: -15rem;
+        width: 45rem;
+        height: 45rem;
+        border: 1px solid rgba(210, 172, 103, .12);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+
+    &__header {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-bottom: clamp(4rem, 6vw, 6rem);
+    }
+
+
+    &__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: .8rem;
+        margin-bottom: 1.5rem;
+        color: $brand-secondary;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: .14rem;
+        text-transform: uppercase;
+
+        i {
+            font-size: 1.6rem;
+        }
+    }
+
+
+    &__title {
+        margin: 0;
+        color: #fff;
+        font-size: clamp(3rem, 5vw, 4rem);
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -.03em;
+
+        span {
+            color: $brand-secondary;
+        }
+    }
+
+
+    &__view {
+        display: inline-flex;
+        align-items: center;
+        gap: .8rem;
+        flex-shrink: 0;
+        padding: 1.1rem 1.6rem;
+        border: 1px solid rgba(255, 255, 255, .2);
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all .3s ease;
+
+        i {
+            transition: transform .3s ease;
+        }
+
+        &:hover {
+            border-color: $brand-secondary;
+            background: $brand-secondary;
+            color: $brand-primary-dark;
+
+            i {
+                transform: translate(3px, -3px);
+            }
+        }
+    }
+
+
+    &__card {
+        position: relative;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        text-decoration: none;
+
+        &:hover {
+
+            .midia1__image img {
+                transform: scale(1.08);
+            }
+
+            .midia1__overlay {
+                opacity: .9;
+            }
+
+            .midia1__icon {
+                background: $brand-secondary;
+                border-color: $brand-secondary;
+                color: $brand-primary-dark;
+                transform: rotate(0) scale(1);
+            }
+
+            .midia1__number {
+                color: $brand-secondary;
+            }
+
+            h3 {
+                transform: translateY(0);
+            }
+        }
+    }
+
+
+    &__image {
+        position: relative;
+        height: 25rem;
+        overflow: hidden;
+        background: $brand-primary;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .8s cubic-bezier(.2, .7, .2, 1);
+        }
+    }
+
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        opacity: .75;
+        background: linear-gradient(
+            to top,
+            rgba(9, 40, 78, .95) 0%,
+            rgba(9, 40, 78, .3) 55%,
+            rgba(9, 40, 78, .05) 100%
+        );
+        transition: opacity .5s ease;
+    }
+
+
+    &__number {
+        position: absolute;
+        z-index: 2;
+        top: 1.8rem;
+        left: 2rem;
+        color: rgba(255, 255, 255, .75);
+        font-size: 1.3rem;
+        font-weight: 700;
+        transition: color .3s ease;
+    }
+
+
+    &__icon {
+        position: absolute;
+        z-index: 2;
+        top: 1.5rem;
+        right: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        border: 1px solid rgba(255, 255, 255, .35);
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.7rem;
+        transform: rotate(-12deg) scale(.9);
+        transition: all .4s ease;
+    }
+
+
+    &__image h3 {
+        position: absolute;
+        z-index: 2;
+        right: 2rem;
+        bottom: 2rem;
+        left: 2rem;
+        margin: 0;
+        color: #fff;
+        font-size: clamp(2rem, 3vw, 2.6rem);
+        line-height: 1.3;
+        font-weight: 700;
+        transform: translateY(.8rem);
+        transition: transform .4s ease;
+    }
+}
+
+
+@include respond-to(sm) {
+
+    .midia1 {
+
+        &__image {
+            height: 30rem;
+        }
+
+        &__image h3 {
+            right: 2.5rem;
+            bottom: 2.5rem;
+            left: 2.5rem;
+        }
+    }
+}
+
+
+@include respond-to(md) {
+
+    .midia1 {
+
+        &__image {
+            height: 28rem;
+        }
+    }
+}
+
+
+@include respond-to(lg) {
+
+    .midia1 {
+
+        &__image {
+            height: 30rem;
+        }
+    }
+}
+
+
+@include respond-to(xl) {
+
+    .midia1 {
+
+        &__image {
+            height: 34rem;
+        }
+
+        &__image h3 {
+            right: 3rem;
+            bottom: 3rem;
+            left: 3rem;
+        }
+    }
+}
+
+
+@include respond-to(xxl) {
+
+    .midia1 {
+
+        &__image {
+            height: 36rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .midia1 {
+
+        &__header {
+            display: block;
+        }
+
+        &__view {
+            margin-top: 2rem;
+        }
+    }
+}

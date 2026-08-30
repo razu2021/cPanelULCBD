@@ -11,6 +11,7 @@ use App\Http\Controllers\backend\cms\manage\Achivementcontroller;
 use App\Http\Controllers\backend\cms\manage\BlogController;
 use App\Http\Controllers\backend\cms\manage\BreadcrumbController;
 use App\Http\Controllers\backend\cms\manage\CasestudyController;
+use App\Http\Controllers\backend\cms\manage\ClinentsController;
 use App\Http\Controllers\backend\cms\manage\CountrydestinationController;
 use App\Http\Controllers\backend\cms\manage\CtaController;
 use App\Http\Controllers\backend\cms\manage\EventController;
@@ -18,13 +19,16 @@ use App\Http\Controllers\backend\cms\manage\FaqController;
 use App\Http\Controllers\backend\cms\manage\FeatureController;
 use App\Http\Controllers\backend\cms\manage\heroController;
 use App\Http\Controllers\backend\cms\manage\ImagegalleryController;
+use App\Http\Controllers\backend\cms\manage\MediaController;
 use App\Http\Controllers\backend\cms\manage\NewsController;
 use App\Http\Controllers\backend\cms\manage\PartnerController;
 use App\Http\Controllers\backend\cms\manage\postController;
 use App\Http\Controllers\backend\cms\manage\PromotController;
 use App\Http\Controllers\backend\cms\manage\ProtfolioController;
+use App\Http\Controllers\backend\cms\manage\ReaserchController;
 use App\Http\Controllers\backend\cms\manage\RoadmapController;
 use App\Http\Controllers\backend\cms\manage\sectionxController;
+use App\Http\Controllers\backend\cms\manage\StoryController;
 use App\Http\Controllers\backend\cms\manage\TeamController;
 use App\Http\Controllers\backend\cms\manage\TestimonialController;
 use App\Http\Controllers\backend\cms\manage\VideoGalleryController;
@@ -663,6 +667,81 @@ Route::controller(FeatureController::class)->prefix('admin/dashboad/manage/secti
 });
 
 
+/**============ Clients section content manage Route Start here =========== */
+Route::controller(ClinentsController::class)->prefix('admin/dashboad/manage/section/clients/')->name('clients_manage.')->group(function(){
+    Route::get('all','index')->name('all');
+    Route::get('add/{id}/{slug}','add')->name('add');
+    Route::get('view/{id}/{slug}','view')->name('view');
+    Route::get('edit/{id}/{slug}','edit')->name('edit');
+    Route::post('submit','insert')->name('submit');
+    Route::patch('update','update')->name('update');
+    Route::get('active/{id}/{slug}','active')->name('active');
+    Route::get('deactive/{id}/{slug}','deactive')->name('deactive');
+    Route::delete('softdelete/{id}','softdelete')->name('softdelete');
+    Route::delete('delete/{id}','delete')->name('delete');
+    Route::get('recycle','recycle')->name('recycle');
+    Route::post('bulk/action' ,'bulkAction')->name('bulkAction');
+    Route::get('export/single/pdf/{id}/{slug}','exportPdf')->name('single_pdf_export');
+    Route::get('export/excel','export_excel')->name('export_excel');
+    Route::get('export/csv','export_csv')->name('export_csv');
+    Route::get('export/pdf','export_pdf')->name('export_pdf');
+});
+/**============ Storys section content manage Route Start here =========== */
+Route::controller(StoryController::class)->prefix('admin/dashboad/manage/section/stories/')->name('story_manage.')->group(function(){
+    Route::get('all','index')->name('all');
+    Route::get('add/{id}/{slug}','add')->name('add');
+    Route::get('view/{id}/{slug}','view')->name('view');
+    Route::get('edit/{id}/{slug}','edit')->name('edit');
+    Route::post('submit','insert')->name('submit');
+    Route::patch('update','update')->name('update');
+    Route::get('active/{id}/{slug}','active')->name('active');
+    Route::get('deactive/{id}/{slug}','deactive')->name('deactive');
+    Route::delete('softdelete/{id}','softdelete')->name('softdelete');
+    Route::delete('delete/{id}','delete')->name('delete');
+    Route::get('recycle','recycle')->name('recycle');
+    Route::post('bulk/action' ,'bulkAction')->name('bulkAction');
+    Route::get('export/single/pdf/{id}/{slug}','exportPdf')->name('single_pdf_export');
+    Route::get('export/excel','export_excel')->name('export_excel');
+    Route::get('export/csv','export_csv')->name('export_csv');
+    Route::get('export/pdf','export_pdf')->name('export_pdf');
+});
+/**============ Storys section content manage Route Start here =========== */
+Route::controller(ReaserchController::class)->prefix('admin/dashboad/manage/section/reaserch/')->name('reaserch_manage.')->group(function(){
+    Route::get('all','index')->name('all');
+    Route::get('add/{id}/{slug}','add')->name('add');
+    Route::get('view/{id}/{slug}','view')->name('view');
+    Route::get('edit/{id}/{slug}','edit')->name('edit');
+    Route::post('submit','insert')->name('submit');
+    Route::patch('update','update')->name('update');
+    Route::get('active/{id}/{slug}','active')->name('active');
+    Route::get('deactive/{id}/{slug}','deactive')->name('deactive');
+    Route::delete('softdelete/{id}','softdelete')->name('softdelete');
+    Route::delete('delete/{id}','delete')->name('delete');
+    Route::get('recycle','recycle')->name('recycle');
+    Route::post('bulk/action' ,'bulkAction')->name('bulkAction');
+    Route::get('export/single/pdf/{id}/{slug}','exportPdf')->name('single_pdf_export');
+    Route::get('export/excel','export_excel')->name('export_excel');
+    Route::get('export/csv','export_csv')->name('export_csv');
+    Route::get('export/pdf','export_pdf')->name('export_pdf');
+});
+Route::controller(MediaController::class)->prefix('admin/dashboad/manage/section/media/')->name('media_manage.')->group(function(){
+    Route::get('all','index')->name('all');
+    Route::get('add/{id}/{slug}','add')->name('add');
+    Route::get('view/{id}/{slug}','view')->name('view');
+    Route::get('edit/{id}/{slug}','edit')->name('edit');
+    Route::post('submit','insert')->name('submit');
+    Route::patch('update','update')->name('update');
+    Route::get('active/{id}/{slug}','active')->name('active');
+    Route::get('deactive/{id}/{slug}','deactive')->name('deactive');
+    Route::delete('softdelete/{id}','softdelete')->name('softdelete');
+    Route::delete('delete/{id}','delete')->name('delete');
+    Route::get('recycle','recycle')->name('recycle');
+    Route::post('bulk/action' ,'bulkAction')->name('bulkAction');
+    Route::get('export/single/pdf/{id}/{slug}','exportPdf')->name('single_pdf_export');
+    Route::get('export/excel','export_excel')->name('export_excel');
+    Route::get('export/csv','export_csv')->name('export_csv');
+    Route::get('export/pdf','export_pdf')->name('export_pdf');
+});
 
 
 

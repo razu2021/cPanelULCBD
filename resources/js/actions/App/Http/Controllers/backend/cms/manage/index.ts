@@ -22,6 +22,10 @@ import VideoGalleryController from './VideoGalleryController'
 import ImagegalleryController from './ImagegalleryController'
 import sectionxController from './sectionxController'
 import FeatureController from './FeatureController'
+import ClinentsController from './ClinentsController'
+import StoryController from './StoryController'
+import ReaserchController from './ReaserchController'
+import MediaController from './MediaController'
 const manage = {
     AboutController: Object.assign(AboutController, AboutController),
 heroController: Object.assign(heroController, heroController),
@@ -47,6 +51,10 @@ VideoGalleryController: Object.assign(VideoGalleryController, VideoGalleryContro
 ImagegalleryController: Object.assign(ImagegalleryController, ImagegalleryController),
 sectionxController: Object.assign(sectionxController, sectionxController),
 FeatureController: Object.assign(FeatureController, FeatureController),
+ClinentsController: Object.assign(ClinentsController, ClinentsController),
+StoryController: Object.assign(StoryController, StoryController),
+ReaserchController: Object.assign(ReaserchController, ReaserchController),
+MediaController: Object.assign(MediaController, MediaController),
 }
 
 export default manage

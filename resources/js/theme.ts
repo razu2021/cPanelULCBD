@@ -167,6 +167,18 @@ export const ctaThemes: Theme[] = [
 ];
 /**
   * ======================================================
+  *  Clients Section Theme   e
+  * ======================================================
+  */
+export const clientThemes: Theme[] = [
+  {
+    key: 'client_main',
+    name: 'Clients Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+];
+/**
+  * ======================================================
   *  Load Call to Action Section Theme   e
   * ======================================================
   */
@@ -358,6 +370,19 @@ export const newsThemes: Theme[] = [
     preview: 'https://picsum.photos/400/250?5'
   },
 ];
+/**
+  * ======================================================
+  * Media  Section Theme  i
+  * ======================================================
+  */
+export const meidaThemes: Theme[] = [
+  {
+    key: 'media_main',
+    name: 'Media Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+ 
+];
 
 /**
   * ======================================================
@@ -470,6 +495,32 @@ export const roadmapThemes: Theme[] = [
     name: 'Roadmap Theme 2',
     preview: 'https://picsum.photos/400/250?5'
   },
+];
+/**
+  * ======================================================
+  * Research Section Theme r
+  * ======================================================
+  */
+export const researchThemes: Theme[] = [
+  {
+    key: 'research_main',
+    name: 'Research Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+
+];
+/**
+  * ======================================================
+  * Research Section Theme 
+  * ======================================================
+  */
+export const storyThemes: Theme[] = [
+  {
+    key: 'story_main',
+    name: 'Stories Theme Defualt',
+    preview: 'https://picsum.photos/400/250?5'
+  },
+
 ];
 /**
   * ======================================================
