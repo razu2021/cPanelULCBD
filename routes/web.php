@@ -54,6 +54,10 @@ Route::controller(frontendController::class)->name('details.')->group(function()
     Route::get('our-preferable-country/details/{id}/{slug}','countryDetails')->name('country');
     Route::get('section/details/{id}/{slug}','sectionsxDetails')->name('sectionx');
     Route::get('team/details/{id}/{slug}','teamDetails')->name('team');
+    Route::get('stories/{id}/{url}','storyDetails')->name('storys');
+    Route::get('research/{id}/{url}','researchDetails')->name('research');
+    Route::get('clients/{id}/{url}','clientsDetails')->name('clients');
+    Route::get('media/{id}/{url}','mediaDetails')->name('media');
 });
 
 

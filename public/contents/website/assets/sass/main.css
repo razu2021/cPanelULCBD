@@ -12387,7 +12387,7 @@ html {
 }
 
 .details_1 {
-  padding: clamp(6rem, 10vw, 12rem) 0;
+  padding: clamp(3rem, 8vw, 6rem) 0;
   background: #ffffff;
 }
 .details_1 .details_banner {
@@ -12445,69 +12445,11 @@ html {
   color: #111;
   font-weight: 500;
 }
-.details_1 .content_wrapper .rich_text ul {
-  margin-bottom: 3rem;
-  padding-left: 2rem;
-}
-.details_1 .content_wrapper .rich_text ul li {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-  color: #555;
-}
-.details_1 .content_wrapper .rich_text ul li::marker {
-  color: #0d6efd;
-}
 .details_1 .content_wrapper .rich_text img {
   border-radius: 2.5rem;
-  margin: 4rem 0;
-  width: 100%;
+  margin: 4rem auto;
+  width: 70%;
   height: auto;
-}
-.details_1 .content_wrapper .details_footer {
-  margin-top: 6rem;
-  padding-top: 4rem;
-  border-top: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.details_1 .content_wrapper .details_footer .tags {
-  display: flex;
-  gap: 1rem;
-}
-.details_1 .content_wrapper .details_footer .tags a {
-  padding: 0.8rem 1.8rem;
-  background: #f0f4f8;
-  border-radius: 5rem;
-  font-size: 1.3rem;
-  color: #555;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.details_1 .content_wrapper .details_footer .tags a:hover {
-  background: #0d6efd;
-  color: #fff;
-}
-.details_1 .content_wrapper .details_footer .share_links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.details_1 .content_wrapper .details_footer .share_links span {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #111;
-}
-.details_1 .content_wrapper .details_footer .share_links a {
-  font-size: 2rem;
-  color: #111;
-  transition: color 0.3s ease;
-}
-.details_1 .content_wrapper .details_footer .share_links a:hover {
-  color: #0d6efd;
 }
 
 .details_3 {
@@ -12562,7 +12504,7 @@ html {
   margin-bottom: 2.5rem;
 }
 .details_3 .article_body h1 {
-  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-size: clamp(3.5rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
   color: #000;
@@ -12694,7 +12636,7 @@ html {
   display: inline-block;
 }
 .details_4 .hero_wrap .hero_info_card h1 {
-  font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+  font-size: clamp(3.5rem, 5.5vw, 4.5rem);
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.2rem;
@@ -12747,6 +12689,11 @@ html {
   line-height: 1.9;
   color: #555;
 }
+.details_4 .narrative_section .cover_image img {
+  height: 50rem;
+  width: auto;
+  background-color: red;
+}
 .details_4 .narrative_section .quote_box {
   margin: 6rem 0;
   padding: 5rem;
@@ -12779,17 +12726,18 @@ html {
 }
 
 .details_5 {
-  background: #080808;
+  background: #fff;
   color: #ffffff;
   padding-bottom: 15rem;
   overflow: hidden;
 }
 .details_5 .hero_section {
-  height: 80vh;
+  height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #09284E;
 }
 .details_5 .hero_section .bg_image {
   position: absolute;
@@ -12811,15 +12759,14 @@ html {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.5rem;
-  color: #0d6efd;
+  color: #E8CD93;
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   display: block;
 }
 .details_5 .hero_section .hero_content h1 {
-  font-size: clamp(4rem, 8vw, 9rem);
+  font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 900;
-  line-height: 0.9;
   letter-spacing: -0.4rem;
   margin-bottom: 4rem;
 }
@@ -12844,7 +12791,7 @@ html {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  color: #fff;
+  color: #E8CD93;
 }
 .details_5 .info_panels .glass_card p {
   font-size: 1.7rem;
@@ -12858,6 +12805,8 @@ html {
 }
 .details_5 .content_body {
   margin-top: 10rem;
+  background-color: #09284E;
+  border-radius: 2rem;
 }
 .details_5 .content_body .sticky_info {
   position: sticky;
@@ -12896,8 +12845,9 @@ html {
   margin-bottom: 4rem;
 }
 .details_5 .content_body .article_text .feature_img_wide {
-  width: 110%;
-  margin-left: -5%;
+  width: auto;
+  height: 40rem;
+  margin: 0 auto;
   border-radius: 4rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -12999,12 +12949,12 @@ html {
 }
 
 .service-details-wrapper {
-  background-color: #f8f9fa;
+  background-color: #fff;
   padding-bottom: clamp(4rem, 8vw, 8rem);
 }
 .service-details-wrapper .details-hero {
-  height: clamp(40rem, 60vh, 60rem);
-  background-attachment: fixed;
+  min-height: clamp(40rem, 60vh, 60rem);
+  background-attachment: scroll;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -13017,7 +12967,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+  background: #09284E;
 }
 .service-details-wrapper .details-hero .hero-content {
   position: relative;
@@ -13035,7 +12985,7 @@ html {
   margin-bottom: 2rem;
 }
 .service-details-wrapper .details-hero .hero-content .hero-heading {
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
 }

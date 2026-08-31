@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\frontend\frontendController::index
- * @see app/Http/Controllers/frontend/frontendController.php:29
+ * @see app/Http/Controllers/frontend/frontendController.php:33
  * @route '/'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ index.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::index
- * @see app/Http/Controllers/frontend/frontendController.php:29
+ * @see app/Http/Controllers/frontend/frontendController.php:33
  * @route '/'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ index.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::index
- * @see app/Http/Controllers/frontend/frontendController.php:29
+ * @see app/Http/Controllers/frontend/frontendController.php:33
  * @route '/'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::index
- * @see app/Http/Controllers/frontend/frontendController.php:29
+ * @see app/Http/Controllers/frontend/frontendController.php:33
  * @route '/'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::index
- * @see app/Http/Controllers/frontend/frontendController.php:29
+ * @see app/Http/Controllers/frontend/frontendController.php:33
  * @route '/'
  */
     const indexForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -54,7 +54,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::index
- * @see app/Http/Controllers/frontend/frontendController.php:29
+ * @see app/Http/Controllers/frontend/frontendController.php:33
  * @route '/'
  */
         indexForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -63,7 +63,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::index
- * @see app/Http/Controllers/frontend/frontendController.php:29
+ * @see app/Http/Controllers/frontend/frontendController.php:33
  * @route '/'
  */
         indexForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -79,7 +79,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     index.form = indexForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::htmlSitemap
- * @see app/Http/Controllers/frontend/frontendController.php:247
+ * @see app/Http/Controllers/frontend/frontendController.php:275
  * @route '/html/sitemap'
  */
 export const htmlSitemap = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -94,7 +94,7 @@ htmlSitemap.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::htmlSitemap
- * @see app/Http/Controllers/frontend/frontendController.php:247
+ * @see app/Http/Controllers/frontend/frontendController.php:275
  * @route '/html/sitemap'
  */
 htmlSitemap.url = (options?: RouteQueryOptions) => {
@@ -103,7 +103,7 @@ htmlSitemap.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::htmlSitemap
- * @see app/Http/Controllers/frontend/frontendController.php:247
+ * @see app/Http/Controllers/frontend/frontendController.php:275
  * @route '/html/sitemap'
  */
 htmlSitemap.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -112,7 +112,7 @@ htmlSitemap.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::htmlSitemap
- * @see app/Http/Controllers/frontend/frontendController.php:247
+ * @see app/Http/Controllers/frontend/frontendController.php:275
  * @route '/html/sitemap'
  */
 htmlSitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -122,7 +122,7 @@ htmlSitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::htmlSitemap
- * @see app/Http/Controllers/frontend/frontendController.php:247
+ * @see app/Http/Controllers/frontend/frontendController.php:275
  * @route '/html/sitemap'
  */
     const htmlSitemapForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -132,7 +132,7 @@ htmlSitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::htmlSitemap
- * @see app/Http/Controllers/frontend/frontendController.php:247
+ * @see app/Http/Controllers/frontend/frontendController.php:275
  * @route '/html/sitemap'
  */
         htmlSitemapForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -141,7 +141,7 @@ htmlSitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::htmlSitemap
- * @see app/Http/Controllers/frontend/frontendController.php:247
+ * @see app/Http/Controllers/frontend/frontendController.php:275
  * @route '/html/sitemap'
  */
         htmlSitemapForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -157,7 +157,7 @@ htmlSitemap.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     htmlSitemap.form = htmlSitemapForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:269
+ * @see app/Http/Controllers/frontend/frontendController.php:297
  * @route '/section'
  */
 export const section = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -172,7 +172,7 @@ section.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:269
+ * @see app/Http/Controllers/frontend/frontendController.php:297
  * @route '/section'
  */
 section.url = (options?: RouteQueryOptions) => {
@@ -181,7 +181,7 @@ section.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:269
+ * @see app/Http/Controllers/frontend/frontendController.php:297
  * @route '/section'
  */
 section.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -190,7 +190,7 @@ section.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:269
+ * @see app/Http/Controllers/frontend/frontendController.php:297
  * @route '/section'
  */
 section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -200,7 +200,7 @@ section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:269
+ * @see app/Http/Controllers/frontend/frontendController.php:297
  * @route '/section'
  */
     const sectionForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -210,7 +210,7 @@ section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:269
+ * @see app/Http/Controllers/frontend/frontendController.php:297
  * @route '/section'
  */
         sectionForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -219,7 +219,7 @@ section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::section
- * @see app/Http/Controllers/frontend/frontendController.php:269
+ * @see app/Http/Controllers/frontend/frontendController.php:297
  * @route '/section'
  */
         sectionForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -235,7 +235,7 @@ section.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     section.form = sectionForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::serviceDetails
- * @see app/Http/Controllers/frontend/frontendController.php:153
+ * @see app/Http/Controllers/frontend/frontendController.php:157
  * @route '/service/details/{id}/{slug}'
  */
 export const serviceDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -250,7 +250,7 @@ serviceDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::serviceDetails
- * @see app/Http/Controllers/frontend/frontendController.php:153
+ * @see app/Http/Controllers/frontend/frontendController.php:157
  * @route '/service/details/{id}/{slug}'
  */
 serviceDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -276,7 +276,7 @@ serviceDetails.url = (args: { id: string | number, slug: string | number } | [id
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::serviceDetails
- * @see app/Http/Controllers/frontend/frontendController.php:153
+ * @see app/Http/Controllers/frontend/frontendController.php:157
  * @route '/service/details/{id}/{slug}'
  */
 serviceDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -285,7 +285,7 @@ serviceDetails.get = (args: { id: string | number, slug: string | number } | [id
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::serviceDetails
- * @see app/Http/Controllers/frontend/frontendController.php:153
+ * @see app/Http/Controllers/frontend/frontendController.php:157
  * @route '/service/details/{id}/{slug}'
  */
 serviceDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -295,7 +295,7 @@ serviceDetails.head = (args: { id: string | number, slug: string | number } | [i
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::serviceDetails
- * @see app/Http/Controllers/frontend/frontendController.php:153
+ * @see app/Http/Controllers/frontend/frontendController.php:157
  * @route '/service/details/{id}/{slug}'
  */
     const serviceDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -305,7 +305,7 @@ serviceDetails.head = (args: { id: string | number, slug: string | number } | [i
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::serviceDetails
- * @see app/Http/Controllers/frontend/frontendController.php:153
+ * @see app/Http/Controllers/frontend/frontendController.php:157
  * @route '/service/details/{id}/{slug}'
  */
         serviceDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -314,7 +314,7 @@ serviceDetails.head = (args: { id: string | number, slug: string | number } | [i
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::serviceDetails
- * @see app/Http/Controllers/frontend/frontendController.php:153
+ * @see app/Http/Controllers/frontend/frontendController.php:157
  * @route '/service/details/{id}/{slug}'
  */
         serviceDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -330,7 +330,7 @@ serviceDetails.head = (args: { id: string | number, slug: string | number } | [i
     serviceDetails.form = serviceDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::blogDetails
- * @see app/Http/Controllers/frontend/frontendController.php:160
+ * @see app/Http/Controllers/frontend/frontendController.php:164
  * @route '/blog/details/{id}/{slug}'
  */
 export const blogDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -345,7 +345,7 @@ blogDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::blogDetails
- * @see app/Http/Controllers/frontend/frontendController.php:160
+ * @see app/Http/Controllers/frontend/frontendController.php:164
  * @route '/blog/details/{id}/{slug}'
  */
 blogDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -371,7 +371,7 @@ blogDetails.url = (args: { id: string | number, slug: string | number } | [id: s
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::blogDetails
- * @see app/Http/Controllers/frontend/frontendController.php:160
+ * @see app/Http/Controllers/frontend/frontendController.php:164
  * @route '/blog/details/{id}/{slug}'
  */
 blogDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -380,7 +380,7 @@ blogDetails.get = (args: { id: string | number, slug: string | number } | [id: s
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::blogDetails
- * @see app/Http/Controllers/frontend/frontendController.php:160
+ * @see app/Http/Controllers/frontend/frontendController.php:164
  * @route '/blog/details/{id}/{slug}'
  */
 blogDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -390,7 +390,7 @@ blogDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::blogDetails
- * @see app/Http/Controllers/frontend/frontendController.php:160
+ * @see app/Http/Controllers/frontend/frontendController.php:164
  * @route '/blog/details/{id}/{slug}'
  */
     const blogDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -400,7 +400,7 @@ blogDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::blogDetails
- * @see app/Http/Controllers/frontend/frontendController.php:160
+ * @see app/Http/Controllers/frontend/frontendController.php:164
  * @route '/blog/details/{id}/{slug}'
  */
         blogDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -409,7 +409,7 @@ blogDetails.head = (args: { id: string | number, slug: string | number } | [id: 
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::blogDetails
- * @see app/Http/Controllers/frontend/frontendController.php:160
+ * @see app/Http/Controllers/frontend/frontendController.php:164
  * @route '/blog/details/{id}/{slug}'
  */
         blogDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -425,7 +425,7 @@ blogDetails.head = (args: { id: string | number, slug: string | number } | [id: 
     blogDetails.form = blogDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::eventDetails
- * @see app/Http/Controllers/frontend/frontendController.php:167
+ * @see app/Http/Controllers/frontend/frontendController.php:171
  * @route '/event/details/{id}/{slug}'
  */
 export const eventDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -440,7 +440,7 @@ eventDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::eventDetails
- * @see app/Http/Controllers/frontend/frontendController.php:167
+ * @see app/Http/Controllers/frontend/frontendController.php:171
  * @route '/event/details/{id}/{slug}'
  */
 eventDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -466,7 +466,7 @@ eventDetails.url = (args: { id: string | number, slug: string | number } | [id: 
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::eventDetails
- * @see app/Http/Controllers/frontend/frontendController.php:167
+ * @see app/Http/Controllers/frontend/frontendController.php:171
  * @route '/event/details/{id}/{slug}'
  */
 eventDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -475,7 +475,7 @@ eventDetails.get = (args: { id: string | number, slug: string | number } | [id: 
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::eventDetails
- * @see app/Http/Controllers/frontend/frontendController.php:167
+ * @see app/Http/Controllers/frontend/frontendController.php:171
  * @route '/event/details/{id}/{slug}'
  */
 eventDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -485,7 +485,7 @@ eventDetails.head = (args: { id: string | number, slug: string | number } | [id:
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::eventDetails
- * @see app/Http/Controllers/frontend/frontendController.php:167
+ * @see app/Http/Controllers/frontend/frontendController.php:171
  * @route '/event/details/{id}/{slug}'
  */
     const eventDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -495,7 +495,7 @@ eventDetails.head = (args: { id: string | number, slug: string | number } | [id:
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::eventDetails
- * @see app/Http/Controllers/frontend/frontendController.php:167
+ * @see app/Http/Controllers/frontend/frontendController.php:171
  * @route '/event/details/{id}/{slug}'
  */
         eventDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -504,7 +504,7 @@ eventDetails.head = (args: { id: string | number, slug: string | number } | [id:
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::eventDetails
- * @see app/Http/Controllers/frontend/frontendController.php:167
+ * @see app/Http/Controllers/frontend/frontendController.php:171
  * @route '/event/details/{id}/{slug}'
  */
         eventDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -520,7 +520,7 @@ eventDetails.head = (args: { id: string | number, slug: string | number } | [id:
     eventDetails.form = eventDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::postDetails
- * @see app/Http/Controllers/frontend/frontendController.php:174
+ * @see app/Http/Controllers/frontend/frontendController.php:178
  * @route '/post/details/{id}/{slug}'
  */
 export const postDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -535,7 +535,7 @@ postDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::postDetails
- * @see app/Http/Controllers/frontend/frontendController.php:174
+ * @see app/Http/Controllers/frontend/frontendController.php:178
  * @route '/post/details/{id}/{slug}'
  */
 postDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -561,7 +561,7 @@ postDetails.url = (args: { id: string | number, slug: string | number } | [id: s
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::postDetails
- * @see app/Http/Controllers/frontend/frontendController.php:174
+ * @see app/Http/Controllers/frontend/frontendController.php:178
  * @route '/post/details/{id}/{slug}'
  */
 postDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -570,7 +570,7 @@ postDetails.get = (args: { id: string | number, slug: string | number } | [id: s
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::postDetails
- * @see app/Http/Controllers/frontend/frontendController.php:174
+ * @see app/Http/Controllers/frontend/frontendController.php:178
  * @route '/post/details/{id}/{slug}'
  */
 postDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -580,7 +580,7 @@ postDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::postDetails
- * @see app/Http/Controllers/frontend/frontendController.php:174
+ * @see app/Http/Controllers/frontend/frontendController.php:178
  * @route '/post/details/{id}/{slug}'
  */
     const postDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -590,7 +590,7 @@ postDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::postDetails
- * @see app/Http/Controllers/frontend/frontendController.php:174
+ * @see app/Http/Controllers/frontend/frontendController.php:178
  * @route '/post/details/{id}/{slug}'
  */
         postDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -599,7 +599,7 @@ postDetails.head = (args: { id: string | number, slug: string | number } | [id: 
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::postDetails
- * @see app/Http/Controllers/frontend/frontendController.php:174
+ * @see app/Http/Controllers/frontend/frontendController.php:178
  * @route '/post/details/{id}/{slug}'
  */
         postDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -615,7 +615,7 @@ postDetails.head = (args: { id: string | number, slug: string | number } | [id: 
     postDetails.form = postDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::newsDetails
- * @see app/Http/Controllers/frontend/frontendController.php:180
+ * @see app/Http/Controllers/frontend/frontendController.php:184
  * @route '/news/details/{id}/{slug}'
  */
 export const newsDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -630,7 +630,7 @@ newsDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::newsDetails
- * @see app/Http/Controllers/frontend/frontendController.php:180
+ * @see app/Http/Controllers/frontend/frontendController.php:184
  * @route '/news/details/{id}/{slug}'
  */
 newsDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -656,7 +656,7 @@ newsDetails.url = (args: { id: string | number, slug: string | number } | [id: s
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::newsDetails
- * @see app/Http/Controllers/frontend/frontendController.php:180
+ * @see app/Http/Controllers/frontend/frontendController.php:184
  * @route '/news/details/{id}/{slug}'
  */
 newsDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -665,7 +665,7 @@ newsDetails.get = (args: { id: string | number, slug: string | number } | [id: s
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::newsDetails
- * @see app/Http/Controllers/frontend/frontendController.php:180
+ * @see app/Http/Controllers/frontend/frontendController.php:184
  * @route '/news/details/{id}/{slug}'
  */
 newsDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -675,7 +675,7 @@ newsDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::newsDetails
- * @see app/Http/Controllers/frontend/frontendController.php:180
+ * @see app/Http/Controllers/frontend/frontendController.php:184
  * @route '/news/details/{id}/{slug}'
  */
     const newsDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -685,7 +685,7 @@ newsDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::newsDetails
- * @see app/Http/Controllers/frontend/frontendController.php:180
+ * @see app/Http/Controllers/frontend/frontendController.php:184
  * @route '/news/details/{id}/{slug}'
  */
         newsDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -694,7 +694,7 @@ newsDetails.head = (args: { id: string | number, slug: string | number } | [id: 
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::newsDetails
- * @see app/Http/Controllers/frontend/frontendController.php:180
+ * @see app/Http/Controllers/frontend/frontendController.php:184
  * @route '/news/details/{id}/{slug}'
  */
         newsDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -710,7 +710,7 @@ newsDetails.head = (args: { id: string | number, slug: string | number } | [id: 
     newsDetails.form = newsDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::promotDetails
- * @see app/Http/Controllers/frontend/frontendController.php:186
+ * @see app/Http/Controllers/frontend/frontendController.php:190
  * @route '/promot/details/{id}/{slug}'
  */
 export const promotDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -725,7 +725,7 @@ promotDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::promotDetails
- * @see app/Http/Controllers/frontend/frontendController.php:186
+ * @see app/Http/Controllers/frontend/frontendController.php:190
  * @route '/promot/details/{id}/{slug}'
  */
 promotDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -751,7 +751,7 @@ promotDetails.url = (args: { id: string | number, slug: string | number } | [id:
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::promotDetails
- * @see app/Http/Controllers/frontend/frontendController.php:186
+ * @see app/Http/Controllers/frontend/frontendController.php:190
  * @route '/promot/details/{id}/{slug}'
  */
 promotDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -760,7 +760,7 @@ promotDetails.get = (args: { id: string | number, slug: string | number } | [id:
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::promotDetails
- * @see app/Http/Controllers/frontend/frontendController.php:186
+ * @see app/Http/Controllers/frontend/frontendController.php:190
  * @route '/promot/details/{id}/{slug}'
  */
 promotDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -770,7 +770,7 @@ promotDetails.head = (args: { id: string | number, slug: string | number } | [id
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::promotDetails
- * @see app/Http/Controllers/frontend/frontendController.php:186
+ * @see app/Http/Controllers/frontend/frontendController.php:190
  * @route '/promot/details/{id}/{slug}'
  */
     const promotDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -780,7 +780,7 @@ promotDetails.head = (args: { id: string | number, slug: string | number } | [id
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::promotDetails
- * @see app/Http/Controllers/frontend/frontendController.php:186
+ * @see app/Http/Controllers/frontend/frontendController.php:190
  * @route '/promot/details/{id}/{slug}'
  */
         promotDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -789,7 +789,7 @@ promotDetails.head = (args: { id: string | number, slug: string | number } | [id
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::promotDetails
- * @see app/Http/Controllers/frontend/frontendController.php:186
+ * @see app/Http/Controllers/frontend/frontendController.php:190
  * @route '/promot/details/{id}/{slug}'
  */
         promotDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -900,7 +900,7 @@ protfoliosDetails.head = (args: { id: string | number, slug: string | number } |
     protfoliosDetails.form = protfoliosDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::casestudyDetails
- * @see app/Http/Controllers/frontend/frontendController.php:193
+ * @see app/Http/Controllers/frontend/frontendController.php:197
  * @route '/case-study/details/{id}/{slug}'
  */
 export const casestudyDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -915,7 +915,7 @@ casestudyDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::casestudyDetails
- * @see app/Http/Controllers/frontend/frontendController.php:193
+ * @see app/Http/Controllers/frontend/frontendController.php:197
  * @route '/case-study/details/{id}/{slug}'
  */
 casestudyDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -941,7 +941,7 @@ casestudyDetails.url = (args: { id: string | number, slug: string | number } | [
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::casestudyDetails
- * @see app/Http/Controllers/frontend/frontendController.php:193
+ * @see app/Http/Controllers/frontend/frontendController.php:197
  * @route '/case-study/details/{id}/{slug}'
  */
 casestudyDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -950,7 +950,7 @@ casestudyDetails.get = (args: { id: string | number, slug: string | number } | [
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::casestudyDetails
- * @see app/Http/Controllers/frontend/frontendController.php:193
+ * @see app/Http/Controllers/frontend/frontendController.php:197
  * @route '/case-study/details/{id}/{slug}'
  */
 casestudyDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -960,7 +960,7 @@ casestudyDetails.head = (args: { id: string | number, slug: string | number } | 
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::casestudyDetails
- * @see app/Http/Controllers/frontend/frontendController.php:193
+ * @see app/Http/Controllers/frontend/frontendController.php:197
  * @route '/case-study/details/{id}/{slug}'
  */
     const casestudyDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -970,7 +970,7 @@ casestudyDetails.head = (args: { id: string | number, slug: string | number } | 
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::casestudyDetails
- * @see app/Http/Controllers/frontend/frontendController.php:193
+ * @see app/Http/Controllers/frontend/frontendController.php:197
  * @route '/case-study/details/{id}/{slug}'
  */
         casestudyDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -979,7 +979,7 @@ casestudyDetails.head = (args: { id: string | number, slug: string | number } | 
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::casestudyDetails
- * @see app/Http/Controllers/frontend/frontendController.php:193
+ * @see app/Http/Controllers/frontend/frontendController.php:197
  * @route '/case-study/details/{id}/{slug}'
  */
         casestudyDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -995,7 +995,7 @@ casestudyDetails.head = (args: { id: string | number, slug: string | number } | 
     casestudyDetails.form = casestudyDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::countryDetails
- * @see app/Http/Controllers/frontend/frontendController.php:200
+ * @see app/Http/Controllers/frontend/frontendController.php:204
  * @route '/our-preferable-country/details/{id}/{slug}'
  */
 export const countryDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1010,7 +1010,7 @@ countryDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::countryDetails
- * @see app/Http/Controllers/frontend/frontendController.php:200
+ * @see app/Http/Controllers/frontend/frontendController.php:204
  * @route '/our-preferable-country/details/{id}/{slug}'
  */
 countryDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -1036,7 +1036,7 @@ countryDetails.url = (args: { id: string | number, slug: string | number } | [id
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::countryDetails
- * @see app/Http/Controllers/frontend/frontendController.php:200
+ * @see app/Http/Controllers/frontend/frontendController.php:204
  * @route '/our-preferable-country/details/{id}/{slug}'
  */
 countryDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1045,7 +1045,7 @@ countryDetails.get = (args: { id: string | number, slug: string | number } | [id
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::countryDetails
- * @see app/Http/Controllers/frontend/frontendController.php:200
+ * @see app/Http/Controllers/frontend/frontendController.php:204
  * @route '/our-preferable-country/details/{id}/{slug}'
  */
 countryDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1055,7 +1055,7 @@ countryDetails.head = (args: { id: string | number, slug: string | number } | [i
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::countryDetails
- * @see app/Http/Controllers/frontend/frontendController.php:200
+ * @see app/Http/Controllers/frontend/frontendController.php:204
  * @route '/our-preferable-country/details/{id}/{slug}'
  */
     const countryDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1065,7 +1065,7 @@ countryDetails.head = (args: { id: string | number, slug: string | number } | [i
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::countryDetails
- * @see app/Http/Controllers/frontend/frontendController.php:200
+ * @see app/Http/Controllers/frontend/frontendController.php:204
  * @route '/our-preferable-country/details/{id}/{slug}'
  */
         countryDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1074,7 +1074,7 @@ countryDetails.head = (args: { id: string | number, slug: string | number } | [i
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::countryDetails
- * @see app/Http/Controllers/frontend/frontendController.php:200
+ * @see app/Http/Controllers/frontend/frontendController.php:204
  * @route '/our-preferable-country/details/{id}/{slug}'
  */
         countryDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1185,7 +1185,7 @@ sectionsxDetails.head = (args: { id: string | number, slug: string | number } | 
     sectionsxDetails.form = sectionsxDetailsForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::teamDetails
- * @see app/Http/Controllers/frontend/frontendController.php:212
+ * @see app/Http/Controllers/frontend/frontendController.php:216
  * @route '/team/details/{id}/{slug}'
  */
 export const teamDetails = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1200,7 +1200,7 @@ teamDetails.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::teamDetails
- * @see app/Http/Controllers/frontend/frontendController.php:212
+ * @see app/Http/Controllers/frontend/frontendController.php:216
  * @route '/team/details/{id}/{slug}'
  */
 teamDetails.url = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions) => {
@@ -1226,7 +1226,7 @@ teamDetails.url = (args: { id: string | number, slug: string | number } | [id: s
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::teamDetails
- * @see app/Http/Controllers/frontend/frontendController.php:212
+ * @see app/Http/Controllers/frontend/frontendController.php:216
  * @route '/team/details/{id}/{slug}'
  */
 teamDetails.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1235,7 +1235,7 @@ teamDetails.get = (args: { id: string | number, slug: string | number } | [id: s
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::teamDetails
- * @see app/Http/Controllers/frontend/frontendController.php:212
+ * @see app/Http/Controllers/frontend/frontendController.php:216
  * @route '/team/details/{id}/{slug}'
  */
 teamDetails.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1245,7 +1245,7 @@ teamDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::teamDetails
- * @see app/Http/Controllers/frontend/frontendController.php:212
+ * @see app/Http/Controllers/frontend/frontendController.php:216
  * @route '/team/details/{id}/{slug}'
  */
     const teamDetailsForm = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1255,7 +1255,7 @@ teamDetails.head = (args: { id: string | number, slug: string | number } | [id: 
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::teamDetails
- * @see app/Http/Controllers/frontend/frontendController.php:212
+ * @see app/Http/Controllers/frontend/frontendController.php:216
  * @route '/team/details/{id}/{slug}'
  */
         teamDetailsForm.get = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1264,7 +1264,7 @@ teamDetails.head = (args: { id: string | number, slug: string | number } | [id: 
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::teamDetails
- * @see app/Http/Controllers/frontend/frontendController.php:212
+ * @see app/Http/Controllers/frontend/frontendController.php:216
  * @route '/team/details/{id}/{slug}'
  */
         teamDetailsForm.head = (args: { id: string | number, slug: string | number } | [id: string | number, slug: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1279,8 +1279,388 @@ teamDetails.head = (args: { id: string | number, slug: string | number } | [id: 
     
     teamDetails.form = teamDetailsForm
 /**
+* @see \App\Http\Controllers\frontend\frontendController::storyDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:231
+ * @route '/stories/{id}/{url}'
+ */
+export const storyDetails = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: storyDetails.url(args, options),
+    method: 'get',
+})
+
+storyDetails.definition = {
+    methods: ["get","head"],
+    url: '/stories/{id}/{url}',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::storyDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:231
+ * @route '/stories/{id}/{url}'
+ */
+storyDetails.url = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions) => {
+    if (Array.isArray(args)) {
+        args = {
+                    id: args[0],
+                    url: args[1],
+                }
+    }
+
+    args = applyUrlDefaults(args)
+
+    const parsedArgs = {
+                        id: args.id,
+                                url: args.url,
+                }
+
+    return storyDetails.definition.url
+            .replace('{id}', parsedArgs.id.toString())
+            .replace('{url}', parsedArgs.url.toString())
+            .replace(/\/+$/, '') + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::storyDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:231
+ * @route '/stories/{id}/{url}'
+ */
+storyDetails.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: storyDetails.url(args, options),
+    method: 'get',
+})
+/**
+* @see \App\Http\Controllers\frontend\frontendController::storyDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:231
+ * @route '/stories/{id}/{url}'
+ */
+storyDetails.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: storyDetails.url(args, options),
+    method: 'head',
+})
+
+    /**
+* @see \App\Http\Controllers\frontend\frontendController::storyDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:231
+ * @route '/stories/{id}/{url}'
+ */
+    const storyDetailsForm = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: storyDetails.url(args, options),
+        method: 'get',
+    })
+
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::storyDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:231
+ * @route '/stories/{id}/{url}'
+ */
+        storyDetailsForm.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: storyDetails.url(args, options),
+            method: 'get',
+        })
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::storyDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:231
+ * @route '/stories/{id}/{url}'
+ */
+        storyDetailsForm.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: storyDetails.url(args, {
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    storyDetails.form = storyDetailsForm
+/**
+* @see \App\Http\Controllers\frontend\frontendController::researchDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:238
+ * @route '/research/{id}/{url}'
+ */
+export const researchDetails = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: researchDetails.url(args, options),
+    method: 'get',
+})
+
+researchDetails.definition = {
+    methods: ["get","head"],
+    url: '/research/{id}/{url}',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::researchDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:238
+ * @route '/research/{id}/{url}'
+ */
+researchDetails.url = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions) => {
+    if (Array.isArray(args)) {
+        args = {
+                    id: args[0],
+                    url: args[1],
+                }
+    }
+
+    args = applyUrlDefaults(args)
+
+    const parsedArgs = {
+                        id: args.id,
+                                url: args.url,
+                }
+
+    return researchDetails.definition.url
+            .replace('{id}', parsedArgs.id.toString())
+            .replace('{url}', parsedArgs.url.toString())
+            .replace(/\/+$/, '') + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::researchDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:238
+ * @route '/research/{id}/{url}'
+ */
+researchDetails.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: researchDetails.url(args, options),
+    method: 'get',
+})
+/**
+* @see \App\Http\Controllers\frontend\frontendController::researchDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:238
+ * @route '/research/{id}/{url}'
+ */
+researchDetails.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: researchDetails.url(args, options),
+    method: 'head',
+})
+
+    /**
+* @see \App\Http\Controllers\frontend\frontendController::researchDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:238
+ * @route '/research/{id}/{url}'
+ */
+    const researchDetailsForm = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: researchDetails.url(args, options),
+        method: 'get',
+    })
+
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::researchDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:238
+ * @route '/research/{id}/{url}'
+ */
+        researchDetailsForm.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: researchDetails.url(args, options),
+            method: 'get',
+        })
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::researchDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:238
+ * @route '/research/{id}/{url}'
+ */
+        researchDetailsForm.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: researchDetails.url(args, {
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    researchDetails.form = researchDetailsForm
+/**
+* @see \App\Http\Controllers\frontend\frontendController::clientsDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:225
+ * @route '/clients/{id}/{url}'
+ */
+export const clientsDetails = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: clientsDetails.url(args, options),
+    method: 'get',
+})
+
+clientsDetails.definition = {
+    methods: ["get","head"],
+    url: '/clients/{id}/{url}',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::clientsDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:225
+ * @route '/clients/{id}/{url}'
+ */
+clientsDetails.url = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions) => {
+    if (Array.isArray(args)) {
+        args = {
+                    id: args[0],
+                    url: args[1],
+                }
+    }
+
+    args = applyUrlDefaults(args)
+
+    const parsedArgs = {
+                        id: args.id,
+                                url: args.url,
+                }
+
+    return clientsDetails.definition.url
+            .replace('{id}', parsedArgs.id.toString())
+            .replace('{url}', parsedArgs.url.toString())
+            .replace(/\/+$/, '') + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::clientsDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:225
+ * @route '/clients/{id}/{url}'
+ */
+clientsDetails.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: clientsDetails.url(args, options),
+    method: 'get',
+})
+/**
+* @see \App\Http\Controllers\frontend\frontendController::clientsDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:225
+ * @route '/clients/{id}/{url}'
+ */
+clientsDetails.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: clientsDetails.url(args, options),
+    method: 'head',
+})
+
+    /**
+* @see \App\Http\Controllers\frontend\frontendController::clientsDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:225
+ * @route '/clients/{id}/{url}'
+ */
+    const clientsDetailsForm = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: clientsDetails.url(args, options),
+        method: 'get',
+    })
+
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::clientsDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:225
+ * @route '/clients/{id}/{url}'
+ */
+        clientsDetailsForm.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: clientsDetails.url(args, options),
+            method: 'get',
+        })
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::clientsDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:225
+ * @route '/clients/{id}/{url}'
+ */
+        clientsDetailsForm.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: clientsDetails.url(args, {
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    clientsDetails.form = clientsDetailsForm
+/**
+* @see \App\Http\Controllers\frontend\frontendController::mediaDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @route '/media/{id}/{url}'
+ */
+export const mediaDetails = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: mediaDetails.url(args, options),
+    method: 'get',
+})
+
+mediaDetails.definition = {
+    methods: ["get","head"],
+    url: '/media/{id}/{url}',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::mediaDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @route '/media/{id}/{url}'
+ */
+mediaDetails.url = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions) => {
+    if (Array.isArray(args)) {
+        args = {
+                    id: args[0],
+                    url: args[1],
+                }
+    }
+
+    args = applyUrlDefaults(args)
+
+    const parsedArgs = {
+                        id: args.id,
+                                url: args.url,
+                }
+
+    return mediaDetails.definition.url
+            .replace('{id}', parsedArgs.id.toString())
+            .replace('{url}', parsedArgs.url.toString())
+            .replace(/\/+$/, '') + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\frontend\frontendController::mediaDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @route '/media/{id}/{url}'
+ */
+mediaDetails.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: mediaDetails.url(args, options),
+    method: 'get',
+})
+/**
+* @see \App\Http\Controllers\frontend\frontendController::mediaDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @route '/media/{id}/{url}'
+ */
+mediaDetails.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: mediaDetails.url(args, options),
+    method: 'head',
+})
+
+    /**
+* @see \App\Http\Controllers\frontend\frontendController::mediaDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @route '/media/{id}/{url}'
+ */
+    const mediaDetailsForm = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+        action: mediaDetails.url(args, options),
+        method: 'get',
+    })
+
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::mediaDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @route '/media/{id}/{url}'
+ */
+        mediaDetailsForm.get = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: mediaDetails.url(args, options),
+            method: 'get',
+        })
+            /**
+* @see \App\Http\Controllers\frontend\frontendController::mediaDetails
+ * @see app/Http/Controllers/frontend/frontendController.php:244
+ * @route '/media/{id}/{url}'
+ */
+        mediaDetailsForm.head = (args: { id: string | number, url: string | number } | [id: string | number, url: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+            action: mediaDetails.url(args, {
+                        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+                            _method: 'HEAD',
+                            ...(options?.query ?? options?.mergeQuery ?? {}),
+                        }
+                    }),
+            method: 'get',
+        })
+    
+    mediaDetails.form = mediaDetailsForm
+/**
 * @see \App\Http\Controllers\frontend\frontendController::categoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:56
+ * @see app/Http/Controllers/frontend/frontendController.php:60
  * @route '/{category}'
  */
 export const categoryPage = (args: { category: string | number } | [category: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1295,7 +1675,7 @@ categoryPage.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::categoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:56
+ * @see app/Http/Controllers/frontend/frontendController.php:60
  * @route '/{category}'
  */
 categoryPage.url = (args: { category: string | number } | [category: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -1323,7 +1703,7 @@ categoryPage.url = (args: { category: string | number } | [category: string | nu
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::categoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:56
+ * @see app/Http/Controllers/frontend/frontendController.php:60
  * @route '/{category}'
  */
 categoryPage.get = (args: { category: string | number } | [category: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1332,7 +1712,7 @@ categoryPage.get = (args: { category: string | number } | [category: string | nu
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::categoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:56
+ * @see app/Http/Controllers/frontend/frontendController.php:60
  * @route '/{category}'
  */
 categoryPage.head = (args: { category: string | number } | [category: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1342,7 +1722,7 @@ categoryPage.head = (args: { category: string | number } | [category: string | n
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::categoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:56
+ * @see app/Http/Controllers/frontend/frontendController.php:60
  * @route '/{category}'
  */
     const categoryPageForm = (args: { category: string | number } | [category: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1352,7 +1732,7 @@ categoryPage.head = (args: { category: string | number } | [category: string | n
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::categoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:56
+ * @see app/Http/Controllers/frontend/frontendController.php:60
  * @route '/{category}'
  */
         categoryPageForm.get = (args: { category: string | number } | [category: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1361,7 +1741,7 @@ categoryPage.head = (args: { category: string | number } | [category: string | n
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::categoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:56
+ * @see app/Http/Controllers/frontend/frontendController.php:60
  * @route '/{category}'
  */
         categoryPageForm.head = (args: { category: string | number } | [category: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1377,7 +1757,7 @@ categoryPage.head = (args: { category: string | number } | [category: string | n
     categoryPage.form = categoryPageForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::subCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:81
+ * @see app/Http/Controllers/frontend/frontendController.php:85
  * @route '/{category}/{subcategory}'
  */
 export const subCategoryPage = (args: { category: string | number, subcategory: string | number } | [category: string | number, subcategory: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1392,7 +1772,7 @@ subCategoryPage.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::subCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:81
+ * @see app/Http/Controllers/frontend/frontendController.php:85
  * @route '/{category}/{subcategory}'
  */
 subCategoryPage.url = (args: { category: string | number, subcategory: string | number } | [category: string | number, subcategory: string | number ], options?: RouteQueryOptions) => {
@@ -1418,7 +1798,7 @@ subCategoryPage.url = (args: { category: string | number, subcategory: string | 
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::subCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:81
+ * @see app/Http/Controllers/frontend/frontendController.php:85
  * @route '/{category}/{subcategory}'
  */
 subCategoryPage.get = (args: { category: string | number, subcategory: string | number } | [category: string | number, subcategory: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1427,7 +1807,7 @@ subCategoryPage.get = (args: { category: string | number, subcategory: string | 
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::subCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:81
+ * @see app/Http/Controllers/frontend/frontendController.php:85
  * @route '/{category}/{subcategory}'
  */
 subCategoryPage.head = (args: { category: string | number, subcategory: string | number } | [category: string | number, subcategory: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1437,7 +1817,7 @@ subCategoryPage.head = (args: { category: string | number, subcategory: string |
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::subCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:81
+ * @see app/Http/Controllers/frontend/frontendController.php:85
  * @route '/{category}/{subcategory}'
  */
     const subCategoryPageForm = (args: { category: string | number, subcategory: string | number } | [category: string | number, subcategory: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1447,7 +1827,7 @@ subCategoryPage.head = (args: { category: string | number, subcategory: string |
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::subCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:81
+ * @see app/Http/Controllers/frontend/frontendController.php:85
  * @route '/{category}/{subcategory}'
  */
         subCategoryPageForm.get = (args: { category: string | number, subcategory: string | number } | [category: string | number, subcategory: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1456,7 +1836,7 @@ subCategoryPage.head = (args: { category: string | number, subcategory: string |
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::subCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:81
+ * @see app/Http/Controllers/frontend/frontendController.php:85
  * @route '/{category}/{subcategory}'
  */
         subCategoryPageForm.head = (args: { category: string | number, subcategory: string | number } | [category: string | number, subcategory: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1472,7 +1852,7 @@ subCategoryPage.head = (args: { category: string | number, subcategory: string |
     subCategoryPage.form = subCategoryPageForm
 /**
 * @see \App\Http\Controllers\frontend\frontendController::childCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:108
+ * @see app/Http/Controllers/frontend/frontendController.php:112
  * @route '/{category}/{subcategory}/{childcategory}'
  */
 export const childCategoryPage = (args: { category: string | number, subcategory: string | number, childcategory: string | number } | [category: string | number, subcategory: string | number, childcategory: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1487,7 +1867,7 @@ childCategoryPage.definition = {
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::childCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:108
+ * @see app/Http/Controllers/frontend/frontendController.php:112
  * @route '/{category}/{subcategory}/{childcategory}'
  */
 childCategoryPage.url = (args: { category: string | number, subcategory: string | number, childcategory: string | number } | [category: string | number, subcategory: string | number, childcategory: string | number ], options?: RouteQueryOptions) => {
@@ -1516,7 +1896,7 @@ childCategoryPage.url = (args: { category: string | number, subcategory: string 
 
 /**
 * @see \App\Http\Controllers\frontend\frontendController::childCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:108
+ * @see app/Http/Controllers/frontend/frontendController.php:112
  * @route '/{category}/{subcategory}/{childcategory}'
  */
 childCategoryPage.get = (args: { category: string | number, subcategory: string | number, childcategory: string | number } | [category: string | number, subcategory: string | number, childcategory: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1525,7 +1905,7 @@ childCategoryPage.get = (args: { category: string | number, subcategory: string 
 })
 /**
 * @see \App\Http\Controllers\frontend\frontendController::childCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:108
+ * @see app/Http/Controllers/frontend/frontendController.php:112
  * @route '/{category}/{subcategory}/{childcategory}'
  */
 childCategoryPage.head = (args: { category: string | number, subcategory: string | number, childcategory: string | number } | [category: string | number, subcategory: string | number, childcategory: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1535,7 +1915,7 @@ childCategoryPage.head = (args: { category: string | number, subcategory: string
 
     /**
 * @see \App\Http\Controllers\frontend\frontendController::childCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:108
+ * @see app/Http/Controllers/frontend/frontendController.php:112
  * @route '/{category}/{subcategory}/{childcategory}'
  */
     const childCategoryPageForm = (args: { category: string | number, subcategory: string | number, childcategory: string | number } | [category: string | number, subcategory: string | number, childcategory: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1545,7 +1925,7 @@ childCategoryPage.head = (args: { category: string | number, subcategory: string
 
             /**
 * @see \App\Http\Controllers\frontend\frontendController::childCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:108
+ * @see app/Http/Controllers/frontend/frontendController.php:112
  * @route '/{category}/{subcategory}/{childcategory}'
  */
         childCategoryPageForm.get = (args: { category: string | number, subcategory: string | number, childcategory: string | number } | [category: string | number, subcategory: string | number, childcategory: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1554,7 +1934,7 @@ childCategoryPage.head = (args: { category: string | number, subcategory: string
         })
             /**
 * @see \App\Http\Controllers\frontend\frontendController::childCategoryPage
- * @see app/Http/Controllers/frontend/frontendController.php:108
+ * @see app/Http/Controllers/frontend/frontendController.php:112
  * @route '/{category}/{subcategory}/{childcategory}'
  */
         childCategoryPageForm.head = (args: { category: string | number, subcategory: string | number, childcategory: string | number } | [category: string | number, subcategory: string | number, childcategory: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1568,6 +1948,6 @@ childCategoryPage.head = (args: { category: string | number, subcategory: string
         })
     
     childCategoryPage.form = childCategoryPageForm
-const frontendController = { index, htmlSitemap, section, serviceDetails, blogDetails, eventDetails, postDetails, newsDetails, promotDetails, protfoliosDetails, casestudyDetails, countryDetails, sectionsxDetails, teamDetails, categoryPage, subCategoryPage, childCategoryPage }
+const frontendController = { index, htmlSitemap, section, serviceDetails, blogDetails, eventDetails, postDetails, newsDetails, promotDetails, protfoliosDetails, casestudyDetails, countryDetails, sectionsxDetails, teamDetails, storyDetails, researchDetails, clientsDetails, mediaDetails, categoryPage, subCategoryPage, childCategoryPage }
 
 export default frontendController

@@ -1,3 +1,5 @@
+@if(!empty($contents) && $contents->count() > 0)
+
 <section class="midia1">
     <div class="container">
 
@@ -5,55 +7,58 @@
             <div>
                 <span class="midia1__eyebrow">
                     <i class="bi bi-camera"></i>
-                    Media & Gallery
+                  {{$sectionsdata->section_title ?? 'Section Title '}}
                 </span>
 
                 <h2 class="midia1__title">
-                    In the
-                    <span>Media.</span>
+                    <span>{{$sectionsdata->section_heading ?? 'Section Heading'}}</span>
                 </h2>
             </div>
 
-            <a href="#" class="midia1__view">
-                View All Media
-                <i class="bi bi-arrow-up-right"></i>
-            </a>
+            
         </div>
 
 
         <div class="row g-4">
 
             <!-- Media Card -->
-            @for ($i = 0; $i <10; $i++)
+              @foreach ($contents as $media)
                 
             
             <div class="col-12 col-md-4">
-                <a href="#" class="midia1__card">
+                <a href="{{route('details.media',[$media->id,$media->url])}}" class="midia1__card">
 
                     <div class="midia1__image">
-                        <img src="https://i.pinimg.com/736x/9e/29/60/9e29602f1dd2bc34469d5398fa85c040.jpg"
-                             alt="Act Legal in media"
+                        @if($media->cover_image)
+                        <img src="{{asset($media->cover_image)}}"
+                             alt="{{$media->title ?? ''}} Media"
                              loading="lazy">
+                        @else 
+                            <img src="{{asset('contents/website/assets/images/avater.gif')}}" alt="{{$res->title ?? ''}}" loading="lazy">
+                        @endif
 
                         <div class="midia1__overlay"></div>
 
                         <span class="midia1__number">
-                            01
+                           {{$media->type ?? ''}}
                         </span>
 
-                        <span class="midia1__icon">
+                       
+                            <span class="midia1__icon">
+                                
                             <i class="bi bi-arrow-up-right"></i>
-                        </span>
+                             
+                            </span>
+                       
 
                         <h3>
-                            Act Legal Featured in Leading
-                            Legal & Business Publication
+                           {{$media->title ?? ''}}
                         </h3>
                     </div>
 
                 </a>
             </div>
-@endfor
+  @endforeach
 
 
            
@@ -63,3 +68,4 @@
 
     </div>
 </section>
+@endif

@@ -7,14 +7,18 @@ use App\Models\Blog;
 use App\Models\Casestudy;
 use App\Models\CategoryPage;
 use App\Models\ChildCategoryPage;
+use App\Models\clients;
 use App\Models\Countrydestination;
 use App\Models\Event;
+use App\Models\Media;
 use App\Models\News;
 use App\Models\Post;
 use App\Models\Promot;
 use App\Models\Protfolio;
+use App\Models\Research;
 use App\Models\sectionx;
 use App\Models\Service;
+use App\Models\story;
 use App\Models\SubCategoryPage;
 use App\Models\Team;
 use Illuminate\Support\Str;
@@ -218,7 +222,31 @@ public function childCategoryPage($category, $subcategory, $childcategory) {
         return view('frontend.detailsPages.team_details',compact('data','all'));
     }
     // ================= News functionality end hre =================
+      public function clientsDetails($id,$slug){
+        $all = clients::where('public_status', 1)->where('id', '!=', $id)->inRandomOrder()->take(6)->get();
+        $data = clients::where('id',$id)->where('url',$slug)->firstOrFail();
+        return view('frontend.detailsPages.clients_details',compact('data','all'));
+    }
+    // ================= Clients Details functionality end hre =================
+      public function storyDetails($id,$slug){
+        $all = story::where('public_status', 1)->where('id', '!=', $id)->inRandomOrder()->take(6)->get();
+        $data = story::where('id',$id)->where('url',$slug)->firstOrFail();
+        return view('frontend.detailsPages.story_details',compact('data','all'));
+    }
+    // ================= Stories Details functionality end hre =================
 
+      public function researchDetails($id,$slug){
+        $all = Research::where('public_status', 1)->where('id', '!=', $id)->inRandomOrder()->take(6)->get();
+        $data = Research::where('id',$id)->where('url',$slug)->firstOrFail();
+        return view('frontend.detailsPages.research_details',compact('data','all'));
+    }
+    // ================= Research Details functionality end hre =================
+      public function mediaDetails($id,$slug){
+        $all = Media::where('public_status', 1)->where('id', '!=', $id)->inRandomOrder()->take(6)->get();
+        $data = Media::where('id',$id)->where('url',$slug)->firstOrFail();
+        return view('frontend.detailsPages.media_details',compact('data','all'));
+    }
+    // ================= Media Details functionality end hre =================
 
 
 // ============= loaded page section private function start here ================
