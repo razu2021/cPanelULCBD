@@ -603,7 +603,7 @@ Route::controller(VideoGalleryController::class)->prefix('admin/dashboad/manage/
     Route::get('export/pdf','export_pdf')->name('export_pdf');
 });
 /**============ team  Route Start here =========== */
-Route::controller(ImagegalleryController::class)->prefix('admin/dashboad/manage/section/image-gallery/')->name('imageallery_manage.')->group(function(){
+Route::controller(ImagegalleryController::class)->prefix('admin/dashboad/manage/section/image-gallery/')->name('imagegallery_manage.')->group(function(){
     Route::get('all','index')->name('all');
     Route::get('add/{id}/{slug}','add')->name('add');
     Route::get('view/{id}/{slug}','view')->name('view');

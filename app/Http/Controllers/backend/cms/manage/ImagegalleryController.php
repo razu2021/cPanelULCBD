@@ -98,12 +98,12 @@ class ImagegalleryController extends Controller
     public function insert(Request $request){
          /**--- validation code -- */
         $request->validate( [
-                'title ' => ['required', 'string'],
+                'title' => ['required', 'string'],
             ],[
                 'title.required'=> 'Title field is Required !',
             ]
         );
-
+      
         //---------- get authenticate use id and create a slug
         $creator_id = Auth::user()->id;
         $slug = uniqid('20').Str::random(20) . '_'.mt_rand(10000, 100000).'-'.time();
@@ -138,7 +138,7 @@ class ImagegalleryController extends Controller
        
         //---------------------- if insert ------
         if($insert){
-            flash()->success('created successfully!');
+            flash()->success('Information created successfully!');
         }else{
              flash()->error('created Faild!');
         }
@@ -158,7 +158,7 @@ class ImagegalleryController extends Controller
 
         /**--- validation code -- */
         $request->validate( [
-                'title ' => ['required', 'string'],
+                'title' => ['required', 'string'],
             ],[
                 'title.required'=> 'Title field is Required !',
             ]

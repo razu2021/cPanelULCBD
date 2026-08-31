@@ -1302,7 +1302,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
     
     export_pdf.form = export_pdfForm
-const imageallery_manage = {
+const imagegallery_manage = {
     all: Object.assign(all, all),
 add: Object.assign(add, add),
 view: Object.assign(view, view),
@@ -1321,4 +1321,4 @@ export_csv: Object.assign(export_csv, export_csv),
 export_pdf: Object.assign(export_pdf, export_pdf),
 }
 
-export default imageallery_manage
+export default imagegallery_manage
