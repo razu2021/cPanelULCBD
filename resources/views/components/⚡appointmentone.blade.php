@@ -137,7 +137,7 @@ new class extends Component
                     <select name="practice_area" class="form-select"  wire:model.blur="service">
                         <option value="" selected disabled>Select Practice Area</option>
                         <option value="Legal_matters">Legal Metterrs</option>
-                        <option value="immigration_matters">Immigration Metterrs</option>
+                        <option value="immigration_matters">Immigration Matterrs</option>
                         <option value="others">Others</option>
                     </select>
                 </div>
@@ -191,7 +191,7 @@ new class extends Component
                     <select name="practice_area" class="form-select"  wire:model.blur="type">
                         <option value="" selected disabled>Select Appointment Time</option>
                         <option value="in_person">In-Person </option>
-                        <option value="online">Virtual Counselling via the (Online Platform) </option>
+                        <option value="online"> Virtual Counselling via Online Platforms </option>
                         
                     </select>
                   

@@ -31,7 +31,7 @@
                                 <i class="bi bi-person-workspace"></i>
                             </div>
                             <div>
-                                <h4>Paid Consultatation - Head of Chambers </h4>
+                                <h4>Paid Consultatation - Head of Chamber </h4>
                                 <p>Get direct expert legal advice from the Head of Chamber for your complex legal matters. Choose between an in-person meeting at our office or virtual meeting.</p>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                <i class="bi bi-person-workspace"></i>
                             </div>
                             <div>
-                                <h4>Free Preliminary assessment - Senior Consultant </h4>
+                                <h4>Free Preliminary Assessment - Senior Consultant </h4>
                                 <p>Get a free case evaluation with our Senior Barristers, Advocates & Consultant for complimentary assessment of your case & clear explanation.</p>
                             </div>
                         </div>
