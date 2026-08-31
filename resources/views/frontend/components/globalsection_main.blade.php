@@ -29,7 +29,10 @@
                             <div class="col-lg-5 col-md-12 p-lg-0">
                                 <div class="promot5-visual-wrap">
                                     <div class="promot5-mask-layer">
-                                        <img src="https://i.pinimg.com/736x/64/73/25/647325b786074e67b1f203a329588e87.jpg" alt="Strategic Business Slide">
+                                        @if ($data->cover_image)
+                                            <img src="{{asset($data->cover_image)}}" alt="Strategic Business Slide">
+                                        @endif
+                                        
                                     </div>
                                     <div class="promot5-blob promot5-blob-1"></div>
                                     <div class="promot5-blob promot5-blob-2"></div>

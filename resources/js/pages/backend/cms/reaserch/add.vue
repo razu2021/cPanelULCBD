@@ -15,7 +15,7 @@ const props = defineProps<{
   section_id:any
 }>()
 // UseForm with remembering state=====================
-const form = useForm('reaserch_manage', {
+const form = useForm('research_manage', {
   section_id:  props.section_id,
   type: '',
   heading: '',
@@ -37,7 +37,7 @@ const {preview:image_preview ,handleUpload:handleImageUpload ,clearPreview:clear
 const {preview:thumbnail_preview ,handleUpload:handleThumbnailUpload ,clearPreview:clearThumbnailPreview} = useImageUploads(form, 'thumbnail');
 //===================== ✅ submit MUST use form========================
 const handleSubmit = () => {
-  form.post(route('reaserch_manage.submit'), {
+  form.post(route('research_manage.submit'), {
       // -- its work as like multipart-form/Data --- 
       forceFormData: true,
       onSuccess: () => {
@@ -68,7 +68,7 @@ const handleSubmit = () => {
            <div>
              <button
               class="rounded-lg bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur hover:bg-white/20 transition">
-              <Link :href="route('reaserch_manage.all')">All Information</Link>
+              <Link :href="route('research_manage.all')">All Information</Link>
             </button>
              <Button @click="goBack" class="rounded-lg bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur hover:bg-white/20 transition mx-2">
               Go Back

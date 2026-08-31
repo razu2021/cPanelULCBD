@@ -62,7 +62,7 @@ const handleUpdate = () => {
   form.transform((data) => ({
     ...(data as any),
     _method: 'patch',
-  })).post(route('reaserch_manage.update'), {
+  })).post(route('research_manage.update'), {
     forceFormData: true,
     onSuccess: () => console.log('Updated'),
   });
@@ -96,7 +96,7 @@ const handleUpdate = () => {
             
                 <button
                 class="rounded-lg bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur hover:bg-white/20 transition">
-                <Link :href="route('reaserch_manage.all')">All Information</Link>
+                <Link :href="route('research_manage.all')">All Information</Link>
                 </button>
             </div>
             </div>

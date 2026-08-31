@@ -137,7 +137,7 @@ class PageSection extends Model
         'protfolio_manage' => 'protfoliioSection',
         'promot_manage' => 'promotSection',
         'roadmap_manage' => 'roadmapSection',
-        'reaserch_manage' => 'researchSection',
+        'research_manage' => 'researchSection',
         'service_manage' => 'serviceSection',
         'story_manage' => 'storySection',
         'team_manage' => 'teamSection',

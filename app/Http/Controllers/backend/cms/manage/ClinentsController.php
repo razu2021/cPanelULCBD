@@ -182,7 +182,7 @@ class ClinentsController extends Controller
     public function update(Request $request){
         /**--- validation code -- */
           $request->validate( [
-                'name' => ['required', 'string', 'max:255',Rule::unique('sectionxes','case_title')],
+                'name' => ['required', 'string', 'max:255',Rule::unique('clients','case_title')],
                 'type' => ['required', 'string'],
                 'phone' => ['required', 'string'],
                 'email' => ['required', 'string'],

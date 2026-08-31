@@ -5,7 +5,7 @@
 <section class="details_4">
     <div class="hero_wrap">
         @if($data->thumbnail)
-        <img src="{{$data->thumbnail}}" class="hero_img" alt="Details Hero">
+        <img src="{{asset($data->thumbnail)}}" class="hero_img" alt="{{$data->title ?? '' }}">
         @endif
 
         <div class="hero_info_card">

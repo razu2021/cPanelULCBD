@@ -1302,7 +1302,7 @@ export_pdf.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
     
     export_pdf.form = export_pdfForm
-const reaserch_manage = {
+const research_manage = {
     all: Object.assign(all, all),
 add: Object.assign(add, add),
 view: Object.assign(view, view),
@@ -1321,4 +1321,4 @@ export_csv: Object.assign(export_csv, export_csv),
 export_pdf: Object.assign(export_pdf, export_pdf),
 }
 
-export default reaserch_manage
+export default research_manage

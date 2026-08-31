@@ -706,7 +706,7 @@ Route::controller(StoryController::class)->prefix('admin/dashboad/manage/section
     Route::get('export/pdf','export_pdf')->name('export_pdf');
 });
 /**============ Storys section content manage Route Start here =========== */
-Route::controller(ReaserchController::class)->prefix('admin/dashboad/manage/section/reaserch/')->name('reaserch_manage.')->group(function(){
+Route::controller(ReaserchController::class)->prefix('admin/dashboad/manage/section/reaserch/')->name('research_manage.')->group(function(){
     Route::get('all','index')->name('all');
     Route::get('add/{id}/{slug}','add')->name('add');
     Route::get('view/{id}/{slug}','view')->name('view');

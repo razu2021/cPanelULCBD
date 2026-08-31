@@ -7,7 +7,7 @@
         <div class="row">
             @if($data->thumbnail)
             <div class="col-12">
-                <img src="{{$data->thumbnail}}" alt="Featured Image" class="details_banner w-100 img-fluid">
+                <img src="{{asset($data->thumbnail)}}" alt="Featured Image" class="details_banner w-100 img-fluid">
             </div>
             @endif
         </div>
@@ -28,7 +28,7 @@
                 </blockquote>
 
                 @if($data->cover_image)
-                    <img src="{{$data->cover_image}}" alt="Sub Image" h-50>
+                    <img src="{{asset($data->cover_image)}}" alt="actlegalbd {{ $data->title ?? '' }}" h-50>
                     <hr>
                 @endif
 

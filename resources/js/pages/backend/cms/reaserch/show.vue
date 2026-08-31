@@ -34,7 +34,7 @@ const {data} = defineProps<{
           </div>
           <button
             class="rounded-lg bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur hover:bg-white/20 transition">
-            <Link :href="route('reaserch_manage.all')"><Button>All Information</Button></Link>
+            <Link :href="route('research_manage.all')"><Button>All Information</Button></Link>
           </button>
         </div>
       </div>

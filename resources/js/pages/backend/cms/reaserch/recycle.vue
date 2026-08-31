@@ -35,9 +35,9 @@ const props = defineProps({
 
 const {rows,links,meta} = useDataTable(props)
 
-const {form} = useFilter(props,'reaserch_manage.all')
+const {form} = useFilter(props,'research_manage.all')
 
-const bulkRoute = ref('reaserch_manage.bulkAction')
+const bulkRoute = ref('research_manage.bulkAction')
 
 const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelection(rows.value, bulkRoute)
 
@@ -62,7 +62,7 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
             You can easily manage your data below with actions like <span class="font-medium text-red-300">Create,  Delete, Restore</span>, and more.
           </p>
       </div>
-      <div> <Link :href="route('reaserch_manage.all')" class="bg-white hover:bg-gray-100  text-dark px-4 py-2 rounded shadow-lg flex items-center gap-2 w-full sm:w-auto sm:text-center"> <InfoIcon class="text-green-600"/> View Information </Link> </div>
+      <div> <Link :href="route('research_manage.all')" class="bg-white hover:bg-gray-100  text-dark px-4 py-2 rounded shadow-lg flex items-center gap-2 w-full sm:w-auto sm:text-center"> <InfoIcon class="text-green-600"/> View Information </Link> </div>
       </div>
 
       <hr class="my-3 border-gray-200">
@@ -95,7 +95,7 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
       <option value="1">Active</option>
       <option value="0">Inactive</option>
     </select>
-        <Link v-show="form.search || form.status" class="text-sm bg-green-200 p-2 rounded-full text-white hover:bg-green-600 transition-all" :href="route('reaserch_manage.all')"><RotateCcwIcon/></Link>
+        <Link v-show="form.search || form.status" class="text-sm bg-green-200 p-2 rounded-full text-white hover:bg-green-600 transition-all" :href="route('research_manage.all')"><RotateCcwIcon/></Link>
     </div>
 
   <!-- RIGHT: Action Buttons -->
@@ -194,14 +194,14 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
                   <DropdownMenuContent>
                     <DropdownMenuGroup>
                       <DropdownMenuItem>
-                        <Link :href="route('reaserch_manage.edit',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-blue-600 rounded-lg">
+                        <Link :href="route('research_manage.edit',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-blue-600 rounded-lg">
                           <span class="flex items-center"><RefreshCcw /></span>
                           <span>Restore</span>
                       </Link>
                       </DropdownMenuItem>
                       <!-- end -->
                       <DropdownMenuItem>
-                        <button @click="confirmDelete('reaserch_manage.delete',data.id)" class="w-full inline-flex items-center gap-2  text-sm font-medium text-red-300 rounded-lg">
+                        <button @click="confirmDelete('research_manage.delete',data.id)" class="w-full inline-flex items-center gap-2  text-sm font-medium text-red-300 rounded-lg">
                           <span class="flex items-center"><Trash /></span>
                           <span> Delete </span>
                         </button>
