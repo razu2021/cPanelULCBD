@@ -12,9 +12,11 @@
         <p class="hero-desc">
           {{ $data->short_des ?? 'Write some Description here !' }}
         </p>
+        @if ($data->button_url)
         <div class="btn-holder">
           <a href="{{ $data->button_url ?? '#' }}" class="primary-btn">{{ $data->button ?? 'Explore more' }}</a>
         </div>
+        @endif
       </div>
 
       <!-- Right Image -->
@@ -23,7 +25,7 @@
           <div class="glass-frame">
             <img src="{{ asset($data->cover_image ?? 'https://html.rrdevs.net/consulter/assets/img/home/our-portfolio-home__item-3.png') }}" alt="Hero Image">
           </div>
-          <div class="floating-badge">99% Faster</div>
+          <div class="floating-badge"></div>
         </div>
       </div>
     </div>

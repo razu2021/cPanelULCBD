@@ -9,19 +9,25 @@
        backface-visibility: hidden;">
     <div class="promot1-container">
         <div class="promot1-content">
-            <h1 class="promot1-title">{{$promot->heading ?? ''}} <span>dfdf {{$promot->sub_heading ?? ''}}</span></h1>
+            <h1 class="promot1-title">{{$promot->heading ?? ''}} <span> {{$promot->sub_heading ?? ''}}</span></h1>
             <p class="promot1-text">
                 {{$promot->short_des ?? ''}}
             </p>
+            @if ($promot->button_url)
             <a href="{{$promot->button_url ?? '#'}}" class="promot1-btn">
                 {{$promot->button ?? 'View More'}} <span class="promot1-icon">»</span>
             </a>
+            @endif
         </div>
-
+        @if ($promot->video_url)
         <div class="promot1-video-box">
-            <button class="promot1-play-btn"></button>
+            <button class="promot1-play-btn" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-url="{{$promot->video_url}}"></button>
         </div>
+        @endif
     </div>
 </section>
 @endforeach
 @endif
+<!-- video modal -->
+ @includeif('frontend/components/ui/video_modal') 
+

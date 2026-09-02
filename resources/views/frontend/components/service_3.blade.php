@@ -22,9 +22,15 @@
                     <h4>{{$service->title ?? ''}}</h4>
                     <p>{{Str::words($service->short_des,15 ?? '')}}</p>
 
+                    @if($service->button_url)
+                    <a href="{{ $service->button_url }}" class="read-more">
+                        {{ $service->button ?? 'Explore more' }} <span>→</span>
+                    </a>
+                    @else
                     <a href="{{ route('details.service',[$service->id,$service->url]) }}" class="read-more">
                         {{ $service->button ?? 'Explore more' }} <span>→</span>
                     </a>
+                    @endif
                 </div>
             </div>
             @endforeach

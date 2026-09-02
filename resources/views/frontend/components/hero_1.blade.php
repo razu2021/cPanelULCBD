@@ -12,10 +12,14 @@
           {{ $data->short_des }}
         </p>
         <div class="hero-btns animate-pop-in-delayed-more">
+          @if ($data->button_url)
           <a href="{{ $data->button_url ?? '#' }}" class="btn btn-primary-custom">{{ $data->button ?? 'Explore more ' }}</a>
-          <a href="#" class="btn btn-outline-custom">
+          @endif
+          @if ($data->video_url)
+          <a href="{{ $data->video_url ?? '#' }}" class="btn btn-outline-custom">
             Watch Demo <i class="bi bi-play-circle-fill ms-2"></i>
           </a>
+          @endif
         </div>
       </div>
       
@@ -24,13 +28,13 @@
         <div class="hero-visual-wrapper animate-float">
           <div class="glass-card">
             <div class="card-icon">⚡</div>
-            <h3>247</h3>
+            <h3>24/7</h3>
             <p>Support</p>
           </div>
           <div class="glass-card statistics">
             <div class="card-icon">📊</div>
             <h3>90.9%</h3>
-            <p>Success Retio</p>
+            <p>Success Ratio</p>
           </div>
           <div class="main-visual-circle"><img class="rounded-6" src="{{asset($data->cover_image ?? 'https://i.pinimg.com/736x/64/73/25/647325b786074e67b1f203a329588e87.jpg')}}" alt=""></div>
           

@@ -36,9 +36,11 @@
             </div>
             @endif
 
+            @if ($about->button_url)
             <a href="{{ $about->button_url ?? '#' }}"><button class="btn btn-primary rounded-pill px-5 py-3 fs-4 fw-bold">
                 {{ $about->button ?? 'About More' }}
             </button></a>
+            @endif
         </div>
     </div>
 </section>

@@ -13,8 +13,12 @@
               <h1 class="hero-title">{{ $data->heading ?? 'Banner Heading !' }}<br> <span class="highlight">{{ $data->sub_heading ?? 'Sub Heading !' }}</span></h1>
               <p class="hero-desc">{{ $data->short_des ?? 'Please! Write some Description !' }}</p>
               <div class="btn-holder">
+                @if ($data->button_url)
                 <a href="{{ $data->button_url ?? '#' }}" class="primary-btn">{{ $data->button ?? 'Explore more ' }}</a>
-                <a href="#" class="video-btn"><i class="bi bi-play-circle"></i> View Demo</a>
+                @endif
+                @if ($data->video_url)
+                <a href="{{ $data->video_url ?? '#' }}" class="video-btn"><i class="bi bi-play-circle"></i> View Demo</a>
+                @endif
               </div>
             </div>
             

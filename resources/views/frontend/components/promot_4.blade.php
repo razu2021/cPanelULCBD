@@ -4,7 +4,6 @@
     <div class="container">
         <div class="promot4-main-box">
             <div class="row align-items-center">
-
                 <div class="col-lg-7">
                     <div class="promot4-content-wrap">
                         <div class="promot4-badge">
@@ -16,12 +15,16 @@
                             {{ $promot->short_des ?? '' }}
                         </p>
                         <div class="promot4-btn-group">
+                            @if ($promot->button_url)
                             <a href="{{ $promot->button_url ?? '#' }}"
                                 class="promot4-primary-btn">{{$promot->button ?? 'Explore now'}}</a>
+                            @endif
+                            @if ($promot->button_url_2)
                             <div class="promot4-video-box">
-                                <button class="promot4-play-btn"></button>
+                                <button class="promot4-play-btn" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-url="{{$promot->video_url}}"></button>
                                 <span>Watch Intro</span>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -41,3 +44,5 @@
 </section>
 @endforeach
 @endif
+<!-- video modal -->
+@includeif('frontend/components/ui/video_modal') 

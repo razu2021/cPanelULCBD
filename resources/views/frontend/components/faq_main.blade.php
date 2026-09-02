@@ -4,8 +4,8 @@
   <div class="container">
     <!-- Header -->
     <div class="text-center mb-5">
-      <h2 class="faq__title">Frequently Asked Questions</h2>
-      <p class="faq__subtitle">Find answers to common questions</p>
+      <h2 class="faq__title">{{ $sectionsdata->section_heading ?? 'Frequently Asked Questions' }}</h2>
+      <p class="faq__subtitle">{{ $sectionsdata->description ?? 'Find answers to common questions' }}</p>
     </div>
 
     <div class="faq__wrapper">

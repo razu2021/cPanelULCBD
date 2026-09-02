@@ -39,9 +39,46 @@ const toggleMenu = (key:string)=>{
         <span class="w-4 h-4 flex items-center justify-center"><LayoutDashboard/> </span>
         <span class="text-sm">Dashboard</span>
       </a>
+
+      
+      <AdminSeparetor title="User Contact" />
+
+        <div class="flex flex-col space-y-1">
+        <!-- Parent Button -->
+        <button
+          @click="toggleMenu('user_contact')" class="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-indigo-50 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-4 h-4 flex items-center justify-center text-indigo-600"><Component /> </span>
+            <span class="text-sm text-gray-700 font-medium">
+               Contact Management
+            </span>
+          </div>
+          <!-- Arrow -->
+          <span class="text-xs text-gray-400 transition-transform duration-200"
+            :class="openMenus['user_contact'] ? 'rotate-180 text-indigo-600' : 'rotate-0'"><ChevronDown /></span>
+        </button>
+
+        <!-- Dropdown Items -->
+        <div class="ml-6 flex flex-col space-y-1 mt-1 overflow-hidden transition-all duration-300 ease-in-out"
+          :style="openMenus['user_contact'] ? 'max-height: 500px;' : 'max-height: 0;'">
+          <Link :href="route('category_page.all')"class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+           Contact Messages
+          </Link>
+          <Link :href="route('sub_category_page.all')" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+            Appointment Request
+          </Link>
+          <a :href="route('child_category_page.all')" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+            Other
+          </a>
+        </div>
+      </div>
+      <!-- ====== dropdown menu end here ====== -->
+
+
       <AdminSeparetor title="Contant Management" />
 
       <!-- ======= Dropdown menu start here  -->
+
       <div class="flex flex-col space-y-1">
         <!-- Parent Button -->
         <button

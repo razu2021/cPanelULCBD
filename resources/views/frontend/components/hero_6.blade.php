@@ -27,8 +27,11 @@
                 </p>
                 
                 <div class="vivid-actions" data-swiper-parallax="-500">
+                  @if ($data->button_url)
                   <a href="{{ $data->button_url ?? '#' }}" class="btn-ripple-cyan">{{ $data->button ?? 'Explore more' }}</a>
-                  <a href="#" class="btn-outline-vivid">Explore Case Studies <i class="bi bi-arrow-up-right ms-2"></i></a>
+                  @endif
+
+                 
                 </div>
               </div>
             </div>

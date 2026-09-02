@@ -20,7 +20,9 @@
                {{ $data->short_des ?? 'Please! , Writte some Description !!' }}
               </p>
               <div class="action-area" data-swiper-parallax="-700">
+                @if ($data->button_url)
                 <a href="{{ $data->button_url ?? '#' }}" class="main-btn">{{ $data->button ?? 'Explore more' }}</a>
+                @endif
                 <div class="scroll-indicator">
                   <span class="line"></span>
                 </div>

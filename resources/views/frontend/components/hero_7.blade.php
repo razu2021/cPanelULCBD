@@ -48,7 +48,7 @@
                                         data-swiper-parallax="-100">
 
                                         <span class="number">
-                                            01
+                                            {{$loop->iteration}}
                                         </span>
 
                                         <span class="line"></span>
@@ -122,7 +122,7 @@
                         <span class="side-line"></span>
 
                         <span class="side-text">
-                            JUSTICE • INTEGRITY • TRUST
+                            Rights • Solutions 
                         </span>
 
                     </div>

@@ -19,10 +19,14 @@
                                         {{$promot->short_des ?? ''}}
                                     </p>
                                     <div class="promot5-actions">
+                                        @if ($promot->button_url)
                                         <a href="{{route('details.promot',[$promot->id,Str::slug($promot->title)])}}" class="promot5-btn-main">{{$promot->button ?? ''}}</a>
+                                        @endif
+                                        @if ($promot->video_url)
                                         <div class="promot5-video-play">
-                                            <button class="promot5-play-btn"></button>
+                                            <button class="promot5-play-btn" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-url="{{$promot->video_url}}"></button>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -46,3 +50,5 @@
     </div>
 </section>
 @endif
+<!-- video modal -->
+@includeif('frontend/components/ui/video_modal') 

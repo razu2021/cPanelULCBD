@@ -343,6 +343,16 @@ export const heroThemes: Theme[] = [
     name: 'Hero Theme 7',
     preview: 'https://picsum.photos/400/250?2'
   },
+  {
+    key: 'hero_11',
+    name: 'Hero Theme 11',
+    preview: 'https://picsum.photos/400/250?2'
+  },
+  {
+    key: 'hero_12',
+    name: 'Hero Theme 12',
+    preview: 'https://picsum.photos/400/250?2'
+  },
  
 ];
 

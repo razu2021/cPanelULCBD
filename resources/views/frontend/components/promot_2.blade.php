@@ -15,14 +15,21 @@
                 {{ $promot->short_des ?? '' }}
             </p>
             <div class="promot2-footer">
+                @if ($promot->button_url)
                 <a href="{{ $promot->button_url ?? '#' }}"
                     class="promot2-button">{{$promot->button ?? 'About More'}}<span class="promot2-arrow">»</span></a>
+                @endif
+                @if ($promot->video_url)
                 <div class="promot2-video-wrap">
-                    <button class="promot2-play-icon"></button>
+                    <button class="promot2-play-icon" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-url="{{$promot->video_url}}"></button>
                 </div>
+                @endif
             </div>
         </div>
     </div>
 </section>
 @endforeach
 @endif
+<!-- video modal -->
+ @includeif('frontend/components/ui/video_modal') 
+

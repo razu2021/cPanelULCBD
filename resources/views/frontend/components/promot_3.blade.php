@@ -12,8 +12,12 @@
                             {{ $promot->short_des ?? '' }}
                         </p>
                         <div class="promot3-cta-group">
+                            @if ($promot->button_url)
                             <a href="{{ $promot->button_url ?? ''}}" class="promot3-main-btn">{{$promot->button ?? 'Explore now'}}</a>
-                            <button class="promot3-video-trigger"></button>
+                            @endif
+                            @if ($promot->video_url)
+                            <button class="promot3-video-trigger" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-url="{{ $promot->video_url ?? '' }}"></button>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -34,3 +38,6 @@
 </section>
 @endforeach
 @endif
+<!-- video modal -->
+ @includeif('frontend/components/ui/video_modal') 
+

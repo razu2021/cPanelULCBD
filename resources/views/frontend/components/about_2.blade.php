@@ -8,7 +8,7 @@
             <img src="{{ asset($about->cover_image ?? 'https://i.pinimg.com/736x/ec/e6/d6/ece6d6032bf3a27176804e5bb8424eb8.jpg') }}" alt="About Us" class="main_img">
             
             <div class="experience_badge">
-                <h2>{{$about->experience ?? '5'}}+</h2>
+                <h2>{{$about->experience ?? }}+</h2>
                 <p>Years Experience</p>
             </div>
         </div>
@@ -29,10 +29,11 @@
                 @endforeach
                 
             </div>
-
-            <a href="#" class="btn_modern">
+            @if ($about->button_url)
+            <a href="{{$about->button_url ?? '#'}}" class="btn_modern">
                 Learn More <i class="bi bi-arrow-right"></i>
             </a>
+            @endif
         </div>
     </div>
 </section>

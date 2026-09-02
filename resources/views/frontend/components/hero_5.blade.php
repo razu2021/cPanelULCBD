@@ -27,9 +27,11 @@
                   <p class="hero-desc">
                     {{ $data->short_des ?? 'Description !!' }}
                   </p>
+                  @if ($data->button_url)
                   <div class="hero-actions">
                     <a href="{{ $data->button_url ?? '#' }}" class="btn-glow">{{ $data->button ?? 'Explore more' }} <i class="bi bi-arrow-right"></i></a>
                   </div>
+                  @endif
                 </div>
               </div>
             </div>
