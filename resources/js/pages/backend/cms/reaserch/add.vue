@@ -87,7 +87,7 @@ const handleSubmit = () => {
             </div>
               <input type="hidden" name="section_id" id="section_id" v-model="form.section_id"/>
                 <div class="grid grid-cols-12 gap-4">
-                  <div class="col-span-12 md:col-span-6">
+                  <div class="col-span-12 md:col-span-12">
                     <div>
                       <label class="text-sm font-medium text-slate-600">Type</label>
                       <input type="text" placeholder="Type" v-model="form.type"
