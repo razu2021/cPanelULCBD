@@ -75,8 +75,8 @@ class DataServiceProvider extends ServiceProvider
                         ]);
                     }
                 ])->whereNotIn('url', ['index', 'home'])->whereIn('is_nav',[1,0])->active()->ordered()->get(),
-            'footermenus'=> CategoryPage::where('is_nav',2)->active()->ordered()->get(['url','name']),
-            'footermenussecondary'=> CategoryPage::where('is_nav',0)->active()->ordered()->get(['url','name']),
+            'footermenus'=> CategoryPage::whereIn('is_nav',[2,0])->active()->ordered()->get(['url','name','link_status']),
+            'footermenussecondary'=> CategoryPage::where('is_nav',0)->active()->ordered()->get(['url','name','link_status']),
 
             // apisetting data share 
             'apisettings' => Apisetting::where('public_status',1)->get(['group','key','value'])

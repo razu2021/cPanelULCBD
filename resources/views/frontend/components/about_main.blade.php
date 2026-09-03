@@ -18,7 +18,7 @@
 
                     <!-- floating badge -->
                     <div class="floating-card">
-                        <h4>10+</h4>
+                        <h4>{{$about->experience ?? ''}}</h4>
                         <p>Years Experience</p>
                     </div>
 

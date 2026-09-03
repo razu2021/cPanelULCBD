@@ -3,6 +3,7 @@
     $data = $contents->first();
 @endphp
 <section class="details_4">
+    @if($data->thumbnail || $data->heading)
     <div class="hero_wrap">
         @if($data->thumbnail)
         <img src="{{asset($data->thumbnail)}}" class="hero_img" alt="{{$data->title ?? '' }}">
@@ -16,6 +17,7 @@
         </div>
 
     </div>
+    @endif
 
     <div class="container mt-5 pt-5">
         

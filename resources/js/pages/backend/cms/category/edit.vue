@@ -22,6 +22,7 @@ const props= defineProps<{
         //-------------
         public_status: boolean,
         is_nav: boolean,
+        link_status: boolean,
         id: number,
         slug: string,
     }
@@ -38,7 +39,7 @@ const form  = useForm(
     order: props.data.order,
     public_status : Boolean(props.data.public_status),
     is_nav : Boolean(props.data.is_nav),
-    internal_status : '',
+    link_status : Boolean(props.data.link_status),
     slug :props.data.slug
   })
 
@@ -171,7 +172,7 @@ const handleUpdate = () => {
 
               <label class="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
                 <span class="text-sm text-slate-600">Set as Internal </span>
-                <input type="checkbox" v-model="form.internal_status"
+                <input type="checkbox" v-model="form.link_status"
                   class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
               </label>
 

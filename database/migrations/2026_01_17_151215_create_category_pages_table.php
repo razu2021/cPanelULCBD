@@ -15,6 +15,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->string('url')->nullable();
+            $table->string('link_status')->default(0);
             $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->integer('order')->nullable();

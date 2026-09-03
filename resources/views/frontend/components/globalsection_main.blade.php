@@ -29,8 +29,8 @@
                             <div class="col-lg-5 col-md-12 p-lg-0">
                                 <div class="promot5-visual-wrap">
                                     <div class="promot5-mask-layer">
-                                        @if ($data->cover_image)
-                                            <img src="{{asset($data->cover_image)}}" alt="Strategic Business Slide">
+                                        @if ($item->cover_image)
+                                            <img src="{{asset($item->cover_image)}}" alt="Strategic Business Slide">
                                         @endif
                                         
                                     </div>

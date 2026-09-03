@@ -108,11 +108,11 @@ class CategoryPageController extends Controller
 
             // ১. ইউজার যদি slug/url ইনপুট দিয়ে থাকে
             if (!empty($user_input_url)) {
-                if ($request->internal_status == true) {
-                    // Internal link হলে slug বানিয়ে নিবে
+                if ($request->link_status == true) {
+                    // Internal link হলে slug বানিয়ে নিবে
                     $url = Str::slug($user_input_url);
                 } else {
-                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
+                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
                     $url = $user_input_url; 
                 }
             } 
@@ -120,13 +120,14 @@ class CategoryPageController extends Controller
             else {
                 $url = Str::slug($categoryname);
             }
-          
+          dd($url);
         // ----- insert record into database 
         $insert = CategoryPage::create([
             'name'=>$request->name,
             'title'=>$request->title,
             'description'=>$request->description,
             'url'=>$url,
+            'link_status'=>$request->link_status ?? 0,
             'order'=>$request->order,
             'public_status'=>$request->public_status ?? 0,
             'is_nav'=>$request->is_nav ?? 1,
@@ -167,6 +168,7 @@ class CategoryPageController extends Controller
      */
 
     public function update(Request $request){
+        
         /**--- validation code -- */
         $category = CategoryPage::where('id',$request->id)->first();
         $request->validate( [
@@ -193,11 +195,11 @@ class CategoryPageController extends Controller
 
             // ১. ইউজার যদি slug/url ইনপুট দিয়ে থাকে
             if (!empty($user_input_url)) {
-                if ($request->internal_status == true) {
-                    // Internal link হলে slug বানিয়ে নিবে
+                if ($request->link_status == true) {
+                    // Internal link হলে slug বানিয়ে নিবে
                     $url = Str::slug($user_input_url);
                 } else {
-                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
+                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
                     $url = $user_input_url; 
                 }
             } 
@@ -216,6 +218,7 @@ class CategoryPageController extends Controller
             'title'=>$request->title,
             'description'=>$request->description,
             'url'=>$url,
+            'link_status'=>$request->link_status ?? 0,
             'order'=>$request->order,
             'public_status'=>$request->public_status ?? 0,
             'is_nav'=>$request->is_nav ?? 1,

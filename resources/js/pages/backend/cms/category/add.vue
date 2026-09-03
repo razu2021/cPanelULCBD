@@ -14,7 +14,7 @@ const form = useForm('category_page', {
   order: '',
   public_status: false,
   is_nav: 1,
-  internal_status: true,
+  link_status: true,
 })
 
   // ✅ submit MUST use form
@@ -138,7 +138,7 @@ const form = useForm('category_page', {
 
               <label class="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
                 <span class="text-sm text-slate-600">Set as Internal </span>
-                <input type="checkbox" v-model="form.internal_status"
+                <input type="checkbox" v-model="form.link_status"
                   class="h-5 w-5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
               </label>
 

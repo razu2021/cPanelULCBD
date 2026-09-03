@@ -8,7 +8,7 @@
             <img src="{{ asset($about->cover_image ?? 'https://i.pinimg.com/736x/ec/e6/d6/ece6d6032bf3a27176804e5bb8424eb8.jpg') }}" alt="About Us" class="main_img">
             
             <div class="experience_badge">
-                <h2>{{$about->experience ?? }}+</h2>
+                <h2>{{$about->experience ?? ''}}+</h2>
                 <p>Years Experience</p>
             </div>
         </div>
@@ -17,7 +17,7 @@
             <div class="sub_title">{{$about->title ?? 'title'}}</div>
             <h2>{{$about->heading ?? "heading"}}<span>{{$about->sub_heading ?? "sub heading "}}</span> </h2>
             <p>
-                {!! $about->description !!}
+                {!! $about->description ?? '' !!}
             </p>
 
             <div class="feature_list">

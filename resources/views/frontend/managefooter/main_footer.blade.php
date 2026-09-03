@@ -1,7 +1,7 @@
 <section class="main_footer">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                 <div class="footer_column">
                
                     <h4> About us</h4>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             {{-- col end --}}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+            {{-- <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                 <div class="footer_column">
                     <h4> Useful links  </h4>
                     <div class="footer_menu">
@@ -28,32 +28,30 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             {{-- col end --}}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                 <div class="footer_column">
                     <h4> Quick Links </h4>
                     <div class="footer_menu">
-                        {{-- <ul>
-                            @if(!empty($sitesocials) && $sitesocials->count() > 0)
-                            @foreach($sitesocials->take(6) as $social)
-                            <li><a href="{{$social->url ?? '#'}}">{{$social->title ?? ''}}</a></li>
-                            @endforeach
-                            @endif
-                        </ul> --}}
+                    
 
                         <ul>
                             @if(!empty($footermenus) && $footermenus->count() > 0)
-                            @foreach($footermenus as $fmenu)
-                            <li><a target="_blank" href="{{$fmenu->url ?? '#'}}">{{$fmenu->name ?? ''}}</a></li>
-                            @endforeach
+                                @foreach($footermenus as $fmenu)
+                                    @if($fmenu->link_status == 0)
+                                        <li><a target="_blank" href="{{$fmenu->url ?? '#' }}">{{ $fmenu->name ?? '' }}</a></li>
+                                    @else
+                                        <li><a href="{{ route('categorypage', $fmenu->url ?? '#') }}">{{ $fmenu->name ?? '' }}</a></li>
+                                    @endif 
+                                @endforeach
                             @endif
                         </ul>
                     </div>
                 </div>
             </div>
             {{-- col end --}}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                 <div class="footer_column">
                     <h4> Quick Contact </h4>
                     <div class="footer_menu">
@@ -96,3 +94,4 @@
         </div>
     </div>
 </section>
+
