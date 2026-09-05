@@ -1,28 +1,32 @@
 <?php
 
-namespace App\Http\Controllers\backend\cms;
+namespace App\Http\Controllers\backend\usermanagement;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon; //----------  defualt -------
 use Barryvdh\DomPDF\Facade\Pdf;//-------------- export pdf
 use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\CategoryPageExport;
+use App\Exports\userContactMessagesExport;
+use App\Models\PageSection;
 use Illuminate\Support\Str;
-use App\Models\CategoryPage;
+use App\Models\Post;
+use App\Models\UserContact;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\File; 
 use Inertia\Inertia;
+use App\Services\ImageUploadService;
 
 
-class CategoryPageController extends Controller
+class userContactMessagesController extends Controller
 {
     /**
      * ======== index page function 
      */
     public function index(Request $request)
     {
-        $query = CategoryPage::query(); 
+        $query = UserContact::query(); 
 
         if($request->filled('search')){
             $query->where('name','LIKE', '%' .$request->search .'%');
@@ -33,9 +37,9 @@ class CategoryPageController extends Controller
             $query->where('public_status', $request->status);
         }
 
-        $alldata = $query->paginate(10)->withQueryString();
+        $alldata = $query->orderBy('created_at', 'desc')->paginate(10)->withQueryString();
 
-        return Inertia::render('backend/cms/category/index',[
+        return Inertia::render('backend/usermanage/usercontactmessages/index',[
             'alldata' => $alldata ,
             'filters' => $request->only(['search','status'])
         ]);
@@ -45,9 +49,11 @@ class CategoryPageController extends Controller
      * ======== create page or add page function 
      */
 
-    public function add()
+    public function add($id,$slug)
     {
-        return Inertia::render('backend/cms/category/add');
+        $section = PageSection::where('id',$id)->where('slug',$slug)->value('id');
+      
+        return Inertia::render('backend/usermanage/usercontactmessages/add',['section_id'=>$section]);
        
     }
 
@@ -56,8 +62,8 @@ class CategoryPageController extends Controller
      */
     public function view($id,$slug)
     {
-        $data = CategoryPage::with(['creator','editor'])->where('id',$id)->where('slug',$slug)->firstOrFail();
-        return Inertia::render('backend/cms/category/show',[
+        $data = UserContact::with(['creator','editor'])->where('id',$id)->where('slug',$slug)->firstOrFail();
+        return Inertia::render('backend/usermanage/usercontactmessages/show',[
             'data' => $data
         ]);
        
@@ -68,8 +74,8 @@ class CategoryPageController extends Controller
      */
     public function edit($id,$slug)
     {
-        $data = CategoryPage::with(['creator','editor'])->where('id',$id)->where('slug',$slug)->firstOrFail();
-        return Inertia::render('backend/cms/category/edit',[
+        $data = UserContact::with(['creator','editor'])->where('id',$id)->where('slug',$slug)->firstOrFail();
+        return Inertia::render('backend/usermanage/usercontactmessages/edit',[
             'data' => $data
         ]);
        
@@ -84,68 +90,53 @@ class CategoryPageController extends Controller
      * =======================================================================
      */
     public function insert(Request $request){
-    
          /**--- validation code -- */
         $request->validate( [
-                'name' => ['required', 'string', 'max:255',Rule::unique('category_pages','name')],
-                'slug' => ['required', 'string', 'max:255', Rule::unique('category_pages','url')],
-               
+                'type' => ['required', 'string', 'max:255'],
+                'title' => ['required', 'string'],
+                
             ],[
-                'name.required'=> 'Name field is Required !',
-                'slug.required'=> 'Slug field is Required !',
-                'name.unique'=> 'This name already exists. !',
-                'slug.unique'=> 'This URL already exists. !',
+                'type.required'=> 'Title field is Required !',
+                'title.required'=> 'Title field is Required !',
             ]
         );
 
         //---------- get authenticate use id and create a slug
         $creator_id = Auth::user()->id;
         $slug = uniqid('20').Str::random(20) . '_'.mt_rand(10000, 100000).'-'.time();
-
-        //------- make a custom url for -------
-            $categoryname   = strtolower($request->name);
-            $user_input_url = strtolower($request->slug);
-
-            // ১. ইউজার যদি slug/url ইনপুট দিয়ে থাকে
-            if (!empty($user_input_url)) {
-                if ($request->link_status == true) {
-                    // Internal link হলে slug বানিয়ে নিবে
-                    $url = Str::slug($user_input_url);
-                } else {
-                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
-                    $url = $user_input_url; 
-                }
-            } 
-            // ২. ইউজার যদি slug খালি রাখে, তবে ক্যাটাগরির নাম থেকে অটো slug তৈরি হবে
-            else {
-                $url = Str::slug($categoryname);
-            }
-          
+       $url = Str::slug($request->case_title) . '-' . rand(1000, 9999);
+       
         // ----- insert record into database 
-        $insert = CategoryPage::create([
-            'name'=>$request->name,
+        $insert = UserContact::create([
+            'page_section_id'=>$request->section_id,
+            'type'=>$request->type,
             'title'=>$request->title,
+            'short_des'=>$request->short_des,
             'description'=>$request->description,
-            'url'=>$url,
-            'link_status'=>$request->link_status ?? 0,
+            'button'=>$request->button,
+            'button_url'=>$request->button_url,
             'order'=>$request->order,
+            'url'=>$url,
             'public_status'=>$request->public_status ?? 0,
-            'is_nav'=>$request->is_nav ?? 1,
             'slug'=>$slug,
             'creator_id' => $creator_id,
             'created_at' => Carbon::now()->toDateTimeString(),
         ]);
 
 
-        // ---------- seo data insert into seo table 
-        $insert->seo()->create([
-            'user_id'=>$creator_id,
-            'meta_title'=>$insert->title ?? 'title',
-            'meta_description'=>$insert->title ?? 'description',
-            'slug'=>$slug,
-        ]);
-
-
+        /**======== upload Cover image image via the service class start ====== */
+            $id = $insert->id;
+        if ($request->hasFile('cover_image')) {
+            // upload image in local folder path via tha service class
+            $upload = (new ImageUploadService($request->file('cover_image')))
+                        ->setPath('uploads/website/')->setResize(1200, 800)->setOldImage($oldimage ?? '')->upload();
+            // ------  save image in database 
+            $insert = UserContact::where('id', $id)
+                        ->where('id', $id)->update([
+                            'cover_image' => $upload,
+                        ]);
+        }
+   
 
         //---------------------- if insert ------
         if($insert){
@@ -157,8 +148,6 @@ class CategoryPageController extends Controller
 
           return redirect()->back();
         
-
-
     }
 
 
@@ -168,65 +157,57 @@ class CategoryPageController extends Controller
      */
 
     public function update(Request $request){
-        
         /**--- validation code -- */
-        $category = CategoryPage::where('id',$request->id)->first();
         $request->validate( [
-                'name' => ['required', 'string', 'max:255',Rule::unique('category_pages','name')->ignore($category->id)],
-                'url' => ['required', 'string', 'max:255', Rule::unique('category_pages','url')->ignore($category->id)],
-               
+                'type' => ['required', 'string', 'max:255'],
+                'title' => ['required', 'string'],
+                
             ],[
-                'name.required'=> 'Name field is Required !',
-                'url.required'=> 'Slug field is Required !',
-                'name.unique'=> 'This name already exists. !',
-                'url.unique'=> 'This URL already exists. !',
+                'type.required'=> 'Title field is Required !',
+                'title.required'=> 'Title field is Required !',
             ]
         );
-
+       
         //---------- get authenticate use id and create a slug
         $editor_id = Auth::user()->id;
         $slug = $request->slug;
         $id = $request->id;
+      $url = Str::slug($request->case_title) . '-' . rand(1000, 9999);
 
-        //------- make a custom url for -------
-        //------- make a custom url for -------
-            $categoryname   = strtolower($request->name);
-            $user_input_url = strtolower($request->url);
-
-            // ১. ইউজার যদি slug/url ইনপুট দিয়ে থাকে
-            if (!empty($user_input_url)) {
-                if ($request->link_status == true) {
-                    // Internal link হলে slug বানিয়ে নিবে
-                    $url = Str::slug($user_input_url);
-                } else {
-                    // External link হলে ইউজার যেভাবে দিয়েছে সেভাবেই থাকবে
-                    $url = $user_input_url; 
-                }
-            } 
-            // ২. ইউজার যদি slug খালি রাখে, তবে ক্যাটাগরির নাম থেকে অটো slug তৈরি হবে
-            else {
-                $url = Str::slug($categoryname);
-            }
-          
-          
         // ----- insert record into database 
-        $update = CategoryPage::where('id',$id)->where('slug',$slug)->firstOrFail();
-
-        if($update){
-            $update->update([
-            'name'=>$request->name,
+        $update = UserContact::where('id',$id)->where('slug',$slug)->firstOrFail();
+        $update->update([
+            'type'=>$request->type,
             'title'=>$request->title,
+            'short_des'=>$request->short_des,
             'description'=>$request->description,
-            'url'=>$url,
-            'link_status'=>$request->link_status ?? 0,
+            'button'=>$request->button,
+            'button_url'=>$request->button_url,
             'order'=>$request->order,
+            'url'=>$url,
             'public_status'=>$request->public_status ?? 0,
-            'is_nav'=>$request->is_nav ?? 1,
             'editor_id' => $editor_id,
             'updated_at' => Carbon::now()->toDateTimeString(),
         ]);
+
+        /**======== upload image via the service class start ====== */
+        if ($request->hasFile('cover_image')) {
+            //---- find old image for delete -----
+            $exixtimage = UserContact::where('id', $id)->first();
+            $oldimage = $exixtimage->cover_image;
+            // upload image in local folder path via tha service class
+            $upload = (new ImageUploadService($request->file('cover_image')))
+                        ->setPath('uploads/website/')->setResize(1200, 800)->setOldImage($oldimage ?? '')->upload();
+            // ------  save image in database 
+            $insert = UserContact::where('id', $id)
+                        ->where('slug', $slug)->update([
+                            'cover_image' => $upload,
+                        ]);
+        }
+        /**======== upload image via the service end ====== */
+        if($update){
             flash()->success('Information Updated successfully!');
-            return redirect()->route('category_page.view',[$id,$slug]);
+            return redirect()->route('media_manage.view',[$id,$slug]);
         }else{
             flash()->error('Information Updated Faild !');
             return redirect()->back();
@@ -240,15 +221,14 @@ class CategoryPageController extends Controller
      * ======== Active Functionality Start here ==========
      */
     public function active($id,$slug){
-        $active = CategoryPage::where('id',$id)->where('slug',$slug)->where('public_status',0)->firstOrFail();
+        $active = UserContact::where('id',$id)->where('slug',$slug)->where('public_status',0)->firstOrFail();
 
         if($active){
-            $active->update(['public_status' => 1, ]);
+            $active->update(['public_status' => 1,]);
             flash()->success('Status Updated Successfully !');
         }else{
             flash()->error('Status Updated Faild !');
         }
-
         return redirect()->back();
     }
 
@@ -257,24 +237,24 @@ class CategoryPageController extends Controller
      */
     public function deactive($id,$slug){
 
-        $active = CategoryPage::where('id',$id)->where('slug',$slug)->where('public_status',1)->firstOrFail();
+        $active = UserContact::where('id',$id)->where('slug',$slug)->where('public_status',1)->firstOrFail();
 
         if($active){
-            $active->update(['public_status' => 0, ]);
+            $active->update(['public_status' => 0,]);
             flash()->success('Status Updated Successfully !');
         }else{
             flash()->error('Status Updated Faild !');
         }
-
         return redirect()->back();
     }
     /**
      * ======== Soft Delete Functionality Start here ==========
      */
     public function softdelete($id){
-        $data= CategoryPage::where('id',$id)->first();
-        if ($data) {
+        $data= UserContact::where('id',$id)->first();
         $data->delete();
+
+        if ($data) {
         flash()->success('Record deleted successfully!');
         } else {
             flash()->error('Failed to delete record!');
@@ -286,13 +266,26 @@ class CategoryPageController extends Controller
      * ========  Delete Functionality Start here ==========
      */
     public function delete($id){
-        $data= CategoryPage::onlyTrashed()->where('id',$id)->first();
+        $data= UserContact::onlyTrashed()->where('id',$id)->first();
         
         if ($data) {
+        /**=========== delete image form folder ===== */
+            $file_paths = public_path($data->cover_image);
+                if (file_exists($file_paths)) {
+                    File::delete($file_paths);
+            }
+
+            $file_paths = public_path($data->thumbnail);
+                if (file_exists($file_paths)) {
+                    File::delete($file_paths);
+            }
+        /**=========== delete image form folder end here ===== */
+
+
         $data->forceDelete();
         flash()->success('Record deleted successfully!');
         } else {
-            flash()->error('Failed to delete record!');
+            flash()->error('Failed to delete record !');
         }
 
         return back();
@@ -302,7 +295,7 @@ class CategoryPageController extends Controller
      * ========  Recycle Functionality Start here ==========
      */
     public function recycle(Request $request){
-        $query = CategoryPage::query(); 
+        $query = UserContact::query(); 
 
         $query->onlyTrashed();
 
@@ -318,7 +311,7 @@ class CategoryPageController extends Controller
 
         $alldata = $query->paginate(10)->withQueryString();
 
-        return Inertia::render('backend/cms/category/recycle',[
+        return Inertia::render('backend/usermanage/usercontactmessages/recycle',[
             'alldata' => $alldata ,
             'filters' => $request->only(['search','status'])
         ]);
@@ -348,17 +341,13 @@ class CategoryPageController extends Controller
 
         // ---------- soft delete code start here 
         if($action === 'delete'){
-            $data = CategoryPage::whereIn('id',$ids)->get();
-            foreach($data as $items){
-                $items->delete();
-            }
-            flash()->success(' Informations deleted successfully.');
+            $data = UserContact::whereIn('id',$ids)->delete();
             return back();
         }
 
         // ---------- Multiple Items active code start here ----------
         if($action === 'active'){
-            $categorys = CategoryPage::whereIn('id',$ids)->where('public_status',0)->get();
+            $categorys = UserContact::whereIn('id',$ids)->where('public_status',0)->get();
             foreach($categorys as $items){
                 $items->update(['public_status'=>1,]);
             }
@@ -366,23 +355,37 @@ class CategoryPageController extends Controller
         }
         // ---------- Multiple Items Inactive code start here ----------
         if($action === 'InActive'){
-            $categorys = CategoryPage::whereIn('id',$ids)->where('public_status',1)->get();
+            $categorys = UserContact::whereIn('id',$ids)->where('public_status',1)->get();
             foreach($categorys as $items){
                 $items->update(['public_status'=>0,]);
             }
         }
         // ---------- Multiple Items Heard Delete code start here ----------
         if($action === 'Heard_Delete'){
-            $categorys = CategoryPage::onlyTrashed()->whereIn('id',$ids)->get();
+            $categorys = UserContact::onlyTrashed()->whereIn('id',$ids)->get();
 
                 foreach ($categorys as $category) {
+                    /**=========== delete image form folder ===== */
+                    $file_paths = public_path($category->cover_image);
+                        if (file_exists($file_paths)) {
+                            File::delete($file_paths);
+                    }
+
+                    $file_paths = public_path($category->thumbnail);
+                        if (file_exists($file_paths)) {
+                            File::delete($file_paths);
+                    }
+                /**=========== delete image form folder end here ===== */
+
+
+
                     $category->forceDelete();
                 }
 
         }
         // ---------- Multiple Items Heard Delete code start here ----------
         if($action === 'Restore'){
-            $categorys = CategoryPage::onlyTrashed()->whereIn('id',$ids)->get();
+            $categorys = UserContact::onlyTrashed()->whereIn('id',$ids)->get();
 
                 foreach ($categorys as $category) {
                     $category->restore();
@@ -396,7 +399,7 @@ class CategoryPageController extends Controller
         // ------------ Multiple Item Export as an PDF -------------------------------
         if($action === 'export_pdf'){
           
-            $category = CategoryPage::whereIn('id',$ids)->get();
+            $category = UserContact::whereIn('id',$ids)->get();
 
             $fileName = now()->format('Y-m-d_H-i-s') . '.pdf';
 
@@ -411,11 +414,11 @@ class CategoryPageController extends Controller
 
         if($action === 'export_excel'){
 
-            return Excel::download(new CategoryPageExport($ids), now().'.xlsx');
+            return Excel::download(new userContactMessagesExport($ids), now().'.xlsx');
         }
         if($action === 'export_csv'){
 
-            return Excel::download(new CategoryPageExport($ids), now().'.csv');
+            return Excel::download(new userContactMessagesExport($ids), now().'.csv');
         }
         return back();
 
@@ -432,9 +435,9 @@ class CategoryPageController extends Controller
 
     public function exportPdf($id,$slug){
 
-        $data = CategoryPage::where('id',$id)->where('slug',$slug)->firstOrFail();
+        $data = UserContact::where('id',$id)->where('slug',$slug)->firstOrFail();
         $fileName = $data->name.'-'.now().'.pdf';
-        $pdf = pdf::loadView('backend/export/category/export_singlepdf',compact('data'))->setPaper('a4', 'portrait');
+        $pdf = pdf::loadView('backend/export/usercontactmessages/export_singlepdf',compact('data'))->setPaper('a4', 'portrait');
         return $pdf->download($fileName);
 
     }
@@ -445,9 +448,9 @@ class CategoryPageController extends Controller
      * ================= export all pdf  function start here ===========================
      */
     public function export_pdf(){
-        $data = CategoryPage::get();
+        $data = UserContact::get();
         $fileName =now().'.pdf';
-        $pdf = pdf::loadView('backend/export/category/export_pdf',[
+        $pdf = pdf::loadView('backend/export/usercontactmessages/export_pdf',[
             'dataJson' => $data->toArray()
         ])->setPaper('a4', 'portrait');
         return $pdf->download($fileName);
@@ -460,14 +463,14 @@ class CategoryPageController extends Controller
      * ================= export Excel function start here ===========================
      */
     public function export_excel(){
-        return Excel::download(new CategoryPageExport, now().'.xlsx');
+        return Excel::download(new userContactMessagesExport, now().'.xlsx');
     }
     /**
      * 
      * ================= export csv function start here ===========================
      */
     public function export_csv(){
-        return Excel::download(new CategoryPageExport, now().'.csv');
+        return Excel::download(new userContactMessagesExport, now().'.csv');
     }
 
 

@@ -36,6 +36,7 @@ use App\Http\Controllers\backend\cms\manage\WhychooseusController;
 use App\Http\Controllers\backend\cms\pageManagementController;
 use App\Http\Controllers\backend\cms\PageSectionController;
 use App\Http\Controllers\backend\cms\SubCategoryPageController;
+use App\Http\Controllers\backend\usermanagement\userContactMessagesController;
 
 /**
  * =========================
@@ -745,7 +746,29 @@ Route::controller(MediaController::class)->prefix('admin/dashboad/manage/section
 
 
 
-
+/**
+ * ======================================== 
+ * user management route start here 
+ * =======================================
+ */
+Route::controller(userContactMessagesController::class)->prefix('admin/dashboad/manage/user/contact/messages/')->name('user_contact_messages.')->group(function(){
+    Route::get('all','index')->name('all');
+    Route::get('add/{id}/{slug}','add')->name('add');
+    Route::get('view/{id}/{slug}','view')->name('view');
+    Route::get('edit/{id}/{slug}','edit')->name('edit');
+    Route::post('submit','insert')->name('submit');
+    Route::patch('update','update')->name('update');
+    Route::get('active/{id}/{slug}','active')->name('active');
+    Route::get('deactive/{id}/{slug}','deactive')->name('deactive');
+    Route::delete('softdelete/{id}','softdelete')->name('softdelete');
+    Route::delete('delete/{id}','delete')->name('delete');
+    Route::get('recycle','recycle')->name('recycle');
+    Route::post('bulk/action' ,'bulkAction')->name('bulkAction');
+    Route::get('export/single/pdf/{id}/{slug}','exportPdf')->name('single_pdf_export');
+    Route::get('export/excel','export_excel')->name('export_excel');
+    Route::get('export/csv','export_csv')->name('export_csv');
+    Route::get('export/pdf','export_pdf')->name('export_pdf');
+});
 
 
 

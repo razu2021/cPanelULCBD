@@ -61,7 +61,7 @@ const toggleMenu = (key:string)=>{
         <!-- Dropdown Items -->
         <div class="ml-6 flex flex-col space-y-1 mt-1 overflow-hidden transition-all duration-300 ease-in-out"
           :style="openMenus['user_contact'] ? 'max-height: 500px;' : 'max-height: 0;'">
-          <Link :href="route('category_page.all')"class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
+          <Link :href="route('user_contact_messages.all')"class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
            Contact Messages
           </Link>
           <Link :href="route('sub_category_page.all')" class="px-3 py-1.5 text-sm text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition">
