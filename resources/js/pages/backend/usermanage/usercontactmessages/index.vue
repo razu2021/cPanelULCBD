@@ -292,8 +292,8 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
             <td class="px-4 py-3 font-medium text-gray-800 text-sm"> {{ data.phone ?? '' }}</td>
             <td class="px-4 py-3 font-medium text-gray-800 text-sm"> {{ data.subject ?? '' }}</td>
             <td class="px-4 py-3 font-medium text-gray-800 text-sm"> {{ data.created_at ? new Date(data.created_at).toLocaleDateString() : '' }}</td>
-            <td class="px-4 py-3 font-medium text-green-600 text-sm" v-if="data.public_status == 1">Active </td>
-            <td class="px-4 py-3 font-medium text-red-600 text-sm" v-else="data.public_status == 0">New </td>
+            <td class="px-4 py-3 font-medium text-green-600 text-sm" v-if="data.public_status == 1">Read </td>
+            <td class="px-4 py-3 font-medium text-red-600 text-sm" v-else="data.public_status == 0">Unread </td>
             <td class="px-4 py-3 font-medium text-gray-800">
               <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -301,12 +301,12 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     <DropdownMenuGroup>
-                      <DropdownMenuItem>
+                      <!-- <DropdownMenuItem>
                         <Link :href="route('user_contact_messages.edit',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-blue-600 rounded-lg">
                           <span class="flex items-center"><SquarePen /></span>
                           <span>  Edit</span>
                       </Link>
-                      </DropdownMenuItem>
+                      </DropdownMenuItem> -->
                       <!-- end -->
                       <DropdownMenuItem>
                         <Link :href="route('user_contact_messages.view',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-gray-600 rounded-lg">
@@ -329,14 +329,14 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
                       <DropdownMenuItem>
                         <Link :href="route('user_contact_messages.active',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-green-600 rounded-lg">
                           <span class="flex items-center"><ShieldCheck /></span>
-                          <span> Active </span>
+                          <span> Read </span>
                       </Link>
                       </DropdownMenuItem>
                       <!-- end -->
                       <DropdownMenuItem>
                         <Link :href="route('user_contact_messages.deactive',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-yellow-600 rounded-lg">
                           <span class="flex items-center"><ShieldMinus /></span>
-                          <span> InActive </span>
+                          <span> Unread </span>
                       </Link>
                       </DropdownMenuItem>
                       <!-- end -->

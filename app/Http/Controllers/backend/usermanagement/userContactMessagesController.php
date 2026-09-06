@@ -63,6 +63,7 @@ class userContactMessagesController extends Controller
     public function view($id,$slug)
     {
         $data = UserContact::with(['creator','editor'])->where('id',$id)->where('slug',$slug)->firstOrFail();
+        $data->update(['public_status' => 1]);
         return Inertia::render('backend/usermanage/usercontactmessages/show',[
             'data' => $data
         ]);

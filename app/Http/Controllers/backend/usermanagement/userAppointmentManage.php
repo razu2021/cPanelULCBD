@@ -61,6 +61,7 @@ class userAppointmentManage extends Controller
     public function view($id,$slug)
     {
         $data = getappointment::with(['creator','editor'])->where('id',$id)->where('slug',$slug)->firstOrFail();
+        $data->update(['public_status' => 1]);
         return Inertia::render('backend/usermanage/userappointment/show',[
             'data' => $data
         ]);

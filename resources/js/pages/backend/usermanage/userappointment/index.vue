@@ -301,12 +301,12 @@ const {selectedIds, isAnySelected, toggleSelectAll, bulkAction} = useBulkSelecti
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     <DropdownMenuGroup>
-                      <DropdownMenuItem>
+                      <!-- <DropdownMenuItem>
                         <Link :href="route('user_get_appointment.edit',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-blue-600 rounded-lg">
                           <span class="flex items-center"><SquarePen /></span>
                           <span>  Edit</span>
                       </Link>
-                      </DropdownMenuItem>
+                      </DropdownMenuItem> -->
                       <!-- end -->
                       <DropdownMenuItem>
                         <Link :href="route('user_get_appointment.view',{id:data.id , slug:data.slug})" class="w-full inline-flex items-center gap-2  text-sm font-medium text-gray-600 rounded-lg">
