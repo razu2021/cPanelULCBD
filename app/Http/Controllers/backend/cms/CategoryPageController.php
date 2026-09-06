@@ -120,7 +120,7 @@ class CategoryPageController extends Controller
             else {
                 $url = Str::slug($categoryname);
             }
-          dd($url);
+   
         // ----- insert record into database 
         $insert = CategoryPage::create([
             'name'=>$request->name,
