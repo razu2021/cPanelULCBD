@@ -33,7 +33,9 @@
         <!-- Main Content Area -->
         <article class="details-content">
           
-          {!! $data->description ?? '' !!}
+         <div class="editor-content">
+              {!! $data->description !!}
+          </div>
         
         </article>
 

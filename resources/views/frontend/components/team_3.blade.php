@@ -9,7 +9,7 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
           <div class="team_card4">
             <div class="img-box">
-                <img src="https://i.pinimg.com/736x/5a/26/d0/5a26d029030b4803b2991a082a1458f9.jpg" alt="Team Member">
+                <img src="{{asset($team->cover_image ?? 'https://i.pinimg.com/1200x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg')}}" alt="Team Member {{$team->name ?? 'Team Member'}}">
             </div>
             
             <div class="content-overlay">

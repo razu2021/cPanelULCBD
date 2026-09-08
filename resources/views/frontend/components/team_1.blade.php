@@ -9,7 +9,7 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
                <div class="team_card1">
                     <div class="profile-img-wrapper">
-                        <img src="https://i.pinimg.com/1200x/7a/a1/db/7aa1dbae860dd50acb959ae6a180177f.jpg" alt="Team Member" class="profile-img">
+                        <img src="{{asset($team->cover_image ?? 'https://i.pinimg.com/1200x/6e/59/95/6e599501252c23bcf02658617b29c894.jpg')}}" alt="Team Member {{$team->name ?? 'Team Member'}}" class="profile-img">
                     </div>
                     
                     <div class="member-info">

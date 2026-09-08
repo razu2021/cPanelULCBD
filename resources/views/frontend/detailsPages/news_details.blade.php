@@ -12,8 +12,13 @@
             <div class="hero-content">
                 <span class="badge-top">{{$data->type ?? 'Service Type!'}}</span>
                 <h1 class="hero-heading">
-                    {{ $data->heading ?? 'Service Heading !' }} <br> 
+                    @if($data->heading)
+                    {{ $data->heading ?? 'Service Heading !' }} 
+                    @endif
+                    @if($data->sub_heading)
+                    <br> 
                     <span class="stroke-text">{{$data->sub_heading ?? 'Service Sub Heading !'}}</span>
+                    @endif
                 </h1>
                 <div class="hero-meta">
                     <span class="meta-item">{{$data->created_at->format('D-M,Y : h:s')}}</span>
@@ -26,27 +31,36 @@
         <div class="row g-5">
             <div class="col-lg-8">
                 <div class="details-card">
+                    @if($data->title)
                     <h2 class="content-title">{{$data->title ?? 'Service Title !'}}</h2>
+                    @endif
+                    @if($data->sub_title)
                     <h5 class="content-subtitle">{{ $data->sub_title ?? 'Service Sub Title !' }}</h5>
-                    
+                    @endif
+                    @if($data->short_des)
                     <div class="short-info-box">
                         <p>{{$data->short_des ?? 'We provide end-to-end web development services that focus on performance, security, and scalability. demo data only'}}</p>
                     </div>
+                    @endif
 
+                    @if($data->cover_image)
                     <div class="thumbnail-wrapper">
                         <img src="{{ asset($data->cover_image) }}" alt="{{ $data->title ?? 'service image' }} " class="img-fluid rounded-custom">
                     </div>
+                    @endif
 
-                    <div class="long-description mt-5">
+                    <div class="long-description mt-5 editor-content">
                        {!! $data->description ?? '' !!}
                     </div>
 
+                    @if($data->video_url)
                     <div class="video-wrapper mt-5">
                         <h4 class="mb-4">Overview</h4>
                         <div class="ratio ratio-16x9 shadow-lg rounded-custom overflow-hidden">
                             <iframe src="{{ $data->video_url ?? '' }}" title="YouTube video" allowfullscreen></iframe>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
 

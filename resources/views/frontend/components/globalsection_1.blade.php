@@ -28,7 +28,9 @@
         <div class="section-divider mx-auto mb-4"></div>
 
         <div class="mx-2">
-          {!! $data->description ?? '' !!}
+          <div class="editor-content">
+              {!! $data->description !!}
+          </div>
         </div>
         <!-- Description -->
         {{-- <p class="section-desc text-muted mx-auto mb-0">

@@ -10,11 +10,14 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <span class="badge-top">{{$data->type ?? 'Type'}}</span>
+                <span class="badge-top">{{$data->type ?? 'Service Type!'}}</span>
                 <h1 class="hero-heading">
-                    {{ $data->heading ?? 'Service Heading !' }} <br> 
+                    @if($data->heading)
+                    {{ $data->heading ?? 'Service Heading !' }} 
+                    @endif
                     @if($data->sub_heading)
-                        <span class="stroke-text">{{$data->sub_heading ?? 'Service Sub Heading !'}}</span>
+                    <br> 
+                    <span class="stroke-text">{{$data->sub_heading ?? 'Service Sub Heading !'}}</span>
                     @endif
                 </h1>
                 <div class="hero-meta">
@@ -28,20 +31,25 @@
         <div class="row g-5">
             <div class="col-lg-8">
                 <div class="details-card">
+                    @if($data->title)
                     <h2 class="content-title">{{$data->title ?? 'Service Title !'}}</h2>
+                    @endif
+                    @if($data->sub_title)
                     <h5 class="content-subtitle">{{ $data->sub_title ?? 'Service Sub Title !' }}</h5>
-                    
+                    @endif
+                    @if($data->short_des)
                     <div class="short-info-box">
                         <p>{{$data->short_des ?? 'We provide end-to-end web development services that focus on performance, security, and scalability. demo data only'}}</p>
                     </div>
+                    @endif
 
+                    @if($data->cover_image)
                     <div class="thumbnail-wrapper">
-                        @if($data->cover_image)
                         <img src="{{ asset($data->cover_image) }}" alt="{{ $data->title ?? 'service image' }} " class="img-fluid rounded-custom">
-                        @endif
                     </div>
+                    @endif
 
-                    <div class="long-description mt-5">
+                    <div class="long-description mt-5 editor-content">
                        {!! $data->description ?? '' !!}
                     </div>
 
@@ -87,7 +95,7 @@
                     </div> -->
 
                     <div class="info-footer mt-4 text-center">
-                        <p>Last Updated: {{$data->updated_at->format('d-m-Y')}}</p>
+                       <p>Last Updated: {{ $data->updated_at->diffForHumans() }}</p>
                     </div>
                 </aside>
             </div>

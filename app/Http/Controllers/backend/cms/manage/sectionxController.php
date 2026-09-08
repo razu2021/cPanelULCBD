@@ -243,7 +243,7 @@ class sectionxController extends Controller
 
         if($update){
             flash()->success('Information Updated successfully!');
-            return redirect()->route('sectionx.view',[$id,$slug]);
+            return redirect()->route('globalsection_manage.view',[$id,$slug]);
         }else{
             flash()->error('Information Updated Faild !');
             return redirect()->back();

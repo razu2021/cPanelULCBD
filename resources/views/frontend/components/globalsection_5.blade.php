@@ -32,7 +32,7 @@
                     
                 </div>
                 
-                <div>
+                <div class="editor-content">
                     {!! $data->description ?? '' !!}
                 </div>
 

@@ -33,24 +33,26 @@
                 <div class="content-card p-4 p-md-5">
                     <div class="bio-header mb-5">
                         <h4 class="sub-heading text-uppercase">Who I Am</h4>
-                        <h1 class="main-heading">Professional Profile</h1>
+                        <h1 class="main-heading">Profile</h1>
                         <div class="accent-line"></div>
                     </div>
 
                     <div class="short-bio-box mb-4">
                         <p class="short-text">
-                            "{{$data->short_des ?? 'Short biography goes here.'}}"
+                            " {{$data->short_des ?? 'Short biography goes here.'}} "
                         </p>
                     </div>
 
-                    <div class="long-bio-content mb-5">
+                    @if($data->description)
+                    <div class="long-bio-content editor-content mb-5">
                         <p>{!! $data->description ?? 'Detailed biography goes here.' !!}</p>
                     </div>
+                    @endif
 
+                    @if($data->tags && $data->tags->count() > 0)
                     <div class="skill-section">
                         <h4 class="skill-title mb-4"><i class="fas fa-tools me-2"></i> Expertise Area </h4>
                         <div class="row">
-                            
                             @foreach($data->tags as $tag)
                             <div class="col-md-6 mb-4">
                                 <div class="skill-card">
@@ -66,14 +68,11 @@
                            @endforeach
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
-
 {{-- ban --}}
 @endsection

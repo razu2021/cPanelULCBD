@@ -43,7 +43,7 @@
                     <img src="{{$data->cover_image}}" class="feature_img_wide img-fluid" alt="Detail View">
                     @endif --}}
                   
-                    <div>
+                    <div class="editor-content">
                         {!! $data->description ?? '' !!}
                     </div>
                 </div>

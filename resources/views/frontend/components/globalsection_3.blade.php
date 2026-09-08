@@ -32,7 +32,7 @@
                     <hr>
                 @endif
 
-                <div>
+                <div class="editor-content">
                     {!! $data->description ?? '' !!}
                 </div>
 
