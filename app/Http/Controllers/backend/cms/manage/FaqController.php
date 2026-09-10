@@ -100,7 +100,7 @@ class FaqController extends Controller
                 'heading'   => ['nullable', 'string', 'max:255'],
                 'title'     => ['required', 'string', 'max:255'],
                 'sub_title' => ['nullable', 'string', 'max:255'],
-                'short_des' => ['required', 'string', 'max:255'], 
+                'short_des' => ['required', 'string',], 
                 'description' => ['nullable', 'string'], 
             ], [
                 'title.required'     => 'Question field is Required!',
@@ -153,7 +153,7 @@ class FaqController extends Controller
                 'heading'   => ['nullable', 'string', 'max:255'],
                 'title'     => ['required', 'string', 'max:255'],
                 'sub_title' => ['nullable', 'string', 'max:255'],
-                'short_des' => ['required', 'string', 'max:255'], 
+                'short_des' => ['required', 'string', ], 
                 'description' => ['nullable', 'string'], 
             ], [
                 'title.required'     => 'Question field is Required!',
