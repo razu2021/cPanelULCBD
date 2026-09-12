@@ -216,6 +216,11 @@ export const faqThemes: Theme[] = [
     name: 'Faq Theme 2',
     preview: 'https://picsum.photos/400/250?5'
   },
+  {
+    key: 'faq_3',
+    name: 'Faq Theme 3',
+    preview: 'https://picsum.photos/400/250?5'
+  },
 ];
 
 /**
