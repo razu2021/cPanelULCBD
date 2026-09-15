@@ -20,8 +20,8 @@ class faqHandler implements ChatbotHandlerInterface
       $faq = Faq::query()
             ->where(function ($query) use ($keywords) {
                 foreach ($keywords as $word) {
-                    $query->orWhere('title', 'like', "%{$word}%")
-                          ->orWhere('short_des', 'like', "%{$word}%");
+                    $query->Where('title', 'like', "%{$word}%");
+                          
                 }
             })
             ->first();
