@@ -5903,3 +5903,447 @@ $bg-white: #ffffff;
         }
     }
 }
+
+
+// ================ breadcrumb 3 css end here =================
+.breadcrumb8 {
+    position: relative;
+    min-height: clamp(20rem, 32vw, 30rem);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // ==========================================
+    // Dark Overlay
+    // ==========================================
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7, 24, 44, .96) 0%,
+                rgba(9, 40, 78, .88) 45%,
+                rgba(9, 40, 78, .60) 100%
+            );
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 85% 40%,
+                    rgba(210, 172, 103, .20),
+                    transparent 30%
+                );
+        }
+    }
+
+
+    // ==========================================
+    // Wrapper
+    // ==========================================
+
+    &__wrapper {
+        position: relative;
+        z-index: 5;
+
+        padding: clamp(3rem, 7vw, 5rem) 0;
+    }
+
+
+
+    // ==========================================
+    // Content
+    // ==========================================
+
+    &__content {
+        animation: breadcrumb8Content 1s .15s ease both;
+    }
+
+
+    // ==========================================
+    // Eyebrow
+    // ==========================================
+
+    &__eyebrow {
+        display: flex;
+        align-items: center;
+
+        gap: 1.2rem;
+
+        margin-bottom: 1rem;
+
+        span {
+            width: clamp(2.5rem, 4vw, 5rem);
+            height: 1px;
+
+            background: #D2AC67;
+
+            &:first-child {
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    #D2AC67
+                );
+            }
+
+            &:last-child {
+                background: linear-gradient(
+                    90deg,
+                    #D2AC67,
+                    transparent
+                );
+            }
+        }
+
+        small {
+            color: #E8CD93;
+
+            font-size: clamp(1.1rem, 1.1vw, 1.3rem);
+
+            font-weight: 700;
+
+            letter-spacing: .35rem;
+        }
+    }
+
+
+    // ==========================================
+    // Title
+    // ==========================================
+
+    &__title {
+        margin: 0;
+
+        color: #fff;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size: clamp(2.8rem, 4vw, 4.8rem);
+
+        font-weight: 500;
+
+        line-height: 1.15;
+
+        letter-spacing: -.05rem;
+    }
+
+
+    // ==========================================
+    // Description
+    // ==========================================
+
+    &__description {
+        max-width: 58rem;
+
+        margin: 1.2rem 0 0;
+
+        color: rgba(255, 255, 255, .72);
+
+        font-size: clamp(1.4rem, 1.4vw, 1.6rem);
+
+        line-height: 1.7;
+    }
+
+
+    // ==========================================
+    // Decorative Glow
+    // ==========================================
+
+    &__glow {
+        position: absolute;
+
+        border-radius: 50%;
+
+        pointer-events: none;
+
+        z-index: -1;
+
+        &--one {
+            width: clamp(18rem, 25vw, 35rem);
+            height: clamp(18rem, 25vw, 35rem);
+
+            top: -45%;
+            right: 5%;
+
+            background: rgba(210, 172, 103, .10);
+
+            filter: blur(2px);
+
+            animation:
+                breadcrumb8GlowOne
+                8s
+                ease-in-out
+                infinite
+                alternate;
+        }
+
+        &--two {
+            width: clamp(15rem, 20vw, 28rem);
+            height: clamp(15rem, 20vw, 28rem);
+
+            bottom: -55%;
+            left: 5%;
+
+            background: rgba(27, 65, 109, .35);
+
+            filter: blur(2px);
+
+            animation:
+                breadcrumb8GlowTwo
+                10s
+                ease-in-out
+                infinite
+                alternate;
+        }
+    }
+
+
+    // ==========================================
+    // Gold Decorative Lines
+    // ==========================================
+
+    &__line {
+        position: absolute;
+
+        width: clamp(20rem, 30vw, 42rem);
+        height: 1px;
+
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(210, 172, 103, .7)
+        );
+
+        opacity: .7;
+
+        pointer-events: none;
+
+        &--one {
+            top: 18%;
+            right: -5%;
+
+            transform: rotate(-18deg);
+
+            animation:
+                breadcrumb8LineOne
+                6s
+                ease-in-out
+                infinite
+                alternate;
+        }
+
+        &--two {
+            bottom: 12%;
+            left: -8%;
+
+            transform: rotate(12deg);
+
+            background: linear-gradient(
+                90deg,
+                rgba(210, 172, 103, .7),
+                transparent
+            );
+
+            animation:
+                breadcrumb8LineTwo
+                7s
+                ease-in-out
+                infinite
+                alternate;
+        }
+    }
+
+
+    // ==========================================
+    // Bottom Gold Line
+    // ==========================================
+
+    &__bottom {
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 5rem;
+
+        pointer-events: none;
+
+        span {
+            position: absolute;
+
+            left: 0;
+            bottom: 1.5rem;
+
+            width: 35%;
+
+            height: 1px;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #D2AC67
+            );
+
+            animation:
+                breadcrumb8Bottom
+                5s
+                ease-in-out
+                infinite
+                alternate;
+        }
+
+        &::after {
+            content: "";
+
+            position: absolute;
+
+            right: -5rem;
+            bottom: -3rem;
+
+            width: 30rem;
+            height: 8rem;
+
+            border-top: 1px solid #D2AC67;
+
+            transform: rotate(-8deg);
+
+            opacity: .65;
+        }
+    }
+
+
+    // ==========================================
+    // Responsive
+    // ==========================================
+
+    @include respond-to(md) {
+        &__wrapper {
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+    }
+
+
+    @include respond-to(lg) {
+        min-height: clamp(20rem, 30vw, 30rem);
+
+        &__wrapper {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        &__description {
+            max-width: 62rem;
+        }
+    }
+
+
+    @include respond-to(xl) {
+        &__wrapper {
+            padding-right: 4rem;
+            padding-left: 4rem;
+        }
+    }
+}
+
+
+// ==========================================
+// Animations
+// ==========================================
+
+@keyframes breadcrumb8Nav {
+    from {
+        opacity: 0;
+        transform: translateY(-1.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes breadcrumb8Content {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes breadcrumb8GlowOne {
+    from {
+        transform: translate(0, 0) scale(1);
+        opacity: .5;
+    }
+
+    to {
+        transform: translate(-2rem, 2rem) scale(1.15);
+        opacity: 1;
+    }
+}
+
+
+@keyframes breadcrumb8GlowTwo {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(3rem, -2rem);
+    }
+}
+
+
+@keyframes breadcrumb8LineOne {
+    from {
+        transform: rotate(-18deg) translateX(0);
+    }
+
+    to {
+        transform: rotate(-18deg) translateX(-3rem);
+    }
+}
+
+
+@keyframes breadcrumb8LineTwo {
+    from {
+        transform: rotate(12deg) translateX(0);
+    }
+
+    to {
+        transform: rotate(12deg) translateX(3rem);
+    }
+}
+
+
+@keyframes breadcrumb8Bottom {
+    from {
+        width: 25%;
+    }
+
+    to {
+        width: 42%;
+    }
+}

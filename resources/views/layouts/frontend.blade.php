@@ -85,9 +85,10 @@
 @endif
 
 
-
-
-
+<!-- ================================
+    Live Chat Widget
+================================= -->
+<livewire:custom_chatbot />
 
 </body>
 </html>

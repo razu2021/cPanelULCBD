@@ -101,6 +101,11 @@ export const breadcrumbThemes: Theme[] = [
     name: 'Breadcrumb example theme 01',
     preview: 'https://picsum.photos/400/250?5'
   },
+  {
+    key: 'breadcrumb_2',
+    name: 'Breadcrumb example theme 02',
+    preview: 'https://picsum.photos/400/250?5'
+  },
 ];
 /**
   * ======================================================
