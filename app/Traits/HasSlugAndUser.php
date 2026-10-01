@@ -22,9 +22,9 @@ trait HasSlugAndUser
             if (empty($model->slug)) {
                 $model->slug = uniqid('20').Str::random(20) . '_'.mt_rand(10000, 100000).'-'.time();
             }
-            // if (Auth::check()) {
-            //     $model->creator_id = Auth::id();
-            // }
+            if (Auth::check()) {
+                $model->creator_id = Auth::id();
+            }
         });
 
         $static::updating(function ($model) {

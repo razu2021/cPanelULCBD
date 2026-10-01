@@ -2,24 +2,60 @@
 
 namespace App\Models;
 
+use App\Domains\Chatbot\Services\chatbot\Contracts\ScoutSearchableInterface;
 use App\Observers\SiteEmailObserver;
 use App\Traits\CacheBuster;
 use App\Traits\Orderable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Attributes\ObservedBy;
- 
+use Laravel\Scout\Searchable;
+
 #[ObservedBy([SiteEmailObserver::class])]
-class SiteEmail extends Model
+class SiteEmail extends Model implements ScoutSearchableInterface
 {
-    use SoftDeletes,CacheBuster;
+    use SoftDeletes,CacheBuster,Searchable;
     use Orderable;
 
     protected $primaryKey = 'id';
     protected $guarded = [];
 
 
-    // --------- 
+       /**
+     * ----------------------------------------------------
+     * scout Search 
+     * implements ScoutSearchableInteface 
+     * ----------------------------------------------------
+     */
+    public function searchableColumns(): array
+    {
+        return ['id','title','email','description']; // এখানে short_des এর বদলে আসল কলাম 'phone' দিতে হবে
+    }
+
+    // --- how many feild would you like to search
+    public function toSearchableArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'email' => $this->email,
+        ];
+    }
+
+    // ------- interface data 
+    public function getSearchableData(): array
+    {
+        return [
+            'title' => $this->title,
+            'content' => $this->email,
+        ];
+    }
+    /**
+     * ---------------------------------------------------------------------------
+     * scout search and 
+     * ---------------------------------------------------------------------------
+     */
 
     public function creator()
     {

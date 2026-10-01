@@ -5,4 +5,5 @@ return [
     App\Providers\DataServiceProvider::class,
     App\Providers\FortifyServiceProvider::class,
     App\Providers\ModuleServiceProvider::class,
+    App\Domains\Chatbot\ChatbotServiceProvider::class,
 ];

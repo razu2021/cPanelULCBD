@@ -869,6 +869,7 @@
 // Live Chat Widget
 // ==========================================
 
+
 .liveChat {
     position: fixed;
     right: 2rem;
@@ -884,8 +885,8 @@
         right: 0;
         bottom: 7.5rem;
 
-        width: min(38rem, calc(100vw - 3rem));
-        height: 52rem;
+        width: min(39rem, calc(100vw - 2.4rem));
+        height: 56rem;
 
         display: flex;
         flex-direction: column;
@@ -894,14 +895,15 @@
 
         background: #fff;
         border: 0.1rem solid rgba(9, 40, 78, 0.08);
-        border-radius: 1.6rem;
+        border-radius: 1.8rem;
 
         box-shadow:
             0 2rem 5rem rgba(9, 40, 78, 0.16),
-            0 0.5rem 1.5rem rgba(9, 40, 78, 0.08);
+            0 0.8rem 2rem rgba(9, 40, 78, 0.08);
 
         opacity: 0;
         visibility: hidden;
+
         transform: translateY(1.5rem) scale(0.97);
         transform-origin: bottom right;
 
@@ -921,10 +923,17 @@
         align-items: center;
         justify-content: space-between;
 
-        padding: 1.6rem;
+        padding: 1.5rem 1.6rem;
 
-        background: #09284E;
         color: #fff;
+        background:
+            linear-gradient(
+                135deg,
+                #09284E 0%,
+                #0F1E2F 100%
+            );
+
+        flex-shrink: 0;
     }
 
 
@@ -932,22 +941,25 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+        min-width: 0;
     }
 
 
     &__avatar {
         position: relative;
 
-        width: 4.2rem;
-        height: 4.2rem;
+        width: 4.3rem;
+        height: 4.3rem;
 
         display: grid;
         place-items: center;
 
         flex-shrink: 0;
 
-        background: rgba(255, 255, 255, 0.14);
-        border: 0.1rem solid rgba(255, 255, 255, 0.18);
+        color: #fff;
+        background: rgba(255, 255, 255, 0.12);
+
+        border: 0.1rem solid rgba(255, 255, 255, 0.16);
         border-radius: 50%;
 
         font-size: 1.8rem;
@@ -969,45 +981,66 @@
 
 
     &__agent-info {
+        min-width: 0;
 
         h5 {
-            margin: 0 0 0.2rem;
+            margin: 0 0 0.25rem;
+
+            overflow: hidden;
+
+            color: #fff;
 
             font-size: 1.6rem;
             font-weight: 600;
             line-height: 1.3;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         span {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+
+            color: rgba(255, 255, 255, 0.68);
 
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.3;
         }
     }
 
 
     &__close {
-        width: 3.6rem;
-        height: 3.6rem;
+        width: 3.5rem;
+        height: 3.5rem;
 
         display: grid;
         place-items: center;
 
+        flex-shrink: 0;
+
         padding: 0;
 
-        color: #fff;
-        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.08);
 
-        border: 0;
+        border: 0.1rem solid rgba(255, 255, 255, 0.08);
         border-radius: 50%;
 
-        font-size: 1.5rem;
+        font-size: 1.4rem;
 
-        transition: 0.2s ease;
+        cursor: pointer;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
 
         &:hover {
-            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            background: rgba(255, 255, 255, 0.16);
+            transform: rotate(90deg);
         }
     }
 
@@ -1018,14 +1051,34 @@
 
     &__body {
         flex: 1;
+        min-height: 0;
 
         padding: 1.8rem 1.5rem;
 
         overflow-y: auto;
+        overscroll-behavior: contain;
 
-        background: #f8fafc;
+        background:
+            linear-gradient(
+                180deg,
+                #f8fafc 0%,
+                #f5f7fa 100%
+            );
 
         scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #d7dde5;
+            border-radius: 1rem;
+        }
     }
 
 
@@ -1039,17 +1092,20 @@
         gap: 1rem;
 
         margin-bottom: 2rem;
-        padding: 1.2rem;
+        padding: 1.3rem;
 
-        background: #fff;
-        border: 0.1rem solid #e9edf2;
-        border-radius: 1.2rem;
+        background: rgba(255, 255, 255, 0.9);
+
+        border: 0.1rem solid #e8ecf1;
+        border-radius: 1.3rem;
+
+        box-shadow: 0 0.4rem 1.2rem rgba(16, 24, 40, 0.03);
     }
 
 
     &__welcome-icon {
-        width: 3.8rem;
-        height: 3.8rem;
+        width: 3.9rem;
+        height: 3.9rem;
 
         display: grid;
         place-items: center;
@@ -1059,14 +1115,13 @@
         color: #D2AC67;
         background: rgba(210, 172, 103, 0.12);
 
-        border-radius: 1rem;
+        border-radius: 1.1rem;
 
         font-size: 1.6rem;
     }
 
 
     &__welcome {
-
         h6 {
             margin: 0 0 0.3rem;
 
@@ -1088,7 +1143,7 @@
 
 
     // --------------------------------------
-    // Agent Message
+    // Message
     // --------------------------------------
 
     &__message {
@@ -1096,7 +1151,7 @@
         align-items: flex-start;
         gap: 0.8rem;
 
-        margin-bottom: 1.8rem;
+        margin-bottom: 1.7rem;
     }
 
 
@@ -1120,6 +1175,7 @@
 
     &__message-content {
         max-width: 82%;
+        min-width: 0;
     }
 
 
@@ -1136,6 +1192,9 @@
 
 
     &__bubble {
+        width: fit-content;
+        max-width: 100%;
+
         padding: 1rem 1.2rem;
 
         color: #344054;
@@ -1147,7 +1206,35 @@
         font-size: 1.3rem;
         line-height: 1.55;
 
-        box-shadow: 0 0.3rem 0.8rem rgba(16, 24, 40, 0.03);
+        overflow-wrap: anywhere;
+
+        box-shadow:
+            0 0.3rem 0.8rem rgba(16, 24, 40, 0.03);
+    }
+
+
+    &__message--user {
+        justify-content: flex-end;
+
+        .liveChat__message-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            max-width: 82%;
+        }
+
+        .liveChat__bubble {
+            color: #fff;
+
+            background: #09284E;
+
+            border-color: #09284E;
+            border-radius: 1.2rem 0 1.2rem 1.2rem;
+
+            box-shadow:
+                0 0.4rem 1rem rgba(9, 40, 78, 0.12);
+        }
     }
 
 
@@ -1163,85 +1250,64 @@
 
 
     // --------------------------------------
-    // Quick Actions
-    // --------------------------------------
-
-    &__quick {
-        display: flex;
-        flex-direction: column;
-        gap: 0.7rem;
-
-        margin-top: 1rem;
-
-        button {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-
-            width: 100%;
-
-            padding: 1rem 1.2rem;
-
-            color: #09284E;
-            background: #fff;
-
-            border: 0.1rem solid #e4e7ec;
-            border-radius: 0.9rem;
-
-            font-size: 1.2rem;
-            font-weight: 500;
-
-            text-align: left;
-
-            transition: 0.2s ease;
-
-            i {
-                color: #D2AC67;
-                font-size: 1.4rem;
-            }
-
-            &:hover {
-                border-color: #D2AC67;
-                transform: translateX(0.2rem);
-            }
-        }
-    }
-
-
-    // --------------------------------------
     // Footer
     // --------------------------------------
 
     &__footer {
-        padding: 1.2rem 1.4rem 1rem;
+        flex-shrink: 0;
+
+        padding: 1.1rem 1.3rem 1.2rem;
 
         background: #fff;
+
         border-top: 0.1rem solid #eaecf0;
     }
 
 
+    // --------------------------------------
+    // FIXED INPUT AREA
+    // --------------------------------------
+
     &__input {
-        display: flex;
-        align-items: center;
+        width: 100%;
 
-        padding: 0.4rem;
+        padding: 0.45rem;
 
-        background: #f8fafc;
+        background: #f7f9fb;
 
-        border: 0.1rem solid #e4e7ec;
-        border-radius: 1rem;
+        border: 0.1rem solid #e1e6ed;
+        border-radius: 1.2rem;
 
-        transition: 0.2s ease;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
 
         &:focus-within {
+            background: #fff;
+
             border-color: #09284E;
-            box-shadow: 0 0 0 0.3rem rgba(9, 40, 78, 0.06);
+
+            box-shadow:
+                0 0 0 0.3rem rgba(9, 40, 78, 0.06);
+        }
+
+        form {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         input {
+            flex: 1;
+            min-width: 0;
             width: 100%;
 
-            padding: 0.8rem 1rem;
+            height: 3.8rem;
+
+            padding: 0 0.9rem;
 
             color: #344054;
             background: transparent;
@@ -1250,6 +1316,7 @@
             outline: 0;
 
             font-size: 1.3rem;
+            line-height: 1.4;
 
             &::placeholder {
                 color: #98a2b3;
@@ -1257,31 +1324,50 @@
         }
 
         button {
-            width: 3.4rem;
-            height: 3.4rem;
+            width: 3.8rem;
+            height: 3.8rem;
 
             display: grid;
             place-items: center;
 
             flex-shrink: 0;
 
+            padding: 0;
+
             color: #fff;
             background: #09284E;
 
             border: 0;
-            border-radius: 0.8rem;
+            border-radius: 0.95rem;
 
-            font-size: 1.2rem;
+            font-size: 1.3rem;
 
-            transition: 0.2s ease;
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
 
             &:hover {
                 background: #0F1E2F;
+
                 transform: translateY(-0.1rem);
+
+                box-shadow:
+                    0 0.5rem 1rem rgba(9, 40, 78, 0.16);
+            }
+
+            &:active {
+                transform: translateY(0);
             }
         }
     }
 
+
+    // --------------------------------------
+    // Powered
+    // --------------------------------------
 
     &__powered {
         display: flex;
@@ -1317,7 +1403,13 @@
         padding: 0;
 
         color: #fff;
-        background: #09284E;
+
+        background:
+            linear-gradient(
+                135deg,
+                #09284E 0%,
+                #0F1E2F 100%
+            );
 
         border: 0.2rem solid #fff;
         border-radius: 50%;
@@ -1330,11 +1422,14 @@
 
         transition:
             transform 0.25s ease,
-            background 0.25s ease;
+            box-shadow 0.25s ease;
 
         &:hover {
             transform: translateY(-0.3rem);
-            background: #0F1E2F;
+
+            box-shadow:
+                0 1.3rem 3rem rgba(9, 40, 78, 0.3),
+                0 0.4rem 1rem rgba(9, 40, 78, 0.14);
         }
     }
 
@@ -1384,18 +1479,23 @@
 
         font-size: 1rem;
         font-weight: 700;
+
+        transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease;
     }
 
 
-    // ======================================
+    // --------------------------------------
     // Active State
-    // ======================================
+    // --------------------------------------
 
     &.is-open {
 
         .liveChat__window {
             opacity: 1;
             visibility: visible;
+
             transform: translateY(0) scale(1);
         }
 
@@ -1416,9 +1516,9 @@
     }
 
 
-    // ======================================
+    // --------------------------------------
     // Responsive
-    // ======================================
+    // --------------------------------------
 
     @include respond-to(sm) {
 
@@ -1426,7 +1526,7 @@
         bottom: 2.5rem;
 
         &__window {
-            width: 38rem;
+            width: 39rem;
         }
     }
 
@@ -1434,7 +1534,8 @@
     @include respond-to(md) {
 
         &__window {
-            height: 54rem;
+            height: 56rem;
         }
     }
 }
+

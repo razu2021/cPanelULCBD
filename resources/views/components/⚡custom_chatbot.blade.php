@@ -1,37 +1,56 @@
 <?php
 
 use Livewire\Component;
-use App\Services\chatbot\CustomChatbotService;
+use App\Domains\Chatbot\Services\chatbot\customeChatbotService;
+use App\Domains\Chatbot\Services\ChatHistoryService;
 
 new class extends Component
 {
     public $newMessage = '';
     public $messages = [];
 
-    public function sendMessage(CustomChatbotService $chatbotService)
+    // Component prothom bar load hole puraton history load hobe
+    public function mount(ChatHistoryService $historyService)
+    {
+        $session = $historyService->getOrCreateSession();
+        $this->messages = $historyService->getSessionMessages($session);
+    }
+
+    public function sendMessage(customeChatbotService $chatbotService, ChatHistoryService $historyService)
     {
         if (empty(trim($this->newMessage))) {
             return;
         }
         
         $userText = $this->newMessage;
+        $this->newMessage = '';
 
-        // ইউজারের মেসেজ যোগ করা
+        // 1. Session manage kora
+        $session = $historyService->getOrCreateSession();
+
+        // 2. User-er message database-e save kora
+        $historyService->saveMessage($session, 'user', $userText, 'user_input');
+
+        // 3. UI-te user message instant add kora
         $this->messages[] = [
             'sender' => 'user',
             'text' => $userText,
             'time' => now()->format('h:i A')
         ];
 
-        $this->newMessage = '';
-
-        // বটের রেসপন্স আনা
+        // 4. Bot-er response ana
         $botResponse = $chatbotService->getBotResponse($userText);
 
-        // বটের রেসপন্স যোগ করা
+        // 5. Bot-er response database-e save kora
+        $historyService->saveMessage($session, 'bot', $botResponse->answer, $botResponse->source);
+
+        // 6. Session er last activity update kora
+        $historyService->touchSession($session);
+
+        // 7. UI-te bot response instant add kora
         $this->messages[] = [
             'sender' => 'bot',
-            'text' => $botResponse,
+            'text' => $botResponse->answer,
             'time' => now()->format('h:i A')
         ];
     }
@@ -142,9 +161,9 @@ new class extends Component
                 </form>
             </div>
             
-            <p class="liveChat__powered">
+            {{-- <p class="liveChat__powered">
                 <i class="bi bi-shield-check"></i> Typically replies within a few minutes
-            </p>
+            </p> --}}
         </div>
 
     </div>

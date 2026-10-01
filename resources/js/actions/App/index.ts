@@ -1,6 +1,8 @@
+import Domains from './Domains'
 import Http from './Http'
 const App = {
-    Http: Object.assign(Http, Http),
+    Domains: Object.assign(Domains, Domains),
+Http: Object.assign(Http, Http),
 }
 
 export default App

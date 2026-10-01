@@ -5,6 +5,7 @@ import { route } from 'ziggy-js'
 import {Gitlab, LayoutDashboard ,ChevronDown,Component,LayoutTemplate, Columns2, SlidersVertical, MailPlus, ContactIcon, SignatureIcon, PickaxeIcon, LockIcon, WebhookIcon, LucidePieChart } from 'lucide-vue-next';
 import AdminSeparetor from './ui/AdminSeparetor.vue';
 import Marketing from './ui/pro/marketing.vue';
+import Aiassitant from './ui/pro/aiassitant.vue';
 
 
 
@@ -35,10 +36,14 @@ const toggleMenu = (key:string)=>{
 
     <!-- Menu -->
     <nav class=" flex-1 overflow-y-auto p-2 space-y-1">
-      <a href="" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100">
+      <Link :href="route('admin_dashboard')" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100">
         <span class="w-4 h-4 flex items-center justify-center"><LayoutDashboard/> </span>
         <span class="text-sm">Dashboard</span>
-      </a>
+      </Link>
+      <Link :href="route('chatboad.dashboad')" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100">
+        <span class="w-4 h-4 flex items-center justify-center"><LayoutDashboard/> </span>
+        <span class="text-sm">AI Dashboard</span>
+      </Link>
 
       
       <AdminSeparetor title="User Contact" />
@@ -462,6 +467,9 @@ const toggleMenu = (key:string)=>{
 
     <AdminSeparetor title="Marketing Tolls" />
     <Marketing/>
+    <!-- Marketing Section  -->
+    <AdminSeparetor title="AI Assitent" />
+    <Aiassitant/>
     <!-- Marketing Section  -->
 
 
